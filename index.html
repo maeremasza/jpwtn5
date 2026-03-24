@@ -146,25 +146,25 @@
 </div>
 
 <script>
+    // --- SUPABASE AYARLARI KISMI ---
     const SUPABASE_URL = 'https://surmrffkiuqdydxltznn.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN1cm1yZmZraXVxZHlkeGx0em5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzNTUzOTYsImV4cCI6MjA4OTkzMTM5Nn0.rf5WVIUZ0TBtAljSaAHaD91GAsEcn_Yy5CaWNbF0tpU';
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    let WORDS_DB = {}; // Sayfa sayfa tutulan kelimeler
-    let ALL_WORDS_FLAT = []; // Online mod için hepsinin birleştirilmiş hali
+    let WORDS_DB = {}; 
+    let ALL_WORDS_FLAT = []; 
 
     function showScreen(screenId) {
         document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
         document.getElementById(screenId).classList.add('active');
     }
 
-    // Kelimeleri yükle ve işle
+    // Kelimeleri yükle
     fetch('words.json')
         .then(res => res.json())
         .then(data => {
             WORDS_DB = data;
             
-            // Tüm sayfaları tek bir listede birleştir (Online mod ve "Tüm Sayfalar" seçeneği için)
             for (let page in WORDS_DB) {
                 ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
             }
@@ -227,7 +227,6 @@
         const selectedPage = document.getElementById("single-page-combo").value;
         let wordsToTest = [];
 
-        // Hangi sayfanın kelimeleri çekilecek belirle
         if (selectedPage === "all") {
             wordsToTest = ALL_WORDS_FLAT;
         } else {
@@ -239,7 +238,6 @@
             return;
         }
 
-        // Öğrenilenleri filtrele
         const filteredWords = wordsToTest.filter(w => !learnedWords.includes(w.jp));
 
         if (filteredWords.length === 0) {
@@ -393,10 +391,8 @@
         setupChannel(roomCode);
         document.getElementById("room-code-display").innerText = roomCode;
         showScreen("online-lobby-screen");
-
-        setTimeout(() => {
-            roomChannel.send({ type: 'broadcast', event: 'player_joined', payload: { name: myName } });
-        }, 1000);
+        
+        // Timeout silindi, kanal başarıyla bağlandığında mesaj atacak.
     }
 
     function setupChannel(roomCode) {
@@ -432,7 +428,12 @@
             .on('broadcast', { event: 'game_over' }, (payload) => {
                 handleOnlineGameOver(payload.payload);
             })
-            .subscribe();
+            .subscribe((status) => {
+                // Kanal tam olarak bağlandığında ve kişi kurucu değilse katıldığını bildirir
+                if (status === 'SUBSCRIBED' && !isHost) {
+                    roomChannel.send({ type: 'broadcast', event: 'player_joined', payload: { name: myName } });
+                }
+            });
     }
 
     function startOnlineGame() {
@@ -441,7 +442,6 @@
         let countToAsk = ALL_WORDS_FLAT.length;
         if (selectedValue !== "all") countToAsk = Math.min(parseInt(selectedValue), ALL_WORDS_FLAT.length);
         
-        // Online modda sayfa filtresi yok, ALL_WORDS_FLAT içinden rastgele seçiyoruz
         onlineGameState.words = [...ALL_WORDS_FLAT].sort(() => 0.5 - Math.random()).slice(0, countToAsk); 
         onlineGameState.currentIndex = 0;
 
