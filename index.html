@@ -41,7 +41,6 @@
         .list-item { padding: 5px; cursor: pointer; border-bottom: 1px solid #eee; }
         .list-item:hover, .list-item.selected { background-color: #007BFF; color: white; }
 
-        /* Slider ve Input Yan Yana Hizalama */
         .slider-group { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; background: #fff; padding: 5px; border-radius: 5px; border: 1px solid #ddd; }
         .slider-group input[type="range"] { flex-grow: 1; margin: 0 10px; cursor: pointer; }
         .slider-group input[type="number"] { width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
@@ -51,7 +50,15 @@
 
 <div id="main-menu" class="container active">
     <h2>jpwt</h2>
-    <p style="font-size: 12px; color: #666;" id="db-status">Kelimeler yükleniyor...</p>
+    
+    <div style="background: #e3f2fd; padding: 10px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #90caf9;">
+        <label style="font-weight: bold; font-size: 14px; color: #0d47a1;">Hedef Dil:</label>
+        <select id="language-select" onchange="loadWords(this.value)" style="margin-top: 5px;">
+            <option value="words.json">İngilizce</option>
+            <option value="words_tr.json">Türkçe</option>
+        </select>
+        <p style="font-size: 12px; color: #666; margin: 5px 0 0 0;" id="db-status">Kelimeler yükleniyor...</p>
+    </div>
     
     <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #ddd;">
         <h4 style="margin-top: 0; margin-bottom: 10px;">👤 Tek Kişilik Çalışma</h4>
@@ -92,7 +99,7 @@
     <div class="hira-label blur-text" id="single-hira-label">ひらがな</div>
     <div class="roma-label blur-text" id="single-roma-label">romaji</div>
     
-    <input type="text" id="single-answer-input" placeholder="İngilizce anlamı yaz + Enter" onkeypress="if(event.key==='Enter') checkSingleAnswer()" autocomplete="off">
+    <input type="text" id="single-answer-input" placeholder="Anlamını yaz + Enter (Boş geçebilirsin)" onkeypress="if(event.key==='Enter') checkSingleAnswer()" autocomplete="off">
     
     <div style="display: flex; gap: 10px;">
         <button id="single-check-btn" class="btn btn-primary" onclick="checkSingleAnswer()">Kontrol Et</button>
@@ -149,7 +156,7 @@
     <div class="hira-label blur-text" id="online-hira-label">ひらがな</div>
     <div class="roma-label blur-text" id="online-roma-label">romaji</div>
     
-    <input type="text" id="online-answer-input" placeholder="İngilizce anlamı yaz + Enter" onkeypress="if(event.key==='Enter') checkOnlineAnswerInput()" autocomplete="off">
+    <input type="text" id="online-answer-input" placeholder="Anlamını yaz + Enter (Boş geçebilirsin)" onkeypress="if(event.key==='Enter') checkOnlineAnswerInput()" autocomplete="off">
     <div id="online-result-label" style="margin-top: 15px; font-weight: bold; white-space: pre-line;"></div>
 </div>
 
@@ -175,45 +182,50 @@
         document.getElementById(screenId).classList.add('active');
     }
 
-    // Kelimeleri yükle
-    fetch('words.json')
-        .then(res => res.json())
-        .then(data => {
-            WORDS_DB = data;
-            for (let page in WORDS_DB) {
-                ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
-            }
-            
-            // Slider Maximum Değerlerini Güncelle
-            const maxWords = ALL_WORDS_FLAT.length;
-            document.getElementById('single-word-slider').max = maxWords;
-            document.getElementById('single-word-input').max = maxWords;
-            document.getElementById('online-word-slider').max = maxWords;
-            document.getElementById('online-word-input').max = maxWords;
+    // DİNAMİK KELİME YÜKLEME FONKSİYONU
+    function loadWords(fileName) {
+        document.getElementById("db-status").innerText = "Kelimeler yükleniyor...";
+        document.getElementById("start-single-btn").disabled = true;
 
-            document.getElementById("db-status").innerText = `Veritabanı hazır (${maxWords} kelime) ✅`;
-            updateTimerDisplay(); 
-        })
-        .catch(err => {
-            document.getElementById("db-status").innerText = "Kelimeler yüklenemedi! JSON dosyanı kontrol et ❌";
-            console.error(err);
-        });
+        fetch(fileName)
+            .then(res => res.json())
+            .then(data => {
+                WORDS_DB = data;
+                ALL_WORDS_FLAT = [];
+                for (let page in WORDS_DB) {
+                    ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
+                }
+                
+                // Slider Maximum Değerlerini Güncelle
+                const maxWords = ALL_WORDS_FLAT.length;
+                document.getElementById('single-word-slider').max = maxWords;
+                document.getElementById('single-word-input').max = maxWords;
+                document.getElementById('online-word-slider').max = maxWords;
+                document.getElementById('online-word-input').max = maxWords;
+
+                document.getElementById("db-status").innerText = `Veritabanı hazır (${maxWords} kelime) ✅`;
+                updateTimerDisplay(); 
+            })
+            .catch(err => {
+                document.getElementById("db-status").innerText = "Kelimeler yüklenemedi! JSON dosyanı kontrol et ❌";
+                console.error(err);
+            });
+    }
+
+    // İlk açılışta varsayılanı (İngilizce) yükle
+    loadWords('words.json');
+
 
     // ==========================================
     // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI
     // ==========================================
     function isMatch(userAns, correctAns) {
         userAns = userAns.trim().toLowerCase();
-        if (!userAns) return false; // Boş cevap direkt yanlış
+        if (!userAns) return false; 
         
-        // Veritabanındaki anlamları virgülden böl
         const parts = correctAns.toLowerCase().split(',').map(p => p.trim());
-        
-        // 1. Birebir tutuyorsa (Örn: "to bathe" == "to bathe")
         if (parts.includes(userAns)) return true;
         
-        // 2. Regex Kelime Sınırı Kontrolü (Örn: "the", "bathe" içinde geçmez ama "bathe", "to bathe" içinde geçer)
-        // Kullanıcının yazdığındaki özel karakterleri bozmaması için kaçış (escape) uyguluyoruz
         const escapedAns = userAns.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         const regex = new RegExp(`\\b${escapedAns}\\b`, 'i');
         
@@ -314,13 +326,13 @@
 
     function checkSingleAnswer() {
         const input = document.getElementById("single-answer-input");
-        const userAns = input.value; // Boş da olsa gönder
+        const userAns = input.value; 
         const word = currentSingleWords[singleWordIndex];
-        const correctAns = word.eng;
+        const correctAns = word.tr || word.eng; // JSON'daki anahtar eng veya tr olabilir, ikisini de dener
         const resultLabel = document.getElementById("single-result-label");
 
         if (isMatch(userAns, correctAns)) {
-            resultLabel.innerText = `Doğru! 🎉\nAnlamı: ${word.eng}`;
+            resultLabel.innerText = `Doğru! 🎉\nAnlamı: ${correctAns}`;
             resultLabel.className = "green-text";
 
             wordCounts[word.jp] = (wordCounts[word.jp] || 0) + 1;
@@ -331,7 +343,7 @@
                 localStorage.setItem("learned_words", JSON.stringify(learnedWords));
             }
         } else {
-            resultLabel.innerText = `Yanlış! ❌\nDoğru Anlamı: ${word.eng}`;
+            resultLabel.innerText = `Yanlış! ❌\nDoğru Anlamı: ${correctAns}`;
             resultLabel.className = "red-text";
         }
 
@@ -402,8 +414,8 @@
         players: {}, 
         words: [], 
         currentIndex: 0,
-        wrongGuesses: {}, // Her kelime için oyuncuların yanlış sayıları
-        isWaiting: false  // Doğru bilindiğinde veya atlandığında bekleme kilidi
+        wrongGuesses: {}, 
+        isWaiting: false  
     };
 
     function createGame() {
@@ -496,11 +508,11 @@
 
     function sendNextOnlineWord() {
         if (!isHost) return;
-        onlineGameState.wrongGuesses = {}; // Yeni kelimede yanlışları sıfırla
+        onlineGameState.wrongGuesses = {}; 
         
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const payloadData = { 
-            word: { jp: currentWord.jp, pos: currentWord.pos, hiragana: currentWord.hiragana, romaji: currentWord.romaji },
+            word: { jp: currentWord.jp, pos: currentWord.pos, hiragana: currentWord.hiragana, romaji: currentWord.romaji, meaning: currentWord.tr || currentWord.eng },
             currentNo: onlineGameState.currentIndex + 1,
             totalWords: onlineGameState.words.length
         };
@@ -518,7 +530,6 @@
         
         document.getElementById("online-result-label").innerText = "";
         
-        // Input'u aktif et ve odaklan
         const input = document.getElementById("online-answer-input");
         input.disabled = false;
         input.value = "";
@@ -528,7 +539,7 @@
     }
 
     function checkOnlineAnswerInput() {
-        const answer = document.getElementById("online-answer-input").value; // Boş değeri de okur
+        const answer = document.getElementById("online-answer-input").value;
         
         if (isHost) {
             processOnlineAnswer(myName, answer);
@@ -539,24 +550,24 @@
     }
 
     function processOnlineAnswer(playerName, answer) {
-        if (!isHost || onlineGameState.isWaiting) return; // Kilitliyse işlem yapma
+        if (!isHost || onlineGameState.isWaiting) return; 
 
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
-        const correctAns = currentWord.eng;
+        const correctAns = currentWord.tr || currentWord.eng;
 
         // DOĞRU CEVAP
         if (isMatch(answer, correctAns)) {
-            onlineGameState.isWaiting = true; // Diğer cevapları kilitle
+            onlineGameState.isWaiting = true; 
             onlineGameState.players[playerName].score += 1;
             
-            const resultData = { winner: playerName, wordEng: currentWord.eng, players: onlineGameState.players };
+            const resultData = { winner: playerName, wordEng: correctAns, players: onlineGameState.players };
             
             handleOnlineCorrectAnswer(resultData);
             roomChannel.send({ type: 'broadcast', event: 'correct_answer', payload: resultData });
 
             onlineGameState.currentIndex++;
             setTimeout(() => {
-                onlineGameState.isWaiting = false; // Kilidi aç
+                onlineGameState.isWaiting = false; 
                 if (onlineGameState.currentIndex < onlineGameState.words.length) {
                     sendNextOnlineWord();
                 } else {
@@ -571,24 +582,21 @@
             onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
             const guesses = onlineGameState.wrongGuesses[playerName];
             
-            // Yanlış cevabı ve kalan hakkı yayınla
             roomChannel.send({ type: 'broadcast', event: 'wrong_answer', payload: { name: playerName, guesses: guesses } });
             if (playerName === myName) handleOnlineWrongAnswer(myName, guesses);
 
-            // Herkesin hakkı bitti mi kontrolü
             const allPlayers = Object.keys(onlineGameState.players);
             const everyoneOut = allPlayers.every(p => (onlineGameState.wrongGuesses[p] || 0) >= 2);
 
             if (everyoneOut) {
-                onlineGameState.isWaiting = true; // Kilitle
+                onlineGameState.isWaiting = true; 
                 
-                // Kimse bilemedi mesajı yayınla
-                roomChannel.send({ type: 'broadcast', event: 'word_skipped', payload: { wordEng: currentWord.eng } });
-                handleWordSkipped(currentWord.eng);
+                roomChannel.send({ type: 'broadcast', event: 'word_skipped', payload: { wordEng: correctAns } });
+                handleWordSkipped(correctAns);
 
                 onlineGameState.currentIndex++;
                 setTimeout(() => {
-                    onlineGameState.isWaiting = false; // Kilidi aç
+                    onlineGameState.isWaiting = false; 
                     if (onlineGameState.currentIndex < onlineGameState.words.length) {
                         sendNextOnlineWord();
                     } else {
