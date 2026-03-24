@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jpwt - Öğren & Yarış</title>
+    <title>jpwt - Öğren & Yarış Pro</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0; color: #333; }
@@ -23,7 +23,8 @@
         .btn-skip { background: none; color: #666; font-size: 12px; font-weight: normal; margin-top: 5px; }
         .btn-skip:hover { text-decoration: underline; }
 
-        input, select { width: 90%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
+        input[type="text"] { width: 90%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
+        select { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
         
         .word-label { font-size: 42px; font-weight: bold; margin: 0; }
         .pos-label { color: #007BFF; font-size: 14px; font-weight: bold; margin-bottom: 15px; }
@@ -39,6 +40,11 @@
         #word-list { height: 150px; overflow-y: auto; border: 1px solid #ccc; border-radius: 5px; margin: 15px 0; padding: 5px; text-align: left; }
         .list-item { padding: 5px; cursor: pointer; border-bottom: 1px solid #eee; }
         .list-item:hover, .list-item.selected { background-color: #007BFF; color: white; }
+
+        /* Slider ve Input Yan Yana Hizalama */
+        .slider-group { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; background: #fff; padding: 5px; border-radius: 5px; border: 1px solid #ddd; }
+        .slider-group input[type="range"] { flex-grow: 1; margin: 0 10px; cursor: pointer; }
+        .slider-group input[type="number"] { width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
     </style>
 </head>
 <body>
@@ -63,7 +69,13 @@
             <option value="7">Sayfa 7</option>
         </select>
 
-        <button id="start-single-btn" class="btn btn-primary" onclick="startSingleQuiz()" disabled>Teste Başla (5 Kelime)</button>
+        <div class="slider-group">
+            <span style="font-size: 12px; font-weight: bold;">Soru:</span>
+            <input type="range" id="single-word-slider" min="1" max="50" value="5" oninput="document.getElementById('single-word-input').value = this.value">
+            <input type="number" id="single-word-input" min="1" max="50" value="5" oninput="document.getElementById('single-word-slider').value = this.value">
+        </div>
+
+        <button id="start-single-btn" class="btn btn-primary" onclick="startSingleQuiz()" disabled>Teste Başla</button>
         <button class="btn btn-warning" onclick="showScreen('panel-screen'); openPanel();" style="margin-top: 5px;">📚 Öğrenilenleri Yönet</button>
     </div>
 
@@ -74,6 +86,7 @@
 </div>
 
 <div id="single-quiz-screen" class="container">
+    <div id="single-progress-label" style="font-size: 12px; color: #666; margin-bottom: 5px;">Kelime: -/-</div>
     <div class="word-label" id="single-word-label">漢字</div>
     <div class="pos-label" id="single-pos-label">Type</div>
     <div class="hira-label blur-text" id="single-hira-label">ひらがな</div>
@@ -91,7 +104,7 @@
 
 <div id="panel-screen" class="container">
     <h3 style="margin-top:0;">Yönetim Paneli</h3>
-    <p style="font-size: 13px; color: #666;">Bu kelimeler tek kişilik testte karşına çıkmaz. Geri getirmek için seçip butona bas.</p>
+    <p style="font-size: 13px; color: #666;">Bu kelimeler tek kişilik testte karşına çıkmaz.</p>
     <div id="word-list"></div>
     <button class="btn btn-primary" onclick="restoreWord()">Seçili Kelimeyi Geri Yükle</button>
     <button class="btn btn-secondary" onclick="showScreen('main-menu')">Ana Menüye Dön</button>
@@ -114,13 +127,14 @@
         <b>Oyuncular:</b>
         <ul id="players-ul"></ul>
     </div>
+    
     <div id="host-controls" style="display:none; margin-top: 15px;">
-        <select id="word-count-select">
-            <option value="5">5 Kelime Sor</option>
-            <option value="10">10 Kelime Sor</option>
-            <option value="20">20 Kelime Sor</option>
-            <option value="all">Tüm Kelimeleri Sor</option>
-        </select>
+        <div class="slider-group">
+            <span style="font-size: 12px; font-weight: bold;">Soru:</span>
+            <input type="range" id="online-word-slider" min="1" max="50" value="10" oninput="document.getElementById('online-word-input').value = this.value">
+            <input type="number" id="online-word-input" min="1" max="50" value="10" oninput="document.getElementById('online-word-slider').value = this.value">
+        </div>
+
         <button class="btn btn-primary" onclick="startOnlineGame()">Oyunu Başlat</button>
     </div>
     <p id="waiting-msg" style="color: #666;">Kurucunun oyunu başlatması bekleniyor...</p>
@@ -146,7 +160,9 @@
 </div>
 
 <script>
-    // --- SUPABASE AYARLARI KISMI ---
+    // ==========================================
+    // 1. SUPABASE VE GENEL AYARLAR
+    // ==========================================
     const SUPABASE_URL = 'https://surmrffkiuqdydxltznn.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN1cm1yZmZraXVxZHlkeGx0em5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzNTUzOTYsImV4cCI6MjA4OTkzMTM5Nn0.rf5WVIUZ0TBtAljSaAHaD91GAsEcn_Yy5CaWNbF0tpU';
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -167,7 +183,15 @@
             for (let page in WORDS_DB) {
                 ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
             }
-            document.getElementById("db-status").innerText = `Veritabanı hazır (${ALL_WORDS_FLAT.length} kelime) ✅`;
+            
+            // Slider Maximum Değerlerini Güncelle
+            const maxWords = ALL_WORDS_FLAT.length;
+            document.getElementById('single-word-slider').max = maxWords;
+            document.getElementById('single-word-input').max = maxWords;
+            document.getElementById('online-word-slider').max = maxWords;
+            document.getElementById('online-word-input').max = maxWords;
+
+            document.getElementById("db-status").innerText = `Veritabanı hazır (${maxWords} kelime) ✅`;
             updateTimerDisplay(); 
         })
         .catch(err => {
@@ -175,9 +199,30 @@
             console.error(err);
         });
 
+    // ==========================================
+    // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI
+    // ==========================================
+    function isMatch(userAns, correctAns) {
+        userAns = userAns.trim().toLowerCase();
+        if (!userAns) return false; // Boş cevap direkt yanlış
+        
+        // Veritabanındaki anlamları virgülden böl
+        const parts = correctAns.toLowerCase().split(',').map(p => p.trim());
+        
+        // 1. Birebir tutuyorsa (Örn: "to bathe" == "to bathe")
+        if (parts.includes(userAns)) return true;
+        
+        // 2. Regex Kelime Sınırı Kontrolü (Örn: "the", "bathe" içinde geçmez ama "bathe", "to bathe" içinde geçer)
+        // Kullanıcının yazdığındaki özel karakterleri bozmaması için kaçış (escape) uyguluyoruz
+        const escapedAns = userAns.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`\\b${escapedAns}\\b`, 'i');
+        
+        return parts.some(part => regex.test(part));
+    }
+
 
     // ==========================================
-    // TEK KİŞİLİK MOD SİSTEMİ (SAYFALI)
+    // 2. TEK KİŞİLİK MOD SİSTEMİ
     // ==========================================
     let learnedWords = JSON.parse(localStorage.getItem("learned_words")) || [];
     let wordCounts = JSON.parse(localStorage.getItem("word_counts")) || {};
@@ -223,6 +268,7 @@
 
     function startSingleQuiz() {
         const selectedPage = document.getElementById("single-page-combo").value;
+        const wordCount = parseInt(document.getElementById("single-word-input").value);
         let wordsToTest = [];
 
         if (selectedPage === "all") wordsToTest = ALL_WORDS_FLAT;
@@ -234,7 +280,7 @@
 
         if (filteredWords.length === 0) return alert("Tebrikler! Seçtiğin sayfadaki tüm kelimeleri zaten öğrendin!");
 
-        currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, 5);
+        currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, wordCount);
         singleWordIndex = 0;
 
         showScreen("single-quiz-screen");
@@ -249,6 +295,7 @@
             document.getElementById("single-pos-label").innerText = word.pos || "Bilinmiyor";
             document.getElementById("single-hira-label").innerText = word.hiragana || "";
             document.getElementById("single-roma-label").innerText = word.romaji || "";
+            document.getElementById("single-progress-label").innerText = `Kelime: ${singleWordIndex + 1}/${currentSingleWords.length}`;
             
             const input = document.getElementById("single-answer-input");
             input.value = "";
@@ -267,12 +314,12 @@
 
     function checkSingleAnswer() {
         const input = document.getElementById("single-answer-input");
-        const userAns = input.value.trim().toLowerCase();
+        const userAns = input.value; // Boş da olsa gönder
         const word = currentSingleWords[singleWordIndex];
-        const correctAns = word.eng.toLowerCase();
+        const correctAns = word.eng;
         const resultLabel = document.getElementById("single-result-label");
 
-        if (userAns && correctAns.includes(userAns)) {
+        if (isMatch(userAns, correctAns)) {
             resultLabel.innerText = `Doğru! 🎉\nAnlamı: ${word.eng}`;
             resultLabel.className = "green-text";
 
@@ -346,12 +393,18 @@
 
 
     // ==========================================
-    // ÇOK OYUNCULU MOD SİSTEMİ (TÜM KELİMELER)
+    // 3. ÇOK OYUNCULU MOD SİSTEMİ (REKABETÇİ)
     // ==========================================
     let roomChannel;
     let isHost = false;
     let myName = "";
-    let onlineGameState = { players: {}, words: [], currentIndex: 0 };
+    let onlineGameState = { 
+        players: {}, 
+        words: [], 
+        currentIndex: 0,
+        wrongGuesses: {}, // Her kelime için oyuncuların yanlış sayıları
+        isWaiting: false  // Doğru bilindiğinde veya atlandığında bekleme kilidi
+    };
 
     function createGame() {
         if (ALL_WORDS_FLAT.length === 0) return alert("Kelimeler yükleniyor, lütfen bekle!");
@@ -412,9 +465,11 @@
             .on('broadcast', { event: 'correct_answer' }, (payload) => {
                 handleOnlineCorrectAnswer(payload.payload);
             })
-            // YANLIŞ CEVAP YAKALAYICI (YENİ EKLENDİ)
             .on('broadcast', { event: 'wrong_answer' }, (payload) => {
-                handleOnlineWrongAnswer(payload.payload.name);
+                handleOnlineWrongAnswer(payload.payload.name, payload.payload.guesses);
+            })
+            .on('broadcast', { event: 'word_skipped' }, (payload) => {
+                handleWordSkipped(payload.payload.wordEng);
             })
             .on('broadcast', { event: 'game_over' }, (payload) => {
                 handleOnlineGameOver(payload.payload);
@@ -428,12 +483,11 @@
 
     function startOnlineGame() {
         if (!isHost) return;
-        const selectedValue = document.getElementById("word-count-select").value;
-        let countToAsk = ALL_WORDS_FLAT.length;
-        if (selectedValue !== "all") countToAsk = Math.min(parseInt(selectedValue), ALL_WORDS_FLAT.length);
+        const countToAsk = parseInt(document.getElementById("online-word-input").value);
         
         onlineGameState.words = [...ALL_WORDS_FLAT].sort(() => 0.5 - Math.random()).slice(0, countToAsk); 
         onlineGameState.currentIndex = 0;
+        onlineGameState.isWaiting = false;
 
         roomChannel.send({ type: 'broadcast', event: 'game_started', payload: {} });
         showScreen("online-quiz-screen");
@@ -442,6 +496,8 @@
 
     function sendNextOnlineWord() {
         if (!isHost) return;
+        onlineGameState.wrongGuesses = {}; // Yeni kelimede yanlışları sıfırla
+        
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const payloadData = { 
             word: { jp: currentWord.jp, pos: currentWord.pos, hiragana: currentWord.hiragana, romaji: currentWord.romaji },
@@ -461,16 +517,19 @@
         document.getElementById("online-progress-label").innerText = `Kelime: ${payload.currentNo}/${payload.totalWords}`;
         
         document.getElementById("online-result-label").innerText = "";
-        document.getElementById("online-answer-input").disabled = false;
-        document.getElementById("online-answer-input").value = "";
-        document.getElementById("online-answer-input").focus();
+        
+        // Input'u aktif et ve odaklan
+        const input = document.getElementById("online-answer-input");
+        input.disabled = false;
+        input.value = "";
+        input.focus();
+        
         updateOnlineScoreBoard();
     }
 
     function checkOnlineAnswerInput() {
-        const answer = document.getElementById("online-answer-input").value.trim().toLowerCase();
-        if (!answer) return;
-
+        const answer = document.getElementById("online-answer-input").value; // Boş değeri de okur
+        
         if (isHost) {
             processOnlineAnswer(myName, answer);
         } else {
@@ -480,13 +539,16 @@
     }
 
     function processOnlineAnswer(playerName, answer) {
-        if (!isHost) return;
-        const currentWord = onlineGameState.words[onlineGameState.currentIndex];
-        const correctAns = currentWord.eng.toLowerCase();
+        if (!isHost || onlineGameState.isWaiting) return; // Kilitliyse işlem yapma
 
-        // DEĞİŞEN KISIM: Tek kişilikteki gibi "içermesi" yeterli kılındı (includes)
-        if (answer && correctAns.includes(answer)) {
+        const currentWord = onlineGameState.words[onlineGameState.currentIndex];
+        const correctAns = currentWord.eng;
+
+        // DOĞRU CEVAP
+        if (isMatch(answer, correctAns)) {
+            onlineGameState.isWaiting = true; // Diğer cevapları kilitle
             onlineGameState.players[playerName].score += 1;
+            
             const resultData = { winner: playerName, wordEng: currentWord.eng, players: onlineGameState.players };
             
             handleOnlineCorrectAnswer(resultData);
@@ -494,6 +556,7 @@
 
             onlineGameState.currentIndex++;
             setTimeout(() => {
+                onlineGameState.isWaiting = false; // Kilidi aç
                 if (onlineGameState.currentIndex < onlineGameState.words.length) {
                     sendNextOnlineWord();
                 } else {
@@ -502,10 +565,39 @@
                     roomChannel.send({ type: 'broadcast', event: 'game_over', payload: finalData });
                 }
             }, 3000); 
-        } else {
-            // YANLIŞ CEVAP DURUMU (YENİ EKLENDİ)
-            roomChannel.send({ type: 'broadcast', event: 'wrong_answer', payload: { name: playerName } });
-            if (playerName === myName) handleOnlineWrongAnswer(myName);
+        } 
+        // YANLIŞ CEVAP
+        else {
+            onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
+            const guesses = onlineGameState.wrongGuesses[playerName];
+            
+            // Yanlış cevabı ve kalan hakkı yayınla
+            roomChannel.send({ type: 'broadcast', event: 'wrong_answer', payload: { name: playerName, guesses: guesses } });
+            if (playerName === myName) handleOnlineWrongAnswer(myName, guesses);
+
+            // Herkesin hakkı bitti mi kontrolü
+            const allPlayers = Object.keys(onlineGameState.players);
+            const everyoneOut = allPlayers.every(p => (onlineGameState.wrongGuesses[p] || 0) >= 2);
+
+            if (everyoneOut) {
+                onlineGameState.isWaiting = true; // Kilitle
+                
+                // Kimse bilemedi mesajı yayınla
+                roomChannel.send({ type: 'broadcast', event: 'word_skipped', payload: { wordEng: currentWord.eng } });
+                handleWordSkipped(currentWord.eng);
+
+                onlineGameState.currentIndex++;
+                setTimeout(() => {
+                    onlineGameState.isWaiting = false; // Kilidi aç
+                    if (onlineGameState.currentIndex < onlineGameState.words.length) {
+                        sendNextOnlineWord();
+                    } else {
+                        const finalData = { players: onlineGameState.players };
+                        handleOnlineGameOver(finalData);
+                        roomChannel.send({ type: 'broadcast', event: 'game_over', payload: finalData });
+                    }
+                }, 3000);
+            }
         }
     }
 
@@ -519,17 +611,29 @@
         updateOnlineScoreBoard();
     }
 
-    // YANLIŞ CEVABI EKRANA BASAN FONKSİYON (YENİ EKLENDİ)
-    function handleOnlineWrongAnswer(name) {
+    function handleOnlineWrongAnswer(name, guesses) {
         if (name === myName) {
             const res = document.getElementById("online-result-label");
-            res.innerText = "Yanlış! Tekrar dene.";
-            res.style.color = "red";
-            document.getElementById("online-answer-input").value = "";
+            const input = document.getElementById("online-answer-input");
+            input.value = "";
             
-            // 1.5 saniye sonra "Yanlış" uyarısını sil (kutu açık kalmaya devam eder)
-            setTimeout(() => { if(res.innerText.includes("Yanlış")) res.innerText = ""; }, 1500);
+            if (guesses >= 2) {
+                input.disabled = true;
+                res.innerText = "Bu kelime için hakkın bitti!\nDiğer oyuncular bekleniyor...";
+                res.style.color = "red";
+            } else {
+                res.innerText = `Yanlış! (${2 - guesses} hakkın kaldı)`;
+                res.style.color = "orange";
+                setTimeout(() => { if(res.innerText.includes("Yanlış!")) res.innerText = ""; }, 1500);
+            }
         }
+    }
+
+    function handleWordSkipped(wordEng) {
+        document.getElementById("online-answer-input").disabled = true;
+        const res = document.getElementById("online-result-label");
+        res.innerText = `⏳ Kimse bilemedi! Kelime atlanıyor...\nCevap: ${wordEng}`;
+        res.style.color = "gray";
     }
 
     function handleOnlineGameOver(data) {
