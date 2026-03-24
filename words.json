@@ -1,0 +1,4524 @@
+{
+    1: [
+        {
+            "jp": "浴びる",
+            "hiragana": "あびる",
+            "romaji": "abiru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to bathe, to shower"
+        },
+        {
+            "jp": "危ない",
+            "hiragana": "あぶない",
+            "romaji": "abunai",
+            "pos": "Adjective, い-adjective",
+            "eng": "dangerous"
+        },
+        {
+            "jp": "あっち",
+            "hiragana": "",
+            "romaji": "acchi",
+            "pos": "Pronoun",
+            "eng": "over there"
+        },
+        {
+            "jp": "あちら",
+            "hiragana": "",
+            "romaji": "achira",
+            "pos": "Pronoun",
+            "eng": "there"
+        },
+        {
+            "jp": "上げる",
+            "hiragana": "あげる",
+            "romaji": "ageru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to raise; to elevate; to give"
+        },
+        {
+            "jp": "赤",
+            "hiragana": "あか",
+            "romaji": "aka",
+            "pos": "Noun",
+            "eng": "red; crimson; scarlet​"
+        },
+        {
+            "jp": "赤い",
+            "hiragana": "あかい",
+            "romaji": "akai",
+            "pos": "Adjective, い-adjective",
+            "eng": "red; crimson; scarlet​"
+        },
+        {
+            "jp": "明るい",
+            "hiragana": "あかるい",
+            "romaji": "akarui",
+            "pos": "Adjective, い-adjective",
+            "eng": "bright; light"
+        },
+        {
+            "jp": "開ける",
+            "hiragana": "あける",
+            "romaji": "akeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to open (a door, etc.); to unwrap (e.g. parcel, package); to unlock"
+        },
+        {
+            "jp": "秋",
+            "hiragana": "あき",
+            "romaji": "aki",
+            "pos": "Noun",
+            "eng": "autumn; fall"
+        },
+        {
+            "jp": "開く",
+            "hiragana": "あく",
+            "romaji": "aku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to open (e.g. doors, business, etc)"
+        },
+        {
+            "jp": "甘い",
+            "hiragana": "あまい",
+            "romaji": "amai",
+            "pos": "Adjective, い-adjective",
+            "eng": "sweet; sweet-tasting; sugary; naive; indulgent"
+        },
+        {
+            "jp": "雨",
+            "hiragana": "あめ",
+            "romaji": "ame",
+            "pos": "Noun",
+            "eng": "rain"
+        },
+        {
+            "jp": "飴",
+            "hiragana": "あめ",
+            "romaji": "ame",
+            "pos": "Noun",
+            "eng": "candy"
+        },
+        {
+            "jp": "あなた",
+            "hiragana": "",
+            "romaji": "anata",
+            "pos": "Pronoun",
+            "eng": "you"
+        },
+        {
+            "jp": "姉",
+            "hiragana": "あね",
+            "romaji": "ane",
+            "pos": "Noun",
+            "eng": "older sister; elder sister​"
+        },
+        {
+            "jp": "兄",
+            "hiragana": "あに",
+            "romaji": "ani",
+            "pos": "Noun",
+            "eng": "elder brother; older brother​"
+        },
+        {
+            "jp": "あの",
+            "hiragana": "",
+            "romaji": "ano",
+            "pos": "Pre-noun adjectival",
+            "eng": "that"
+        },
+        {
+            "jp": "青",
+            "hiragana": "あお",
+            "romaji": "ao",
+            "pos": "Noun",
+            "eng": "blue; azure"
+        },
+        {
+            "jp": "青い",
+            "hiragana": "あおい",
+            "romaji": "aoi",
+            "pos": "Adjective, い-adjective",
+            "eng": "blue; azure"
+        },
+        {
+            "jp": "アパート",
+            "hiragana": "",
+            "romaji": "apaato",
+            "pos": "Noun, Katakana",
+            "eng": "apartment"
+        },
+        {
+            "jp": "洗う",
+            "hiragana": "あらう",
+            "romaji": "arau",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to wash"
+        },
+        {
+            "jp": "あれ",
+            "hiragana": "",
+            "romaji": "are",
+            "pos": "Pronoun",
+            "eng": "that"
+        },
+        {
+            "jp": "ある",
+            "hiragana": "",
+            "romaji": "aru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to be, to have"
+        },
+        {
+            "jp": "歩く",
+            "hiragana": "あるく",
+            "romaji": "aruku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to walk"
+        },
+        {
+            "jp": "朝",
+            "hiragana": "あさ",
+            "romaji": "asa",
+            "pos": "Noun",
+            "eng": "morning"
+        },
+        {
+            "jp": "朝ご飯",
+            "hiragana": "あさごはん",
+            "romaji": "asagohan",
+            "pos": "Noun",
+            "eng": "breakfast"
+        },
+        {
+            "jp": "明後日",
+            "hiragana": "あさって",
+            "romaji": "asatte",
+            "pos": "Noun",
+            "eng": "day after tomorrow"
+        },
+        {
+            "jp": "足",
+            "hiragana": "あし",
+            "romaji": "ashi",
+            "pos": "Noun",
+            "eng": "foot; leg; paw; arm"
+        },
+        {
+            "jp": "明日",
+            "hiragana": "あした",
+            "romaji": "ashita",
+            "pos": "Noun, Temporal noun",
+            "eng": "tomorrow"
+        },
+        {
+            "jp": "遊ぶ",
+            "hiragana": "あそぶ",
+            "romaji": "asobu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to play; to enjoy oneself"
+        },
+        {
+            "jp": "あそこ",
+            "hiragana": "",
+            "romaji": "asoko",
+            "pos": "Pronoun",
+            "eng": "over there"
+        },
+        {
+            "jp": "頭",
+            "hiragana": "あたま",
+            "romaji": "atama",
+            "pos": "Noun",
+            "eng": "head"
+        },
+        {
+            "jp": "新しい",
+            "hiragana": "あたらしい",
+            "romaji": "atarashii",
+            "pos": "Adjective, い-adjective",
+            "eng": "new; novel; fresh; recent; latest"
+        },
+        {
+            "jp": "暖かい",
+            "hiragana": "あたたかい",
+            "romaji": "atatakai",
+            "pos": "Adjective, い-adjective",
+            "eng": "warm"
+        },
+        {
+            "jp": "後",
+            "hiragana": "あと",
+            "romaji": "ato",
+            "pos": "Noun",
+            "eng": "behind; after; remainder; left; also"
+        },
+        {
+            "jp": "暑い",
+            "hiragana": "あつい",
+            "romaji": "atsui",
+            "pos": "Adjective, い-adjective",
+            "eng": "hot; sultry"
+        },
+        {
+            "jp": "厚い",
+            "hiragana": "あつい",
+            "romaji": "atsui",
+            "pos": "Adjective, い-adjective",
+            "eng": "thick"
+        },
+        {
+            "jp": "熱い",
+            "hiragana": "あつい",
+            "romaji": "atsui",
+            "pos": "Adjective, い-adjective",
+            "eng": "hot"
+        },
+        {
+            "jp": "会う",
+            "hiragana": "あう",
+            "romaji": "au",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to meet; to encounter; to see"
+        },
+        {
+            "jp": "晩ご飯",
+            "hiragana": "ばんごはん",
+            "romaji": "bangohan",
+            "pos": "Noun",
+            "eng": "dinner; evening meal"
+        },
+        {
+            "jp": "番号",
+            "hiragana": "ばんごう",
+            "romaji": "bangou",
+            "pos": "Noun",
+            "eng": "number"
+        },
+        {
+            "jp": "バス",
+            "hiragana": "",
+            "romaji": "basu",
+            "pos": "Noun, Katakana",
+            "eng": "bus"
+        },
+        {
+            "jp": "バター",
+            "hiragana": "",
+            "romaji": "bataa",
+            "pos": "Noun, Katakana",
+            "eng": "butter​"
+        },
+        {
+            "jp": "ベッド",
+            "hiragana": "",
+            "romaji": "beddo",
+            "pos": "Noun, Katakana",
+            "eng": "bed"
+        },
+        {
+            "jp": "勉強",
+            "hiragana": "べんきょう",
+            "romaji": "benkyou",
+            "pos": "Noun, Suru verb",
+            "eng": "to study"
+        },
+        {
+            "jp": "便利",
+            "hiragana": "べんり",
+            "romaji": "benri",
+            "pos": "な-adjective",
+            "eng": "convenient; handy; useful"
+        },
+        {
+            "jp": "ボールペン",
+            "hiragana": "",
+            "romaji": "boorupen",
+            "pos": "Noun, Katakana",
+            "eng": "ball-point pen"
+        },
+        {
+            "jp": "ボタン",
+            "hiragana": "",
+            "romaji": "botan",
+            "pos": "Noun, Katakana",
+            "eng": "button"
+        },
+        {
+            "jp": "帽子",
+            "hiragana": "ぼうし",
+            "romaji": "boushi",
+            "pos": "Noun",
+            "eng": "hat; cap"
+        },
+        {
+            "jp": "文章",
+            "hiragana": "ぶんしょう",
+            "romaji": "bunshou",
+            "pos": "Noun",
+            "eng": "sentence"
+        },
+        {
+            "jp": "豚肉",
+            "hiragana": "ぶたにく",
+            "romaji": "butaniku",
+            "pos": "Noun",
+            "eng": "pork"
+        },
+        {
+            "jp": "病院",
+            "hiragana": "びょういん",
+            "romaji": "byouin",
+            "pos": "Noun",
+            "eng": "hospital"
+        },
+        {
+            "jp": "病気",
+            "hiragana": "びょうき",
+            "romaji": "byouki",
+            "pos": "Noun",
+            "eng": "illness; disease; sickness"
+        },
+        {
+            "jp": "茶色",
+            "hiragana": "ちゃいろ",
+            "romaji": "chairo",
+            "pos": "Noun",
+            "eng": "brown"
+        },
+        {
+            "jp": "茶碗",
+            "hiragana": "ちゃわん",
+            "romaji": "chawan",
+            "pos": "Noun",
+            "eng": "rice bowl; tea cup; teacup"
+        },
+        {
+            "jp": "父",
+            "hiragana": "ちち",
+            "romaji": "chichi",
+            "pos": "Noun",
+            "eng": "father"
+        },
+        {
+            "jp": "違う",
+            "hiragana": "ちがう",
+            "romaji": "chigau",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to differ"
+        },
+        {
+            "jp": "小さい",
+            "hiragana": "ちいさい",
+            "romaji": "chiisai",
+            "pos": "Adjective, い-adjective",
+            "eng": "small; little; tiny"
+        },
+        {
+            "jp": "小さな",
+            "hiragana": "ちいさな",
+            "romaji": "chiisana",
+            "pos": "Pre-noun adjectival",
+            "eng": "small; little; tiny​"
+        },
+        {
+            "jp": "近い",
+            "hiragana": "ちかい",
+            "romaji": "chikai",
+            "pos": "い-adjective",
+            "eng": "near; close"
+        },
+        {
+            "jp": "地下鉄",
+            "hiragana": "ちかてつ",
+            "romaji": "chikatetsu",
+            "pos": "Noun",
+            "eng": "subway; underground train"
+        },
+        {
+            "jp": "地図",
+            "hiragana": "ちず",
+            "romaji": "chizu",
+            "pos": "Noun",
+            "eng": "map"
+        },
+        {
+            "jp": "ちょっと",
+            "hiragana": "",
+            "romaji": "chotto",
+            "pos": "Adverb",
+            "eng": "a little"
+        },
+        {
+            "jp": "丁度",
+            "hiragana": "ちょうど",
+            "romaji": "choudo",
+            "pos": "Adverb",
+            "eng": "exactly"
+        },
+        {
+            "jp": "台所",
+            "hiragana": "だいどころ",
+            "romaji": "daidokoro",
+            "pos": "Noun",
+            "eng": "kitchen"
+        },
+        {
+            "jp": "大学",
+            "hiragana": "だいがく",
+            "romaji": "daigaku",
+            "pos": "Noun",
+            "eng": "university; college"
+        },
+        {
+            "jp": "大丈夫",
+            "hiragana": "だいじょうぶ",
+            "romaji": "daijoubu",
+            "pos": "Adjective, な-adjective, Adverb",
+            "eng": "OK; okay; alright; problem free"
+        },
+        {
+            "jp": "大好き",
+            "hiragana": "だいすき",
+            "romaji": "daisuki",
+            "pos": "Adjective, な-adjective",
+            "eng": "love; like; like very much"
+        },
+        {
+            "jp": "だんだん",
+            "hiragana": "",
+            "romaji": "dandan",
+            "pos": "Adverb",
+            "eng": "gradually"
+        },
+        {
+            "jp": "誰",
+            "hiragana": "だれ",
+            "romaji": "dare",
+            "pos": "Pronoun",
+            "eng": "who"
+        },
+        {
+            "jp": "誰か",
+            "hiragana": "だれか",
+            "romaji": "dareka",
+            "pos": "Pronoun",
+            "eng": "someone; somebody"
+        },
+        {
+            "jp": "出す",
+            "hiragana": "だす",
+            "romaji": "dasu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to take out; to get out; to put out; to reveal"
+        },
+        {
+            "jp": "出口",
+            "hiragana": "でぐち",
+            "romaji": "deguchi",
+            "pos": "Noun",
+            "eng": "exit; gateway; way out"
+        },
+        {
+            "jp": "出かける",
+            "hiragana": "でかける",
+            "romaji": "dekakeru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to go out; to leave; to depart"
+        },
+        {
+            "jp": "電気",
+            "hiragana": "でんき",
+            "romaji": "denki",
+            "pos": "Noun",
+            "eng": "electricity"
+        },
+        {
+            "jp": "電車",
+            "hiragana": "でんしゃ",
+            "romaji": "densha",
+            "pos": "Noun",
+            "eng": "train; electric train"
+        },
+        {
+            "jp": "電話",
+            "hiragana": "でんわ",
+            "romaji": "denwa",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "telephone (call / device)l; phone call"
+        },
+        {
+            "jp": "デパート",
+            "hiragana": "",
+            "romaji": "depaato",
+            "pos": "Noun, Katakana",
+            "eng": "department store"
+        },
+        {
+            "jp": "出る",
+            "hiragana": "でる",
+            "romaji": "deru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to leave; to exit; to appear; to go out"
+        },
+        {
+            "jp": "ドア",
+            "hiragana": "",
+            "romaji": "doa",
+            "pos": "Noun, Katakana",
+            "eng": "door"
+        },
+        {
+            "jp": "どっち",
+            "hiragana": "",
+            "romaji": "docchi",
+            "pos": "Pronoun",
+            "eng": "which; which one"
+        },
+        {
+            "jp": "どちら",
+            "hiragana": "",
+            "romaji": "dochira",
+            "pos": "Pronoun",
+            "eng": "which of two"
+        },
+        {
+            "jp": "どこ",
+            "hiragana": "",
+            "romaji": "doko",
+            "pos": "Pronoun",
+            "eng": "where; what place​"
+        },
+        {
+            "jp": "どなた",
+            "hiragana": "",
+            "romaji": "donata",
+            "pos": "Noun",
+            "eng": "who"
+        },
+        {
+            "jp": "どの",
+            "hiragana": "",
+            "romaji": "dono",
+            "pos": "Pre-noun adjectival",
+            "eng": "which"
+        },
+        {
+            "jp": "どれ",
+            "hiragana": "",
+            "romaji": "dore",
+            "pos": "Pronoun",
+            "eng": "which (of three or more)​"
+        },
+        {
+            "jp": "どう",
+            "hiragana": "",
+            "romaji": "dou",
+            "pos": "Adverb",
+            "eng": "how; in what way; how about​"
+        },
+        {
+            "jp": "動物",
+            "hiragana": "どうぶつ",
+            "romaji": "doubutsu",
+            "pos": "Noun",
+            "eng": "animal"
+        },
+        {
+            "jp": "どうも",
+            "hiragana": "",
+            "romaji": "doumo",
+            "pos": "Adverb",
+            "eng": "thank you; thanks"
+        },
+        {
+            "jp": "どうぞ",
+            "hiragana": "",
+            "romaji": "douzo",
+            "pos": "Adverb",
+            "eng": "please"
+        },
+        {
+            "jp": "土曜日",
+            "hiragana": "どようび",
+            "romaji": "doyoubi",
+            "pos": "Noun",
+            "eng": "Saturday"
+        },
+        {
+            "jp": "絵",
+            "hiragana": "え",
+            "romaji": "e",
+            "pos": "Noun",
+            "eng": "picture"
+        },
+        {
+            "jp": "ええ",
+            "hiragana": "",
+            "romaji": "ee",
+            "pos": "Noun",
+            "eng": "yes; that is correct; right"
+        },
+        {
+            "jp": "映画",
+            "hiragana": "えいが",
+            "romaji": "eiga",
+            "pos": "Noun",
+            "eng": "movie; film"
+        },
+        {
+            "jp": "映画館",
+            "hiragana": "えいがかん",
+            "romaji": "eigakan",
+            "pos": "Noun",
+            "eng": "movie theater; cinema"
+        },
+        {
+            "jp": "英語",
+            "hiragana": "えいご",
+            "romaji": "eigo",
+            "pos": "Noun",
+            "eng": "English language"
+        },
+        {
+            "jp": "駅",
+            "hiragana": "えき",
+            "romaji": "eki",
+            "pos": "Noun",
+            "eng": "station"
+        },
+        {
+            "jp": "鉛筆",
+            "hiragana": "えんぴつ",
+            "romaji": "enpitsu",
+            "pos": "Noun",
+            "eng": "pencil"
+        },
+        {
+            "jp": "エレベーター",
+            "hiragana": "",
+            "romaji": "erebeetaa",
+            "pos": "Noun, Katakana",
+            "eng": "elevator"
+        }
+    ],
+    2: [
+        {
+            "jp": "フィルム",
+            "hiragana": "",
+            "romaji": "firumu",
+            "pos": "Noun, Katakana",
+            "eng": "film"
+        },
+        {
+            "jp": "フォーク",
+            "hiragana": "",
+            "romaji": "fooku",
+            "pos": "Noun, Katakana",
+            "eng": "fork"
+        },
+        {
+            "jp": "服",
+            "hiragana": "ふく",
+            "romaji": "fuku",
+            "pos": "Noun",
+            "eng": "clothes"
+        },
+        {
+            "jp": "吹く",
+            "hiragana": "ふく",
+            "romaji": "fuku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to blow (of the wind)"
+        },
+        {
+            "jp": "降る",
+            "hiragana": "ふる",
+            "romaji": "furu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to fall"
+        },
+        {
+            "jp": "古い",
+            "hiragana": "ふるい",
+            "romaji": "furui",
+            "pos": "い-adjective",
+            "eng": "old (not used for people)"
+        },
+        {
+            "jp": "二人",
+            "hiragana": "ふたり",
+            "romaji": "futari",
+            "pos": "Noun",
+            "eng": "two people; pair; couple"
+        },
+        {
+            "jp": "二つ",
+            "hiragana": "ふたつ",
+            "romaji": "futatsu",
+            "pos": "Noun, Numeric",
+            "eng": "two; 2"
+        },
+        {
+            "jp": "太い",
+            "hiragana": "ふとい",
+            "romaji": "futoi",
+            "pos": "Adjective, い-adjective",
+            "eng": "fat; thick"
+        },
+        {
+            "jp": "二日",
+            "hiragana": "ふつか",
+            "romaji": "futsuka",
+            "pos": "Noun",
+            "eng": "the second day of the month / 2 days"
+        },
+        {
+            "jp": "封筒",
+            "hiragana": "ふうとう",
+            "romaji": "fuutou",
+            "pos": "Noun",
+            "eng": "envelope"
+        },
+        {
+            "jp": "冬",
+            "hiragana": "ふゆ",
+            "romaji": "fuyu",
+            "pos": "Noun",
+            "eng": "winter"
+        },
+        {
+            "jp": "外国",
+            "hiragana": "がいこく",
+            "romaji": "gaikoku",
+            "pos": "Noun",
+            "eng": "foreign country"
+        },
+        {
+            "jp": "外国人",
+            "hiragana": "がいこくじん",
+            "romaji": "gaikokujin",
+            "pos": "Noun",
+            "eng": "foreigner; foreign citizen; foreign national; alien; non-Japanese"
+        },
+        {
+            "jp": "学校",
+            "hiragana": "がっこう",
+            "romaji": "gakkou",
+            "pos": "Noun",
+            "eng": "school"
+        },
+        {
+            "jp": "学生",
+            "hiragana": "がくせい",
+            "romaji": "gakusei",
+            "pos": "Noun",
+            "eng": "student"
+        },
+        {
+            "jp": "玄関",
+            "hiragana": "げんかん",
+            "romaji": "genkan",
+            "pos": "Noun",
+            "eng": "entrance"
+        },
+        {
+            "jp": "元気",
+            "hiragana": "げんき",
+            "romaji": "genki",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "lively; full of spirit; energetic; healthy"
+        },
+        {
+            "jp": "月曜日",
+            "hiragana": "げつようび",
+            "romaji": "getsuyoubi",
+            "pos": "Noun",
+            "eng": "Monday"
+        },
+        {
+            "jp": "銀行",
+            "hiragana": "ぎんこう",
+            "romaji": "ginkou",
+            "pos": "Noun",
+            "eng": "bank"
+        },
+        {
+            "jp": "ギター",
+            "hiragana": "",
+            "romaji": "gitaa",
+            "pos": "Noun, Katakana",
+            "eng": "guitar"
+        },
+        {
+            "jp": "五",
+            "hiragana": "ご",
+            "romaji": "go",
+            "pos": "Noun, Numeric",
+            "eng": "five; 5"
+        },
+        {
+            "jp": "午後",
+            "hiragana": "ごご",
+            "romaji": "gogo",
+            "pos": "Noun",
+            "eng": "afternoon; p.m."
+        },
+        {
+            "jp": "ご飯",
+            "hiragana": "ごはん",
+            "romaji": "gohan",
+            "pos": "Noun",
+            "eng": "cooked rice, meal"
+        },
+        {
+            "jp": "午前",
+            "hiragana": "ごぜん",
+            "romaji": "gozen",
+            "pos": "Noun",
+            "eng": "morning; a.m."
+        },
+        {
+            "jp": "グラム",
+            "hiragana": "",
+            "romaji": "guramu",
+            "pos": "Noun, Katakana",
+            "eng": "gram"
+        },
+        {
+            "jp": "牛肉",
+            "hiragana": "ぎゅうにく",
+            "romaji": "gyuuniku",
+            "pos": "Noun",
+            "eng": "beef"
+        },
+        {
+            "jp": "牛乳",
+            "hiragana": "ぎゅうにゅう",
+            "romaji": "gyuunyuu",
+            "pos": "Noun",
+            "eng": "(cow's) milk"
+        },
+        {
+            "jp": "歯",
+            "hiragana": "は",
+            "romaji": "ha",
+            "pos": "Noun",
+            "eng": "tooth"
+        },
+        {
+            "jp": "八",
+            "hiragana": "はち",
+            "romaji": "hachi",
+            "pos": "Noun, Numeric",
+            "eng": "eight: 8"
+        },
+        {
+            "jp": "葉書",
+            "hiragana": "はがき",
+            "romaji": "hagaki",
+            "pos": "Noun",
+            "eng": "postcard"
+        },
+        {
+            "jp": "母",
+            "hiragana": "はは",
+            "romaji": "haha",
+            "pos": "Noun",
+            "eng": "mother"
+        },
+        {
+            "jp": "はい",
+            "hiragana": "",
+            "romaji": "hai",
+            "pos": "Noun",
+            "eng": "yes; that is correct​"
+        },
+        {
+            "jp": "入る",
+            "hiragana": "はいる",
+            "romaji": "hairu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to enter; to go into"
+        },
+        {
+            "jp": "灰皿",
+            "hiragana": "はいざら",
+            "romaji": "haizara",
+            "pos": "Noun",
+            "eng": "ashtray"
+        },
+        {
+            "jp": "始まる",
+            "hiragana": "はじまる",
+            "romaji": "hajimaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to begin"
+        },
+        {
+            "jp": "初めて",
+            "hiragana": "はじめて",
+            "romaji": "hajimete",
+            "pos": "Adverb",
+            "eng": "for the first time"
+        },
+        {
+            "jp": "箱",
+            "hiragana": "はこ",
+            "romaji": "hako",
+            "pos": "Noun",
+            "eng": "box; crate"
+        },
+        {
+            "jp": "履く",
+            "hiragana": "はく",
+            "romaji": "haku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to wear, to put on trousers"
+        },
+        {
+            "jp": "半",
+            "hiragana": "はん",
+            "romaji": "han",
+            "pos": "Noun",
+            "eng": "half; semi-; half-past"
+        },
+        {
+            "jp": "花",
+            "hiragana": "はな",
+            "romaji": "hana",
+            "pos": "Noun",
+            "eng": "flower"
+        },
+        {
+            "jp": "鼻",
+            "hiragana": "はな",
+            "romaji": "hana",
+            "pos": "Noun",
+            "eng": "nose"
+        },
+        {
+            "jp": "話",
+            "hiragana": "はなし",
+            "romaji": "hanashi",
+            "pos": "Noun",
+            "eng": "talk; speech; chat; conversation​"
+        },
+        {
+            "jp": "話す",
+            "hiragana": "はなす",
+            "romaji": "hanasu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to speak; to talk; to converse"
+        },
+        {
+            "jp": "半分",
+            "hiragana": "はんぶん",
+            "romaji": "hanbun",
+            "pos": "Noun",
+            "eng": "half"
+        },
+        {
+            "jp": "ハンカチ",
+            "hiragana": "",
+            "romaji": "hankachi",
+            "pos": "Noun, Katakana",
+            "eng": "handkerchief​"
+        },
+        {
+            "jp": "晴れ",
+            "hiragana": "はれ",
+            "romaji": "hare",
+            "pos": "Noun",
+            "eng": "clear weather"
+        },
+        {
+            "jp": "晴れる",
+            "hiragana": "はれる",
+            "romaji": "hareru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to be sunny"
+        },
+        {
+            "jp": "春",
+            "hiragana": "はる",
+            "romaji": "haru",
+            "pos": "Noun",
+            "eng": "spring; springtime"
+        },
+        {
+            "jp": "貼る",
+            "hiragana": "はる",
+            "romaji": "haru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to stick; to paste"
+        },
+        {
+            "jp": "箸",
+            "hiragana": "はし",
+            "romaji": "hashi",
+            "pos": "Noun",
+            "eng": "chopsticks"
+        },
+        {
+            "jp": "橋",
+            "hiragana": "はし",
+            "romaji": "hashi",
+            "pos": "Noun",
+            "eng": "bridge"
+        },
+        {
+            "jp": "走る",
+            "hiragana": "はしる",
+            "romaji": "hashiru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to run"
+        },
+        {
+            "jp": "二十歳",
+            "hiragana": "はたち",
+            "romaji": "hatachi",
+            "pos": "Noun",
+            "eng": "20 years old; twenty years old"
+        },
+        {
+            "jp": "働く",
+            "hiragana": "はたらく",
+            "romaji": "hataraku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to work"
+        },
+        {
+            "jp": "二十日",
+            "hiragana": "はつか",
+            "romaji": "hatsuka",
+            "pos": "Noun",
+            "eng": "twentieth day of the month / 20 days"
+        },
+        {
+            "jp": "速い",
+            "hiragana": "はやい",
+            "romaji": "hayai",
+            "pos": "Adjective, い-adjective",
+            "eng": "fast; quick; hasty; brisk"
+        },
+        {
+            "jp": "早い",
+            "hiragana": "はやい",
+            "romaji": "hayai",
+            "pos": "Adjective, い-adjective",
+            "eng": "fast; early"
+        },
+        {
+            "jp": "辺",
+            "hiragana": "へん",
+            "romaji": "hen",
+            "pos": "Noun",
+            "eng": "area"
+        },
+        {
+            "jp": "下手",
+            "hiragana": "へた",
+            "romaji": "heta",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "unskillful; poor; awkward​"
+        },
+        {
+            "jp": "部屋",
+            "hiragana": "へや",
+            "romaji": "heya",
+            "pos": "Noun",
+            "eng": "room"
+        },
+        {
+            "jp": "左",
+            "hiragana": "ひだり",
+            "romaji": "hidari",
+            "pos": "Noun",
+            "eng": "left; left hand side"
+        },
+        {
+            "jp": "東",
+            "hiragana": "ひがし",
+            "romaji": "higashi",
+            "pos": "Noun",
+            "eng": "east"
+        },
+        {
+            "jp": "飛行機",
+            "hiragana": "ひこうき",
+            "romaji": "hikouki",
+            "pos": "Noun",
+            "eng": "airplane; aircraft"
+        },
+        {
+            "jp": "引く",
+            "hiragana": "ひく",
+            "romaji": "hiku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to pull"
+        },
+        {
+            "jp": "弾く",
+            "hiragana": "ひく",
+            "romaji": "hiku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to play"
+        },
+        {
+            "jp": "低い",
+            "hiragana": "ひくい",
+            "romaji": "hikui",
+            "pos": "い-adjective",
+            "eng": "short,low"
+        },
+        {
+            "jp": "暇",
+            "hiragana": "ひま",
+            "romaji": "hima",
+            "pos": "Noun, な-adjective",
+            "eng": "free time"
+        },
+        {
+            "jp": "広い",
+            "hiragana": "ひろい",
+            "romaji": "hiroi",
+            "pos": "い-adjective",
+            "eng": "spacious; vast; wide"
+        },
+        {
+            "jp": "昼",
+            "hiragana": "ひる",
+            "romaji": "hiru",
+            "pos": "Noun",
+            "eng": "noon; midday; daytime; lunch"
+        },
+        {
+            "jp": "昼ご飯",
+            "hiragana": "ひるごはん",
+            "romaji": "hirugohan",
+            "pos": "Noun",
+            "eng": "lunch"
+        },
+        {
+            "jp": "人",
+            "hiragana": "ひと",
+            "romaji": "hito",
+            "pos": "Noun",
+            "eng": "person; human"
+        },
+        {
+            "jp": "一人",
+            "hiragana": "ひとり",
+            "romaji": "hitori",
+            "pos": "Noun, Adverb",
+            "eng": "one person​; alone; single"
+        },
+        {
+            "jp": "一つ",
+            "hiragana": "ひとつ",
+            "romaji": "hitotsu",
+            "pos": "Noun, Numeric",
+            "eng": "one thing; only"
+        },
+        {
+            "jp": "ほか",
+            "hiragana": "",
+            "romaji": "hoka",
+            "pos": "Noun",
+            "eng": "other (place, thing, person); the rest"
+        },
+        {
+            "jp": "本",
+            "hiragana": "ほん",
+            "romaji": "hon",
+            "pos": "Noun",
+            "eng": "book; volume; script"
+        },
+        {
+            "jp": "本棚",
+            "hiragana": "ほんだな",
+            "romaji": "hondana",
+            "pos": "Noun",
+            "eng": "bookshelf; bookcase"
+        },
+        {
+            "jp": "本当",
+            "hiragana": "ほんとう",
+            "romaji": "hontou",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "truth; reality; actuality; fact"
+        },
+        {
+            "jp": "欲しい",
+            "hiragana": "ほしい",
+            "romaji": "hoshii",
+            "pos": "Adjective, い-adjective",
+            "eng": "want"
+        },
+        {
+            "jp": "細い",
+            "hiragana": "ほそい",
+            "romaji": "hosoi",
+            "pos": "Adjective, い-adjective",
+            "eng": "thin; slender"
+        },
+        {
+            "jp": "ホテル",
+            "hiragana": "",
+            "romaji": "hoteru",
+            "pos": "Noun, Katakana",
+            "eng": "hotel"
+        },
+        {
+            "jp": "百",
+            "hiragana": "ひゃく",
+            "romaji": "hyaku",
+            "pos": "Noun, Numeric",
+            "eng": "100; hundred"
+        },
+        {
+            "jp": "一",
+            "hiragana": "いち",
+            "romaji": "ichi",
+            "pos": "Noun, Prefix, Suffix, Numeric",
+            "eng": "one; best; first; foremost; start"
+        },
+        {
+            "jp": "一番",
+            "hiragana": "いちばん",
+            "romaji": "ichiban",
+            "pos": "Noun, Adverb",
+            "eng": "number one; first; 1st, first place​; best; most​"
+        },
+        {
+            "jp": "一日",
+            "hiragana": "いちにち",
+            "romaji": "ichinichi",
+            "pos": "Noun, Adverbial Noun",
+            "eng": "one day, all day"
+        },
+        {
+            "jp": "家",
+            "hiragana": "いえ",
+            "romaji": "ie",
+            "pos": "Noun",
+            "eng": "house, residence, family"
+        },
+        {
+            "jp": "いかが",
+            "hiragana": "",
+            "romaji": "ikaga",
+            "pos": "Adverb",
+            "eng": "how; in what way; how about​"
+        },
+        {
+            "jp": "池",
+            "hiragana": "いけ",
+            "romaji": "ike",
+            "pos": "Noun",
+            "eng": "pond"
+        },
+        {
+            "jp": "行く",
+            "hiragana": "いく",
+            "romaji": "iku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to go; to move"
+        },
+        {
+            "jp": "いくら",
+            "hiragana": "",
+            "romaji": "ikura",
+            "pos": "Noun, Adverb",
+            "eng": "how much?; how many?​"
+        },
+        {
+            "jp": "いくつ",
+            "hiragana": "",
+            "romaji": "ikutsu",
+            "pos": "Adverb",
+            "eng": "how many?,how old?"
+        },
+        {
+            "jp": "今",
+            "hiragana": "いま",
+            "romaji": "ima",
+            "pos": "Noun, Adverbial Noun",
+            "eng": "now; the present time; soon"
+        },
+        {
+            "jp": "意味",
+            "hiragana": "いみ",
+            "romaji": "imi",
+            "pos": "Noun",
+            "eng": "meaning; significance; sense"
+        },
+        {
+            "jp": "妹",
+            "hiragana": "いもうと",
+            "romaji": "imouto",
+            "pos": "Noun",
+            "eng": "younger sister"
+        },
+        {
+            "jp": "犬",
+            "hiragana": "いぬ",
+            "romaji": "inu",
+            "pos": "Noun",
+            "eng": "dog"
+        },
+        {
+            "jp": "入れる",
+            "hiragana": "いれる",
+            "romaji": "ireru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to put in; to let in; to take in; to bring in; to insert; to install"
+        },
+        {
+            "jp": "入口",
+            "hiragana": "いりぐち",
+            "romaji": "iriguchi",
+            "pos": "Noun",
+            "eng": "entrance; entry; gate"
+        },
+        {
+            "jp": "色",
+            "hiragana": "いろ",
+            "romaji": "iro",
+            "pos": "Noun",
+            "eng": "colour; color"
+        },
+        {
+            "jp": "色々",
+            "hiragana": "いろいろ",
+            "romaji": "iroiro",
+            "pos": "Noun, Adjective, な-adjective, Adverb",
+            "eng": "various"
+        },
+        {
+            "jp": "要る",
+            "hiragana": "いる",
+            "romaji": "iru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to be needed"
+        }
+    ],
+    3: [
+        {
+            "jp": "居る",
+            "hiragana": "いる",
+            "romaji": "iru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to be, to have"
+        },
+        {
+            "jp": "医者",
+            "hiragana": "いしゃ",
+            "romaji": "isha",
+            "pos": "Noun",
+            "eng": "(medical) doctor; physician"
+        },
+        {
+            "jp": "忙しい",
+            "hiragana": "いそがしい",
+            "romaji": "isogashii",
+            "pos": "Adjective, い-adjective",
+            "eng": "busy"
+        },
+        {
+            "jp": "一緒",
+            "hiragana": "いっしょ",
+            "romaji": "issho",
+            "pos": "Noun",
+            "eng": "together; at the same time; same; identical"
+        },
+        {
+            "jp": "椅子",
+            "hiragana": "いす",
+            "romaji": "isu",
+            "pos": "Noun",
+            "eng": "chair"
+        },
+        {
+            "jp": "痛い",
+            "hiragana": "いたい",
+            "romaji": "itai",
+            "pos": "Adjective, い-adjective",
+            "eng": "painful; sore​"
+        },
+        {
+            "jp": "いつ",
+            "hiragana": "",
+            "romaji": "itsu",
+            "pos": "Pronoun",
+            "eng": "when"
+        },
+        {
+            "jp": "五日",
+            "hiragana": "いつか",
+            "romaji": "itsuka",
+            "pos": "Noun",
+            "eng": "the fifth day of the month / 5 days"
+        },
+        {
+            "jp": "五つ",
+            "hiragana": "いつつ",
+            "romaji": "itsutsu",
+            "pos": "Noun, Numeric",
+            "eng": "five; 5"
+        },
+        {
+            "jp": "言う",
+            "hiragana": "いう",
+            "romaji": "iu",
+            "pos": "Verb, Godan verb",
+            "eng": "to say; to call"
+        },
+        {
+            "jp": "嫌",
+            "hiragana": "いや",
+            "romaji": "iya",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "unpleasant"
+        },
+        {
+            "jp": "じゃあ",
+            "hiragana": "",
+            "romaji": "jaa",
+            "pos": "Conjunction",
+            "eng": "then; well; so; well then"
+        },
+        {
+            "jp": "字引",
+            "hiragana": "じびき",
+            "romaji": "jibiki",
+            "pos": "Noun",
+            "eng": "dictionary"
+        },
+        {
+            "jp": "自分",
+            "hiragana": "じぶん",
+            "romaji": "jibun",
+            "pos": "Pronoun",
+            "eng": "myself; yourself; oneself; himself; herself; i; me"
+        },
+        {
+            "jp": "自動車",
+            "hiragana": "じどうしゃ",
+            "romaji": "jidousha",
+            "pos": "Noun",
+            "eng": "automobile; motorcar; motor vehicle; car"
+        },
+        {
+            "jp": "時間",
+            "hiragana": "じかん",
+            "romaji": "jikan",
+            "pos": "Noun",
+            "eng": "time; hour(s)"
+        },
+        {
+            "jp": "辞書",
+            "hiragana": "じしょ",
+            "romaji": "jisho",
+            "pos": "Noun",
+            "eng": "dictionary"
+        },
+        {
+            "jp": "自転車",
+            "hiragana": "じてんしゃ",
+            "romaji": "jitensha",
+            "pos": "Noun",
+            "eng": "bicycle"
+        },
+        {
+            "jp": "丈夫",
+            "hiragana": "じょうぶ",
+            "romaji": "joubu",
+            "pos": "Adjective, な-adjective",
+            "eng": "strong, durable"
+        },
+        {
+            "jp": "上手",
+            "hiragana": "じょうず",
+            "romaji": "jouzu",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "skillful; skilled; proficient; good (at)"
+        },
+        {
+            "jp": "授業",
+            "hiragana": "じゅぎょう",
+            "romaji": "jugyou",
+            "pos": "Noun, Suru verb",
+            "eng": "lesson; class work"
+        },
+        {
+            "jp": "十",
+            "hiragana": "じゅう",
+            "romaji": "juu",
+            "pos": "Noun, Numeric",
+            "eng": "ten; 10"
+        },
+        {
+            "jp": "かばん",
+            "hiragana": "",
+            "romaji": "kaban",
+            "pos": "Noun",
+            "eng": "bag; basket​"
+        },
+        {
+            "jp": "花瓶",
+            "hiragana": "かびん",
+            "romaji": "kabin",
+            "pos": "Noun",
+            "eng": "a vase"
+        },
+        {
+            "jp": "角",
+            "hiragana": "かど",
+            "romaji": "kado",
+            "pos": "Noun",
+            "eng": "a corner; angle​"
+        },
+        {
+            "jp": "帰る",
+            "hiragana": "かえる",
+            "romaji": "kaeru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to go back​"
+        },
+        {
+            "jp": "返す",
+            "hiragana": "かえす",
+            "romaji": "kaesu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to return something"
+        },
+        {
+            "jp": "鍵",
+            "hiragana": "かぎ",
+            "romaji": "kagi",
+            "pos": "Noun",
+            "eng": "key"
+        },
+        {
+            "jp": "階段",
+            "hiragana": "かいだん",
+            "romaji": "kaidan",
+            "pos": "Noun",
+            "eng": "stairs; stairway; staircase"
+        },
+        {
+            "jp": "買い物",
+            "hiragana": "かいもの",
+            "romaji": "kaimono",
+            "pos": "Noun",
+            "eng": "shopping; purchased goods"
+        },
+        {
+            "jp": "会社",
+            "hiragana": "かいしゃ",
+            "romaji": "kaisha",
+            "pos": "Noun",
+            "eng": "company; corporation"
+        },
+        {
+            "jp": "掛かる",
+            "hiragana": "かかる",
+            "romaji": "kakaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to take (a resource, e.g. time or money)"
+        },
+        {
+            "jp": "掛ける",
+            "hiragana": "かける",
+            "romaji": "kakeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to hang up; to make (a call)​;"
+        },
+        {
+            "jp": "書く",
+            "hiragana": "かく",
+            "romaji": "kaku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to write; to compose; to pen; to draw"
+        },
+        {
+            "jp": "カメラ",
+            "hiragana": "",
+            "romaji": "kamera",
+            "pos": "Noun, Katakana",
+            "eng": "camera"
+        },
+        {
+            "jp": "紙",
+            "hiragana": "かみ",
+            "romaji": "kami",
+            "pos": "Noun",
+            "eng": "paper"
+        },
+        {
+            "jp": "漢字",
+            "hiragana": "かんじ",
+            "romaji": "kanji",
+            "pos": "Noun",
+            "eng": "kanji"
+        },
+        {
+            "jp": "カップ",
+            "hiragana": "",
+            "romaji": "kappu",
+            "pos": "Noun, Katakana",
+            "eng": "cup"
+        },
+        {
+            "jp": "体",
+            "hiragana": "からだ",
+            "romaji": "karada",
+            "pos": "Noun",
+            "eng": "body"
+        },
+        {
+            "jp": "辛い",
+            "hiragana": "からい",
+            "romaji": "karai",
+            "pos": "い-adjective",
+            "eng": "spicy"
+        },
+        {
+            "jp": "カレー",
+            "hiragana": "",
+            "romaji": "karee",
+            "pos": "Noun, Katakana",
+            "eng": "curry"
+        },
+        {
+            "jp": "カレンダー",
+            "hiragana": "",
+            "romaji": "karendaa",
+            "pos": "Noun, Katakana",
+            "eng": "calendar"
+        },
+        {
+            "jp": "借りる",
+            "hiragana": "かりる",
+            "romaji": "kariru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to borrow"
+        },
+        {
+            "jp": "軽い",
+            "hiragana": "かるい",
+            "romaji": "karui",
+            "pos": "Adjective, い-adjective",
+            "eng": "light"
+        },
+        {
+            "jp": "傘",
+            "hiragana": "かさ",
+            "romaji": "kasa",
+            "pos": "Noun",
+            "eng": "umbrella"
+        },
+        {
+            "jp": "貸す",
+            "hiragana": "かす",
+            "romaji": "kasu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to lend; to loan"
+        },
+        {
+            "jp": "方",
+            "hiragana": "かた",
+            "romaji": "kata",
+            "pos": "Noun",
+            "eng": "way of doing something"
+        },
+        {
+            "jp": "家庭",
+            "hiragana": "かてい",
+            "romaji": "katei",
+            "pos": "Noun",
+            "eng": "household"
+        },
+        {
+            "jp": "買う",
+            "hiragana": "かう",
+            "romaji": "kau",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to buy; to purchase"
+        },
+        {
+            "jp": "川",
+            "hiragana": "かわ",
+            "romaji": "kawa",
+            "pos": "Noun, Suffix",
+            "eng": "river; stream​"
+        },
+        {
+            "jp": "可愛い",
+            "hiragana": "かわいい",
+            "romaji": "kawaii",
+            "pos": "Adjective, い-adjective",
+            "eng": "cute"
+        },
+        {
+            "jp": "火曜日",
+            "hiragana": "かようび",
+            "romaji": "kayoubi",
+            "pos": "Noun",
+            "eng": "Tuesday"
+        },
+        {
+            "jp": "風",
+            "hiragana": "かぜ",
+            "romaji": "kaze",
+            "pos": "Noun",
+            "eng": "wind"
+        },
+        {
+            "jp": "風邪",
+            "hiragana": "かぜ",
+            "romaji": "kaze",
+            "pos": "Noun",
+            "eng": "a cold"
+        },
+        {
+            "jp": "家族",
+            "hiragana": "かぞく",
+            "romaji": "kazoku",
+            "pos": "Noun",
+            "eng": "family; members of a family"
+        },
+        {
+            "jp": "警官",
+            "hiragana": "けいかん",
+            "romaji": "keikan",
+            "pos": "Noun",
+            "eng": "policeman; police officer"
+        },
+        {
+            "jp": "結婚",
+            "hiragana": "けっこん",
+            "romaji": "kekkon",
+            "pos": "Noun, Suru verb",
+            "eng": "marriage"
+        },
+        {
+            "jp": "結構",
+            "hiragana": "けっこう",
+            "romaji": "kekkou",
+            "pos": "Noun, Adverbial Noun, Adjective, な-adjective, Adverb",
+            "eng": "splendid, enough"
+        },
+        {
+            "jp": "今朝",
+            "hiragana": "けさ",
+            "romaji": "kesa",
+            "pos": "Noun, Temporal noun",
+            "eng": "this morning"
+        },
+        {
+            "jp": "消す",
+            "hiragana": "けす",
+            "romaji": "kesu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to erase, to turn off power"
+        },
+        {
+            "jp": "木",
+            "hiragana": "き",
+            "romaji": "ki",
+            "pos": "Noun",
+            "eng": "tree; shrub; bush; wood; timber"
+        },
+        {
+            "jp": "消える",
+            "hiragana": "きえる",
+            "romaji": "kieru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to disappear"
+        },
+        {
+            "jp": "黄色い",
+            "hiragana": "きいろい",
+            "romaji": "kiiroi",
+            "pos": "Adjective, い-adjective",
+            "eng": "yellow"
+        },
+        {
+            "jp": "聞く",
+            "hiragana": "きく",
+            "romaji": "kiku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to hear; to listen (to music); to ask; to learn of"
+        },
+        {
+            "jp": "昨日",
+            "hiragana": "きのう",
+            "romaji": "kinou",
+            "pos": "Noun",
+            "eng": "yesterday"
+        },
+        {
+            "jp": "金曜日",
+            "hiragana": "きんようび",
+            "romaji": "kinyoubi",
+            "pos": "Noun",
+            "eng": "Friday"
+        },
+        {
+            "jp": "切符",
+            "hiragana": "きっぷ",
+            "romaji": "kippu",
+            "pos": "Noun",
+            "eng": "ticket"
+        },
+        {
+            "jp": "嫌い",
+            "hiragana": "きらい",
+            "romaji": "kirai",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "hate"
+        },
+        {
+            "jp": "綺麗",
+            "hiragana": "きれい",
+            "romaji": "kirei",
+            "pos": "Adjective, な-adjective",
+            "eng": "pretty; lovely; beautiful"
+        },
+        {
+            "jp": "キログラム",
+            "hiragana": "",
+            "romaji": "kiro guramu",
+            "pos": "Noun, Katakana",
+            "eng": "kilogram"
+        },
+        {
+            "jp": "キロメートル",
+            "hiragana": "",
+            "romaji": "kiro meetoru",
+            "pos": "Noun, Katakana",
+            "eng": "kilometer"
+        },
+        {
+            "jp": "切る",
+            "hiragana": "きる",
+            "romaji": "kiru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to cut"
+        },
+        {
+            "jp": "着る",
+            "hiragana": "きる",
+            "romaji": "kiru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to wear"
+        },
+        {
+            "jp": "喫茶店",
+            "hiragana": "きっさてん",
+            "romaji": "kissaten",
+            "pos": "Noun",
+            "eng": "coffee shop; tearoom; cafe"
+        },
+        {
+            "jp": "北",
+            "hiragana": "きた",
+            "romaji": "kita",
+            "pos": "Noun",
+            "eng": "north"
+        },
+        {
+            "jp": "汚い",
+            "hiragana": "きたない",
+            "romaji": "kitanai",
+            "pos": "Adjective, い-adjective",
+            "eng": "dirty"
+        },
+        {
+            "jp": "切手",
+            "hiragana": "きって",
+            "romaji": "kitte",
+            "pos": "Noun",
+            "eng": "stamp (postage)"
+        },
+        {
+            "jp": "こっち",
+            "hiragana": "",
+            "romaji": "kocchi",
+            "pos": "Noun",
+            "eng": "this person or way"
+        },
+        {
+            "jp": "こちら",
+            "hiragana": "",
+            "romaji": "kochira",
+            "pos": "Noun",
+            "eng": "this way; this direction​"
+        },
+        {
+            "jp": "子供",
+            "hiragana": "こども",
+            "romaji": "kodomo",
+            "pos": "Noun",
+            "eng": "child"
+        },
+        {
+            "jp": "声",
+            "hiragana": "こえ",
+            "romaji": "koe",
+            "pos": "Noun",
+            "eng": "voice"
+        },
+        {
+            "jp": "ここ",
+            "hiragana": "",
+            "romaji": "koko",
+            "pos": "Pronoun",
+            "eng": "here; this place"
+        },
+        {
+            "jp": "九日",
+            "hiragana": "ここのか",
+            "romaji": "kokonoka",
+            "pos": "Noun",
+            "eng": "ninth day of the month / 9 days"
+        },
+        {
+            "jp": "九つ",
+            "hiragana": "ここのつ",
+            "romaji": "kokonotsu",
+            "pos": "Noun, Numeric",
+            "eng": "nine; 9"
+        },
+        {
+            "jp": "困る",
+            "hiragana": "こまる",
+            "romaji": "komaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to be troubled"
+        },
+        {
+            "jp": "今晩",
+            "hiragana": "こんばん",
+            "romaji": "konban",
+            "pos": "Noun",
+            "eng": "tonight; this evening"
+        },
+        {
+            "jp": "今月",
+            "hiragana": "こんげつ",
+            "romaji": "kongetsu",
+            "pos": "Noun",
+            "eng": "this month"
+        },
+        {
+            "jp": "こんな",
+            "hiragana": "",
+            "romaji": "konna",
+            "pos": "Pre-noun adjectival",
+            "eng": "such; like this​"
+        },
+        {
+            "jp": "この",
+            "hiragana": "",
+            "romaji": "kono",
+            "pos": "Pre-noun adjectival",
+            "eng": "this​"
+        },
+        {
+            "jp": "今週",
+            "hiragana": "こんしゅう",
+            "romaji": "konshuu",
+            "pos": "Noun",
+            "eng": "this week"
+        },
+        {
+            "jp": "コーヒー",
+            "hiragana": "",
+            "romaji": "koohii",
+            "pos": "Noun, Katakana",
+            "eng": "Coffee"
+        },
+        {
+            "jp": "コート",
+            "hiragana": "",
+            "romaji": "kooto",
+            "pos": "Noun, Katakana",
+            "eng": "coat"
+        },
+        {
+            "jp": "コピー",
+            "hiragana": "",
+            "romaji": "kopii",
+            "pos": "Noun, Suru verb, Katakana",
+            "eng": "copy; photocopy"
+        },
+        {
+            "jp": "コップ",
+            "hiragana": "",
+            "romaji": "koppu",
+            "pos": "Noun, Katakana",
+            "eng": "glass (drinking vessel); tumbler​"
+        },
+        {
+            "jp": "これ",
+            "hiragana": "",
+            "romaji": "kore",
+            "pos": "Pronoun",
+            "eng": "this"
+        },
+        {
+            "jp": "答える",
+            "hiragana": "こたえる",
+            "romaji": "kotaeru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to answer"
+        },
+        {
+            "jp": "言葉",
+            "hiragana": "ことば",
+            "romaji": "kotoba",
+            "pos": "Noun",
+            "eng": "word; words"
+        },
+        {
+            "jp": "今年",
+            "hiragana": "ことし",
+            "romaji": "kotoshi",
+            "pos": "Noun",
+            "eng": "this year"
+        },
+        {
+            "jp": "交番",
+            "hiragana": "こうばん",
+            "romaji": "kouban",
+            "pos": "Noun",
+            "eng": "police box"
+        },
+        {
+            "jp": "紅茶",
+            "hiragana": "こうちゃ",
+            "romaji": "koucha",
+            "pos": "Noun",
+            "eng": "black tea"
+        }
+    ],
+    4: [
+        {
+            "jp": "公園",
+            "hiragana": "こうえん",
+            "romaji": "kouen",
+            "pos": "Noun",
+            "eng": "park"
+        },
+        {
+            "jp": "交差点",
+            "hiragana": "こうさてん",
+            "romaji": "kousaten",
+            "pos": "Noun",
+            "eng": "intersection"
+        },
+        {
+            "jp": "口",
+            "hiragana": "くち",
+            "romaji": "kuchi",
+            "pos": "Noun",
+            "eng": "mouth, opening"
+        },
+        {
+            "jp": "果物",
+            "hiragana": "くだもの",
+            "romaji": "kudamono",
+            "pos": "Noun",
+            "eng": "fruit"
+        },
+        {
+            "jp": "下さい",
+            "hiragana": "ください",
+            "romaji": "kudasai",
+            "pos": "Expression",
+            "eng": "please"
+        },
+        {
+            "jp": "曇り",
+            "hiragana": "くもり",
+            "romaji": "kumori",
+            "pos": "Noun",
+            "eng": "cloudiness; cloudy weather"
+        },
+        {
+            "jp": "曇る",
+            "hiragana": "くもる",
+            "romaji": "kumoru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to become cloudy, to become dim"
+        },
+        {
+            "jp": "国",
+            "hiragana": "くに",
+            "romaji": "kuni",
+            "pos": "Noun",
+            "eng": "country; state; region"
+        },
+        {
+            "jp": "暗い",
+            "hiragana": "くらい",
+            "romaji": "kurai",
+            "pos": "Adjective, い-adjective",
+            "eng": "dark; gloomy; murky"
+        },
+        {
+            "jp": "クラス",
+            "hiragana": "",
+            "romaji": "kurasu",
+            "pos": "Noun, Katakana",
+            "eng": "class"
+        },
+        {
+            "jp": "黒",
+            "hiragana": "くろ",
+            "romaji": "kuro",
+            "pos": "Noun",
+            "eng": "black"
+        },
+        {
+            "jp": "黒い",
+            "hiragana": "くろい",
+            "romaji": "kuroi",
+            "pos": "い-adjective",
+            "eng": "black"
+        },
+        {
+            "jp": "来る",
+            "hiragana": "くる",
+            "romaji": "kuru",
+            "pos": "Verb, Intransitive verb",
+            "eng": "to come"
+        },
+        {
+            "jp": "車",
+            "hiragana": "くるま",
+            "romaji": "kuruma",
+            "pos": "Noun",
+            "eng": "car; automobile; vehicle"
+        },
+        {
+            "jp": "薬",
+            "hiragana": "くすり",
+            "romaji": "kusuri",
+            "pos": "Noun",
+            "eng": "medicine"
+        },
+        {
+            "jp": "靴",
+            "hiragana": "くつ",
+            "romaji": "kutsu",
+            "pos": "Noun",
+            "eng": "shoes"
+        },
+        {
+            "jp": "靴下",
+            "hiragana": "くつした",
+            "romaji": "kutsushita",
+            "pos": "Noun",
+            "eng": "socks"
+        },
+        {
+            "jp": "去年",
+            "hiragana": "きょねん",
+            "romaji": "kyonen",
+            "pos": "Noun",
+            "eng": "last year"
+        },
+        {
+            "jp": "今日",
+            "hiragana": "きょう",
+            "romaji": "kyou",
+            "pos": "Noun, Temporal noun",
+            "eng": "today; this day"
+        },
+        {
+            "jp": "兄弟",
+            "hiragana": "きょうだい",
+            "romaji": "kyoudai",
+            "pos": "Noun",
+            "eng": "siblings; brothers and sisters​; mate"
+        },
+        {
+            "jp": "教室",
+            "hiragana": "きょうしつ",
+            "romaji": "kyoushitsu",
+            "pos": "Noun",
+            "eng": "classroom"
+        },
+        {
+            "jp": "九",
+            "hiragana": "きゅう",
+            "romaji": "kyuu",
+            "pos": "Noun, Numeric",
+            "eng": "nine; 9"
+        },
+        {
+            "jp": "マッチ",
+            "hiragana": "",
+            "romaji": "macchi",
+            "pos": "Noun, Katakana",
+            "eng": "match"
+        },
+        {
+            "jp": "町",
+            "hiragana": "まち",
+            "romaji": "machi",
+            "pos": "Noun",
+            "eng": "town; block; neighborhood"
+        },
+        {
+            "jp": "窓",
+            "hiragana": "まど",
+            "romaji": "mado",
+            "pos": "Noun",
+            "eng": "window"
+        },
+        {
+            "jp": "前",
+            "hiragana": "まえ",
+            "romaji": "mae",
+            "pos": "Noun, Suffix",
+            "eng": "previous; before; in front; ago"
+        },
+        {
+            "jp": "曲がる",
+            "hiragana": "まがる",
+            "romaji": "magaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to turn, to bend"
+        },
+        {
+            "jp": "毎朝",
+            "hiragana": "まいあさ",
+            "romaji": "maiasa",
+            "pos": "Noun",
+            "eng": "every morning"
+        },
+        {
+            "jp": "毎晩",
+            "hiragana": "まいばん",
+            "romaji": "maiban",
+            "pos": "Noun",
+            "eng": "every night"
+        },
+        {
+            "jp": "毎日",
+            "hiragana": "まいにち",
+            "romaji": "mainichi",
+            "pos": "Noun",
+            "eng": "every day"
+        },
+        {
+            "jp": "毎週",
+            "hiragana": "まいしゅう",
+            "romaji": "maishuu",
+            "pos": "Noun",
+            "eng": "every week"
+        },
+        {
+            "jp": "毎年",
+            "hiragana": "/ まいとし / まいねん",
+            "romaji": "maitoshi mainen",
+            "pos": "Noun",
+            "eng": "every year; yearly; annually"
+        },
+        {
+            "jp": "毎月",
+            "hiragana": "まいつき",
+            "romaji": "maitsuki",
+            "pos": "Noun",
+            "eng": "every month; monthly"
+        },
+        {
+            "jp": "万",
+            "hiragana": "まん",
+            "romaji": "man",
+            "pos": "Noun, Numeric",
+            "eng": "10,000; ten thousand"
+        },
+        {
+            "jp": "万年筆",
+            "hiragana": "まんねんひつ",
+            "romaji": "mannenhitsu",
+            "pos": "Noun",
+            "eng": "fountain pen"
+        },
+        {
+            "jp": "丸い",
+            "hiragana": "まるい",
+            "romaji": "marui",
+            "pos": "Adjective, い-adjective",
+            "eng": "round,circular"
+        },
+        {
+            "jp": "真っ直ぐ",
+            "hiragana": "まっすぐ",
+            "romaji": "massugu",
+            "pos": "Noun, Adjective, な-adjective, Adverb",
+            "eng": "straight ahead,direct"
+        },
+        {
+            "jp": "待つ",
+            "hiragana": "まつ",
+            "romaji": "matsu",
+            "pos": "Verb, Godan verb, Intransitive verb, Transitive verb",
+            "eng": "to wait​"
+        },
+        {
+            "jp": "不味い",
+            "hiragana": "まずい",
+            "romaji": "mazui",
+            "pos": "Adjective, い-adjective",
+            "eng": "unpleasant"
+        },
+        {
+            "jp": "目",
+            "hiragana": "め",
+            "romaji": "me",
+            "pos": "Noun",
+            "eng": "eye"
+        },
+        {
+            "jp": "メートル",
+            "hiragana": "",
+            "romaji": "meetoru",
+            "pos": "Noun, Katakana",
+            "eng": "metre; meter"
+        },
+        {
+            "jp": "眼鏡",
+            "hiragana": "めがね",
+            "romaji": "megane",
+            "pos": "Noun",
+            "eng": "glasses"
+        },
+        {
+            "jp": "道",
+            "hiragana": "みち",
+            "romaji": "michi",
+            "pos": "Noun",
+            "eng": "road; street"
+        },
+        {
+            "jp": "緑",
+            "hiragana": "みどり",
+            "romaji": "midori",
+            "pos": "Noun",
+            "eng": "green"
+        },
+        {
+            "jp": "磨く",
+            "hiragana": "みがく",
+            "romaji": "migaku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to polish; to shine; to brush (e.g. teeth)"
+        },
+        {
+            "jp": "右",
+            "hiragana": "みぎ",
+            "romaji": "migi",
+            "pos": "Noun",
+            "eng": "right; right hand side"
+        },
+        {
+            "jp": "短い",
+            "hiragana": "みじかい",
+            "romaji": "mijikai",
+            "pos": "Adjective, い-adjective",
+            "eng": "short"
+        },
+        {
+            "jp": "三日",
+            "hiragana": "みっか",
+            "romaji": "mikka",
+            "pos": "Noun",
+            "eng": "the third day of the month / 3 days"
+        },
+        {
+            "jp": "耳",
+            "hiragana": "みみ",
+            "romaji": "mimi",
+            "pos": "Noun",
+            "eng": "ear; hearing"
+        },
+        {
+            "jp": "南",
+            "hiragana": "みなみ",
+            "romaji": "minami",
+            "pos": "Noun",
+            "eng": "south"
+        },
+        {
+            "jp": "皆さん",
+            "hiragana": "みなさん",
+            "romaji": "minasan",
+            "pos": "Noun",
+            "eng": "everyone"
+        },
+        {
+            "jp": "みんな",
+            "hiragana": "",
+            "romaji": "minna",
+            "pos": "Noun, Adverb",
+            "eng": "all; everyone; everybody"
+        },
+        {
+            "jp": "見る",
+            "hiragana": "みる",
+            "romaji": "miru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to see; to look; to watch; to view; to observe"
+        },
+        {
+            "jp": "店",
+            "hiragana": "みせ",
+            "romaji": "mise",
+            "pos": "Noun",
+            "eng": "store; shop; establishment; restaurant"
+        },
+        {
+            "jp": "見せる",
+            "hiragana": "みせる",
+            "romaji": "miseru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to show; to display"
+        },
+        {
+            "jp": "三つ",
+            "hiragana": "みっつ",
+            "romaji": "mittsu",
+            "pos": "Noun, Numeric",
+            "eng": "three; 3"
+        },
+        {
+            "jp": "水",
+            "hiragana": "みず",
+            "romaji": "mizu",
+            "pos": "Noun",
+            "eng": "water; fluid; liquid​"
+        },
+        {
+            "jp": "木曜日",
+            "hiragana": "もくようび",
+            "romaji": "mokuyoubi",
+            "pos": "Noun",
+            "eng": "Thursday"
+        },
+        {
+            "jp": "門",
+            "hiragana": "もん",
+            "romaji": "mon",
+            "pos": "Noun",
+            "eng": "gate"
+        },
+        {
+            "jp": "問題",
+            "hiragana": "もんだい",
+            "romaji": "mondai",
+            "pos": "Noun",
+            "eng": "problem; question (e.g. on a test)"
+        },
+        {
+            "jp": "物",
+            "hiragana": "もの",
+            "romaji": "mono",
+            "pos": "Noun",
+            "eng": "thing"
+        },
+        {
+            "jp": "持つ",
+            "hiragana": "もつ",
+            "romaji": "motsu",
+            "pos": "Verb, Godan verb",
+            "eng": "to hold"
+        },
+        {
+            "jp": "もっと",
+            "hiragana": "",
+            "romaji": "motto",
+            "pos": "Adverb",
+            "eng": "more; longer; further"
+        },
+        {
+            "jp": "もう一度",
+            "hiragana": "もういちど",
+            "romaji": "mouichido",
+            "pos": "Expression",
+            "eng": "once more; again"
+        },
+        {
+            "jp": "六日",
+            "hiragana": "むいか",
+            "romaji": "muika",
+            "pos": "Noun",
+            "eng": "sixth day of the month / 6 days"
+        },
+        {
+            "jp": "向こう",
+            "hiragana": "むこう",
+            "romaji": "mukou",
+            "pos": "Noun",
+            "eng": "over there"
+        },
+        {
+            "jp": "村",
+            "hiragana": "むら",
+            "romaji": "mura",
+            "pos": "Noun",
+            "eng": "village"
+        },
+        {
+            "jp": "六つ",
+            "hiragana": "むっつ",
+            "romaji": "muttsu",
+            "pos": "Noun, Numeric",
+            "eng": "six; 6"
+        },
+        {
+            "jp": "難しい",
+            "hiragana": "むずかしい",
+            "romaji": "muzukashii",
+            "pos": "Adjective, い-adjective",
+            "eng": "difficult"
+        },
+        {
+            "jp": "長い",
+            "hiragana": "ながい",
+            "romaji": "nagai",
+            "pos": "Adjective, い-adjective",
+            "eng": "long (distance)​; long (time); lengthy."
+        },
+        {
+            "jp": "ナイフ",
+            "hiragana": "",
+            "romaji": "naifu",
+            "pos": "Noun, Katakana",
+            "eng": "knife"
+        },
+        {
+            "jp": "中",
+            "hiragana": "なか",
+            "romaji": "naka",
+            "pos": "Noun",
+            "eng": "inside; in; within; center"
+        },
+        {
+            "jp": "鳴く",
+            "hiragana": "なく",
+            "romaji": "naku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "animal noise. to chirp"
+        },
+        {
+            "jp": "無くす",
+            "hiragana": "なくす",
+            "romaji": "nakusu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to lose (something)"
+        },
+        {
+            "jp": "名前",
+            "hiragana": "なまえ",
+            "romaji": "namae",
+            "pos": "Noun",
+            "eng": "name; full name; given name"
+        },
+        {
+            "jp": "七つ",
+            "hiragana": "ななつ",
+            "romaji": "nanatsu",
+            "pos": "Noun, Numeric",
+            "eng": "seven; 7"
+        },
+        {
+            "jp": "何",
+            "hiragana": "なに",
+            "romaji": "nani",
+            "pos": "Noun, Pronoun, Prefix",
+            "eng": "what"
+        },
+        {
+            "jp": "七日",
+            "hiragana": "なのか",
+            "romaji": "nanoka",
+            "pos": "Noun",
+            "eng": "seventh day of the month / 7 days"
+        },
+        {
+            "jp": "並べる",
+            "hiragana": "ならべる",
+            "romaji": "naraberu",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to line up,to set up"
+        },
+        {
+            "jp": "並ぶ",
+            "hiragana": "ならぶ",
+            "romaji": "narabu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to line up,to stand in a line"
+        },
+        {
+            "jp": "習う",
+            "hiragana": "ならう",
+            "romaji": "narau",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to be taught; to learn (from a teacher)"
+        },
+        {
+            "jp": "夏",
+            "hiragana": "なつ",
+            "romaji": "natsu",
+            "pos": "Noun",
+            "eng": "summer"
+        },
+        {
+            "jp": "夏休み",
+            "hiragana": "なつやすみ",
+            "romaji": "natsuyasumi",
+            "pos": "Noun",
+            "eng": "summer vacation; summer holiday"
+        },
+        {
+            "jp": "何故",
+            "hiragana": "なぜ",
+            "romaji": "naze",
+            "pos": "Adverb",
+            "eng": "why; how"
+        },
+        {
+            "jp": "猫",
+            "hiragana": "ねこ",
+            "romaji": "neko",
+            "pos": "Noun",
+            "eng": "cat"
+        },
+        {
+            "jp": "ネクタイ",
+            "hiragana": "",
+            "romaji": "nekutai",
+            "pos": "Noun, Katakana",
+            "eng": "tie; necktie"
+        },
+        {
+            "jp": "寝る",
+            "hiragana": "ねる",
+            "romaji": "neru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to sleep; to go to bed; to lie down"
+        },
+        {
+            "jp": "二",
+            "hiragana": "に",
+            "romaji": "ni",
+            "pos": "Noun, Numeric",
+            "eng": "two; 2"
+        },
+        {
+            "jp": "日曜日",
+            "hiragana": "にちようび",
+            "romaji": "nichiyoubi",
+            "pos": "Noun",
+            "eng": "Sunday"
+        },
+        {
+            "jp": "賑やか",
+            "hiragana": "にぎやか",
+            "romaji": "nigiyaka",
+            "pos": "Adjective, な-adjective",
+            "eng": "bustling,busy"
+        },
+        {
+            "jp": "日記",
+            "hiragana": "にっき",
+            "romaji": "nikki",
+            "pos": "Noun",
+            "eng": "diary; journal"
+        },
+        {
+            "jp": "肉",
+            "hiragana": "にく",
+            "romaji": "niku",
+            "pos": "Noun",
+            "eng": "meat"
+        },
+        {
+            "jp": "荷物",
+            "hiragana": "にもつ",
+            "romaji": "nimotsu",
+            "pos": "Noun",
+            "eng": "luggage; baggage"
+        },
+        {
+            "jp": "西",
+            "hiragana": "にし",
+            "romaji": "nishi",
+            "pos": "Noun",
+            "eng": "west"
+        },
+        {
+            "jp": "庭",
+            "hiragana": "にわ",
+            "romaji": "niwa",
+            "pos": "Noun",
+            "eng": "garden"
+        },
+        {
+            "jp": "登る",
+            "hiragana": "のぼる",
+            "romaji": "noboru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to climb"
+        },
+        {
+            "jp": "飲み物",
+            "hiragana": "のみもの",
+            "romaji": "nomimono",
+            "pos": "Noun",
+            "eng": "drink; beverage"
+        },
+        {
+            "jp": "飲む",
+            "hiragana": "のむ",
+            "romaji": "nomu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to drink"
+        },
+        {
+            "jp": "ノート",
+            "hiragana": "",
+            "romaji": "nooto",
+            "pos": "Noun, Katakana",
+            "eng": "notebook"
+        },
+        {
+            "jp": "乗る",
+            "hiragana": "のる",
+            "romaji": "noru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to get on (train, plane, bus, ship, etc.)"
+        }
+    ],
+    5: [
+        {
+            "jp": "脱ぐ",
+            "hiragana": "ぬぐ",
+            "romaji": "nugu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to take off clothes"
+        },
+        {
+            "jp": "温い",
+            "hiragana": "ぬるい",
+            "romaji": "nurui",
+            "pos": "Adjective, い-adjective",
+            "eng": "luke warm"
+        },
+        {
+            "jp": "ニュース",
+            "hiragana": "",
+            "romaji": "nyuusu",
+            "pos": "Noun, Katakana",
+            "eng": "news"
+        },
+        {
+            "jp": "おばあさん",
+            "hiragana": "",
+            "romaji": "obaasan",
+            "pos": "Noun",
+            "eng": "grandmother"
+        },
+        {
+            "jp": "伯母さん",
+            "hiragana": "おばさん",
+            "romaji": "obasan",
+            "pos": "Noun",
+            "eng": "aunt; old lady"
+        },
+        {
+            "jp": "お弁当",
+            "hiragana": "おべんとう",
+            "romaji": "obentou",
+            "pos": "Noun",
+            "eng": "lunch box; Japanese box lunch"
+        },
+        {
+            "jp": "覚える",
+            "hiragana": "おぼえる",
+            "romaji": "oboeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to remember"
+        },
+        {
+            "jp": "お茶",
+            "hiragana": "おちゃ",
+            "romaji": "ocha",
+            "pos": "Noun",
+            "eng": "tea"
+        },
+        {
+            "jp": "お風呂",
+            "hiragana": "おふろ",
+            "romaji": "ofuro",
+            "pos": "Noun",
+            "eng": "bath"
+        },
+        {
+            "jp": "美味しい",
+            "hiragana": "おいしい",
+            "romaji": "oishii",
+            "pos": "い-adjective",
+            "eng": "delicious"
+        },
+        {
+            "jp": "伯父さん",
+            "hiragana": "おじさん",
+            "romaji": "ojisan",
+            "pos": "Noun",
+            "eng": "uncle; old man; mister"
+        },
+        {
+            "jp": "お母さん",
+            "hiragana": "おかあさん",
+            "romaji": "okaasan",
+            "pos": "Noun",
+            "eng": "mother; mom; mum; ma"
+        },
+        {
+            "jp": "お金",
+            "hiragana": "おかね",
+            "romaji": "okane",
+            "pos": "Noun",
+            "eng": "money"
+        },
+        {
+            "jp": "お菓子",
+            "hiragana": "おかし",
+            "romaji": "okashi",
+            "pos": "Noun",
+            "eng": "confections; sweets; candy"
+        },
+        {
+            "jp": "起きる",
+            "hiragana": "おきる",
+            "romaji": "okiru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to get up; to wake up"
+        },
+        {
+            "jp": "置く",
+            "hiragana": "おく",
+            "romaji": "oku",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to put; to place​"
+        },
+        {
+            "jp": "奥さん",
+            "hiragana": "おくさん",
+            "romaji": "okusan",
+            "pos": "Noun",
+            "eng": "wife; your wife; his wife"
+        },
+        {
+            "jp": "お巡りさん",
+            "hiragana": "おまわりさん",
+            "romaji": "omawari san",
+            "pos": "Noun",
+            "eng": "police officer (friendly term for policeman)"
+        },
+        {
+            "jp": "重い",
+            "hiragana": "おもい",
+            "romaji": "omoi",
+            "pos": "い-adjective",
+            "eng": "heavy"
+        },
+        {
+            "jp": "面白い",
+            "hiragana": "おもしろい",
+            "romaji": "omoshiroi",
+            "pos": "Adjective, い-adjective",
+            "eng": "interesting"
+        },
+        {
+            "jp": "同じ",
+            "hiragana": "おなじ",
+            "romaji": "onaji",
+            "pos": "Noun, Adverb",
+            "eng": "same"
+        },
+        {
+            "jp": "お腹",
+            "hiragana": "おなか",
+            "romaji": "onaka",
+            "pos": "Noun",
+            "eng": "stomach"
+        },
+        {
+            "jp": "お姉さん",
+            "hiragana": "おねえさん",
+            "romaji": "oneesan",
+            "pos": "Noun",
+            "eng": "elder sister; young lady; miss; ma'am"
+        },
+        {
+            "jp": "音楽",
+            "hiragana": "おんがく",
+            "romaji": "ongaku",
+            "pos": "Noun",
+            "eng": "music"
+        },
+        {
+            "jp": "お兄さん",
+            "hiragana": "おにいさん",
+            "romaji": "oniisan",
+            "pos": "Noun",
+            "eng": "older brother; elder brother; young man; buddy"
+        },
+        {
+            "jp": "女",
+            "hiragana": "おんな",
+            "romaji": "onna",
+            "pos": "Noun, Prefix",
+            "eng": "woman; female sex"
+        },
+        {
+            "jp": "女の子",
+            "hiragana": "おんなのこ",
+            "romaji": "onnanoko",
+            "pos": "Noun, Expression",
+            "eng": "girl; daughter; young women"
+        },
+        {
+            "jp": "多い",
+            "hiragana": "おおい",
+            "romaji": "ooi",
+            "pos": "Adjective, い-adjective",
+            "eng": "many; numerous; a lot; large quantity; frequent"
+        },
+        {
+            "jp": "大きい",
+            "hiragana": "おおきい",
+            "romaji": "ookii",
+            "pos": "Adjective, い-adjective",
+            "eng": "big; large; great; important"
+        },
+        {
+            "jp": "大きな",
+            "hiragana": "おおきな",
+            "romaji": "ookina",
+            "pos": "Pre-noun adjectival",
+            "eng": "big; large; great​"
+        },
+        {
+            "jp": "大勢",
+            "hiragana": "おおぜい",
+            "romaji": "oozei",
+            "pos": "Noun",
+            "eng": "crowd of people; great number of people"
+        },
+        {
+            "jp": "降りる",
+            "hiragana": "おりる",
+            "romaji": "oriru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to get off"
+        },
+        {
+            "jp": "お酒",
+            "hiragana": "おさけ",
+            "romaji": "osake",
+            "pos": "Noun",
+            "eng": "alcohol"
+        },
+        {
+            "jp": "お皿",
+            "hiragana": "おさら",
+            "romaji": "osara",
+            "pos": "Noun",
+            "eng": "plate, dish"
+        },
+        {
+            "jp": "教える",
+            "hiragana": "おしえる",
+            "romaji": "oshieru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to teach"
+        },
+        {
+            "jp": "遅い",
+            "hiragana": "おそい",
+            "romaji": "osoi",
+            "pos": "Adjective, い-adjective",
+            "eng": "slow; time-consuming; late"
+        },
+        {
+            "jp": "押す",
+            "hiragana": "おす",
+            "romaji": "osu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to push; to press​"
+        },
+        {
+            "jp": "お手洗い",
+            "hiragana": "おてあらい",
+            "romaji": "otearai",
+            "pos": "Noun",
+            "eng": "toilet; restroom; lavatory; bathroom"
+        },
+        {
+            "jp": "男",
+            "hiragana": "おとこ",
+            "romaji": "otoko",
+            "pos": "Noun",
+            "eng": "man; male"
+        },
+        {
+            "jp": "男の子",
+            "hiragana": "おとこのこ",
+            "romaji": "otokonoko",
+            "pos": "Noun, Expression",
+            "eng": "boy; male child; baby boy"
+        },
+        {
+            "jp": "大人",
+            "hiragana": "おとな",
+            "romaji": "otona",
+            "pos": "Noun",
+            "eng": "adult"
+        },
+        {
+            "jp": "一昨日",
+            "hiragana": "おととい",
+            "romaji": "ototoi",
+            "pos": "Noun",
+            "eng": "day before yesterday"
+        },
+        {
+            "jp": "一昨年",
+            "hiragana": "おととし",
+            "romaji": "ototoshi",
+            "pos": "Noun",
+            "eng": "year before last"
+        },
+        {
+            "jp": "お父さん",
+            "hiragana": "おとうさん",
+            "romaji": "otousan",
+            "pos": "Noun",
+            "eng": "father; dad; papa; pa; pop; daddy"
+        },
+        {
+            "jp": "弟",
+            "hiragana": "おとうと",
+            "romaji": "otouto",
+            "pos": "Noun",
+            "eng": "younger brother"
+        },
+        {
+            "jp": "終わる",
+            "hiragana": "おわる",
+            "romaji": "owaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to finish; to end"
+        },
+        {
+            "jp": "泳ぐ",
+            "hiragana": "およぐ",
+            "romaji": "oyogu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to swim"
+        },
+        {
+            "jp": "パーティー",
+            "hiragana": "",
+            "romaji": "paatii",
+            "pos": "Noun, Katakana",
+            "eng": "party"
+        },
+        {
+            "jp": "パン",
+            "hiragana": "",
+            "romaji": "pan",
+            "pos": "Noun, Katakana",
+            "eng": "bread"
+        },
+        {
+            "jp": "ページ",
+            "hiragana": "",
+            "romaji": "peeji",
+            "pos": "Noun, Katakana",
+            "eng": "page"
+        },
+        {
+            "jp": "ペン",
+            "hiragana": "",
+            "romaji": "pen",
+            "pos": "Noun, Katakana",
+            "eng": "pen"
+        },
+        {
+            "jp": "ペット",
+            "hiragana": "",
+            "romaji": "petto",
+            "pos": "Noun, Katakana",
+            "eng": "pet"
+        },
+        {
+            "jp": "ポケット",
+            "hiragana": "",
+            "romaji": "poketto",
+            "pos": "Noun",
+            "eng": "pocket"
+        },
+        {
+            "jp": "ポスト",
+            "hiragana": "",
+            "romaji": "posuto",
+            "pos": "Noun, Katakana",
+            "eng": "post"
+        },
+        {
+            "jp": "プール",
+            "hiragana": "",
+            "romaji": "puuru",
+            "pos": "Noun, Katakana",
+            "eng": "swimming pool"
+        },
+        {
+            "jp": "来月",
+            "hiragana": "らいげつ",
+            "romaji": "raigetsu",
+            "pos": "Noun",
+            "eng": "next month"
+        },
+        {
+            "jp": "来年",
+            "hiragana": "らいねん",
+            "romaji": "rainen",
+            "pos": "Noun",
+            "eng": "next year"
+        },
+        {
+            "jp": "来週",
+            "hiragana": "らいしゅう",
+            "romaji": "raishuu",
+            "pos": "Noun",
+            "eng": "next week"
+        },
+        {
+            "jp": "ラジオ",
+            "hiragana": "",
+            "romaji": "rajiio",
+            "pos": "Noun, Katakana",
+            "eng": "radio"
+        },
+        {
+            "jp": "零",
+            "hiragana": "れい",
+            "romaji": "rei",
+            "pos": "Noun",
+            "eng": "zero"
+        },
+        {
+            "jp": "冷蔵庫",
+            "hiragana": "れいぞうこ",
+            "romaji": "reizouko",
+            "pos": "Noun",
+            "eng": "refrigerator"
+        },
+        {
+            "jp": "レコード",
+            "hiragana": "",
+            "romaji": "rekoodo",
+            "pos": "Noun, Katakana",
+            "eng": "record"
+        },
+        {
+            "jp": "練習",
+            "hiragana": "れんしゅう",
+            "romaji": "renshuu",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "practice; practicing"
+        },
+        {
+            "jp": "レストラン",
+            "hiragana": "",
+            "romaji": "resutoran",
+            "pos": "Noun, Katakana",
+            "eng": "restaurant"
+        },
+        {
+            "jp": "立派",
+            "hiragana": "りっぱ",
+            "romaji": "rippa",
+            "pos": "Adjective, な-adjective",
+            "eng": "splendid"
+        },
+        {
+            "jp": "六",
+            "hiragana": "ろく",
+            "romaji": "roku",
+            "pos": "Noun, Numeric",
+            "eng": "six; 6"
+        },
+        {
+            "jp": "廊下",
+            "hiragana": "ろうか",
+            "romaji": "rouka",
+            "pos": "Noun",
+            "eng": "corridor; hallway; passageway"
+        },
+        {
+            "jp": "旅行",
+            "hiragana": "りょこう",
+            "romaji": "ryokou",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "travel; trip; journey; excursion; tour"
+        },
+        {
+            "jp": "料理",
+            "hiragana": "りょうり",
+            "romaji": "ryouri",
+            "pos": "Noun, Suru verb",
+            "eng": "cuisine"
+        },
+        {
+            "jp": "両親",
+            "hiragana": "りょうしん",
+            "romaji": "ryoushin",
+            "pos": "Noun",
+            "eng": "parents; both parents"
+        },
+        {
+            "jp": "留学生",
+            "hiragana": "りゅうがくせい",
+            "romaji": "ryuugakusei",
+            "pos": "Noun",
+            "eng": "overseas student; exchange student"
+        },
+        {
+            "jp": "さあ",
+            "hiragana": "",
+            "romaji": "saa",
+            "pos": "Conjunction",
+            "eng": "well…"
+        },
+        {
+            "jp": "財布",
+            "hiragana": "さいふ",
+            "romaji": "saifu",
+            "pos": "Noun",
+            "eng": "purse; wallet"
+        },
+        {
+            "jp": "魚",
+            "hiragana": "さかな",
+            "romaji": "sakana",
+            "pos": "Noun",
+            "eng": "fish"
+        },
+        {
+            "jp": "先",
+            "hiragana": "さき",
+            "romaji": "saki",
+            "pos": "Noun, Prefix, Suffix",
+            "eng": "previous; prior; first; earlier"
+        },
+        {
+            "jp": "咲く",
+            "hiragana": "さく",
+            "romaji": "saku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to bloom"
+        },
+        {
+            "jp": "作文",
+            "hiragana": "さくぶん",
+            "romaji": "sakubun",
+            "pos": "Noun",
+            "eng": "writing; composition"
+        },
+        {
+            "jp": "寒い",
+            "hiragana": "さむい",
+            "romaji": "samui",
+            "pos": "Adjective, い-adjective",
+            "eng": "cold"
+        },
+        {
+            "jp": "三",
+            "hiragana": "さん",
+            "romaji": "san",
+            "pos": "Noun, Numeric",
+            "eng": "three; 3"
+        },
+        {
+            "jp": "散歩",
+            "hiragana": "さんぽ",
+            "romaji": "sanpo",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "walk; stroll"
+        },
+        {
+            "jp": "再来年",
+            "hiragana": "さらいねん",
+            "romaji": "sarainen",
+            "pos": "Noun",
+            "eng": "year after next"
+        },
+        {
+            "jp": "差す",
+            "hiragana": "さす",
+            "romaji": "sasu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to stretch out hands, to raise an umbrella"
+        },
+        {
+            "jp": "砂糖",
+            "hiragana": "さとう",
+            "romaji": "satou",
+            "pos": "Noun",
+            "eng": "sugar"
+        },
+        {
+            "jp": "背",
+            "hiragana": "せ",
+            "romaji": "se",
+            "pos": "Noun",
+            "eng": "height; stature; back; spine"
+        },
+        {
+            "jp": "背広",
+            "hiragana": "せびろ",
+            "romaji": "sebiro",
+            "pos": "Noun",
+            "eng": "business suit"
+        },
+        {
+            "jp": "セーター",
+            "hiragana": "",
+            "romaji": "seetaa",
+            "pos": "Noun, Katakana",
+            "eng": "sweater; jumper"
+        },
+        {
+            "jp": "生徒",
+            "hiragana": "せいと",
+            "romaji": "seito",
+            "pos": "Noun",
+            "eng": "pupil; student"
+        },
+        {
+            "jp": "石鹼",
+            "hiragana": "せっけん",
+            "romaji": "sekken",
+            "pos": "Noun",
+            "eng": "soap"
+        },
+        {
+            "jp": "狭い",
+            "hiragana": "せまい",
+            "romaji": "semai",
+            "pos": "い-adjective",
+            "eng": "narrow"
+        },
+        {
+            "jp": "千",
+            "hiragana": "せん",
+            "romaji": "sen",
+            "pos": "Noun, Numeric",
+            "eng": "1,000; thousand"
+        },
+        {
+            "jp": "先月",
+            "hiragana": "せんげつ",
+            "romaji": "sengetsu",
+            "pos": "Noun",
+            "eng": "last month"
+        },
+        {
+            "jp": "先生",
+            "hiragana": "せんせい",
+            "romaji": "sensei",
+            "pos": "Noun, Suffix",
+            "eng": "teacher; instructor; master"
+        },
+        {
+            "jp": "先週",
+            "hiragana": "せんしゅう",
+            "romaji": "senshuu",
+            "pos": "Noun",
+            "eng": "last week"
+        },
+        {
+            "jp": "洗濯",
+            "hiragana": "せんたく",
+            "romaji": "sentaku",
+            "pos": "Noun, Suru verb",
+            "eng": "washing; laundry"
+        },
+        {
+            "jp": "写真",
+            "hiragana": "しゃしん",
+            "romaji": "shashin",
+            "pos": "Noun",
+            "eng": "photograph; photo"
+        },
+        {
+            "jp": "シャツ",
+            "hiragana": "",
+            "romaji": "shatsu",
+            "pos": "Noun, Katakana",
+            "eng": "shirt"
+        },
+        {
+            "jp": "シャワー",
+            "hiragana": "",
+            "romaji": "shawaa",
+            "pos": "Noun, Katakana",
+            "eng": "shower"
+        },
+        {
+            "jp": "四",
+            "hiragana": "し",
+            "romaji": "shi",
+            "pos": "Noun, Numeric",
+            "eng": "four; 4"
+        },
+        {
+            "jp": "七",
+            "hiragana": "しち",
+            "romaji": "shichi",
+            "pos": "Noun, Numeric",
+            "eng": "seven; 7"
+        },
+        {
+            "jp": "仕事",
+            "hiragana": "しごと",
+            "romaji": "shigoto",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "work; job; business"
+        }
+    ],
+    6: [
+        {
+            "jp": "閉まる",
+            "hiragana": "しまる",
+            "romaji": "shimaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to close, to be closed"
+        },
+        {
+            "jp": "閉める",
+            "hiragana": "しめる",
+            "romaji": "shimeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to close; to shut"
+        },
+        {
+            "jp": "締める",
+            "hiragana": "しめる",
+            "romaji": "shimeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to tie; to fasten; to tighten​"
+        },
+        {
+            "jp": "新聞",
+            "hiragana": "しんぶん",
+            "romaji": "shinbun",
+            "pos": "Noun",
+            "eng": "newspaper"
+        },
+        {
+            "jp": "死ぬ",
+            "hiragana": "しぬ",
+            "romaji": "shinu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to die"
+        },
+        {
+            "jp": "塩",
+            "hiragana": "しお",
+            "romaji": "shio",
+            "pos": "Noun",
+            "eng": "salt"
+        },
+        {
+            "jp": "白",
+            "hiragana": "しろ",
+            "romaji": "shiro",
+            "pos": "Noun",
+            "eng": "white; innocence; innocent person"
+        },
+        {
+            "jp": "白い",
+            "hiragana": "しろい",
+            "romaji": "shiroi",
+            "pos": "Adjective, い-adjective",
+            "eng": "white"
+        },
+        {
+            "jp": "知る",
+            "hiragana": "しる",
+            "romaji": "shiru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to know"
+        },
+        {
+            "jp": "下",
+            "hiragana": "した",
+            "romaji": "shita",
+            "pos": "Noun",
+            "eng": "below; down; under; bottom"
+        },
+        {
+            "jp": "質問",
+            "hiragana": "しつもん",
+            "romaji": "shitsumon",
+            "pos": "Noun, Verb, Suru verb",
+            "eng": "question; inquiry"
+        },
+        {
+            "jp": "静か",
+            "hiragana": "しずか",
+            "romaji": "shizuka",
+            "pos": "Adjective, な-adjective",
+            "eng": "quiet"
+        },
+        {
+            "jp": "食堂",
+            "hiragana": "しょくどう",
+            "romaji": "shokudou",
+            "pos": "Noun",
+            "eng": "cafeteria; dining room"
+        },
+        {
+            "jp": "醬油",
+            "hiragana": "しょうゆ",
+            "romaji": "shouyu",
+            "pos": "Noun",
+            "eng": "soy sauce"
+        },
+        {
+            "jp": "宿題",
+            "hiragana": "しゅくだい",
+            "romaji": "shukudai",
+            "pos": "Noun",
+            "eng": "homework; assignment; pending issue"
+        },
+        {
+            "jp": "そば",
+            "hiragana": "",
+            "romaji": "soba",
+            "pos": "Noun",
+            "eng": "near; beside"
+        },
+        {
+            "jp": "そっち",
+            "hiragana": "",
+            "romaji": "socchi",
+            "pos": "Pronoun",
+            "eng": "that way; ​over there"
+        },
+        {
+            "jp": "そちら",
+            "hiragana": "",
+            "romaji": "sochira",
+            "pos": "Pronoun",
+            "eng": "that way (distant from speaker, close to listener); you; your family"
+        },
+        {
+            "jp": "そこ",
+            "hiragana": "",
+            "romaji": "soko",
+            "pos": "Pronoun",
+            "eng": "that place​; there"
+        },
+        {
+            "jp": "その",
+            "hiragana": "",
+            "romaji": "sono",
+            "pos": "Pre-noun adjectival",
+            "eng": "that"
+        },
+        {
+            "jp": "空",
+            "hiragana": "そら",
+            "romaji": "sora",
+            "pos": "Noun",
+            "eng": "sky; the air"
+        },
+        {
+            "jp": "それ",
+            "hiragana": "",
+            "romaji": "sore",
+            "pos": "Pronoun",
+            "eng": "that"
+        },
+        {
+            "jp": "それでは",
+            "hiragana": "",
+            "romaji": "sore dewa",
+            "pos": "Expression",
+            "eng": "in that situation"
+        },
+        {
+            "jp": "外",
+            "hiragana": "そと",
+            "romaji": "soto",
+            "pos": "Noun",
+            "eng": "outside; exterior;"
+        },
+        {
+            "jp": "掃除",
+            "hiragana": "そうじ",
+            "romaji": "souji",
+            "pos": "Noun, Suru verb",
+            "eng": "to clean, to sweep"
+        },
+        {
+            "jp": "直ぐに",
+            "hiragana": "すぐに",
+            "romaji": "sugu ni",
+            "pos": "Adverb",
+            "eng": "immediately; right away; instantly​"
+        },
+        {
+            "jp": "水曜日",
+            "hiragana": "すいようび",
+            "romaji": "suiyoubi",
+            "pos": "Noun",
+            "eng": "Wednesday"
+        },
+        {
+            "jp": "スカート",
+            "hiragana": "",
+            "romaji": "sukaato",
+            "pos": "Noun, Katakana",
+            "eng": "skirt"
+        },
+        {
+            "jp": "好き",
+            "hiragana": "すき",
+            "romaji": "suki",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "like"
+        },
+        {
+            "jp": "少し",
+            "hiragana": "すこし",
+            "romaji": "sukoshi",
+            "pos": "Noun, Adverb",
+            "eng": "a little (bit); small quantity; few; short distance"
+        },
+        {
+            "jp": "少ない",
+            "hiragana": "すくない",
+            "romaji": "sukunai",
+            "pos": "い-adjective",
+            "eng": "few; a little; scarce; insufficient; seldom"
+        },
+        {
+            "jp": "住む",
+            "hiragana": "すむ",
+            "romaji": "sumu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to live in; to reside; to inhabit; to dwell; to abide"
+        },
+        {
+            "jp": "スポーツ",
+            "hiragana": "",
+            "romaji": "supootsu",
+            "pos": "Noun, Katakana",
+            "eng": "sport; sports"
+        },
+        {
+            "jp": "スプーン",
+            "hiragana": "",
+            "romaji": "supuun",
+            "pos": "Noun, Katakana",
+            "eng": "spoon"
+        },
+        {
+            "jp": "スリッパ",
+            "hiragana": "",
+            "romaji": "surippa",
+            "pos": "Noun, Katakana",
+            "eng": "slipper; slippers"
+        },
+        {
+            "jp": "ストーブ",
+            "hiragana": "",
+            "romaji": "sutoobu",
+            "pos": "Noun, Katakana",
+            "eng": "heater; stove"
+        },
+        {
+            "jp": "吸う",
+            "hiragana": "すう",
+            "romaji": "suu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to smoke, to suck"
+        },
+        {
+            "jp": "座る",
+            "hiragana": "すわる",
+            "romaji": "suwaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to sit"
+        },
+        {
+            "jp": "涼しい",
+            "hiragana": "すずしい",
+            "romaji": "suzushii",
+            "pos": "Adjective, い-adjective",
+            "eng": "refreshing, cool"
+        },
+        {
+            "jp": "たばこ",
+            "hiragana": "",
+            "romaji": "tabako",
+            "pos": "Noun",
+            "eng": "tobacco; cigarette"
+        },
+        {
+            "jp": "食べ物",
+            "hiragana": "たべもの",
+            "romaji": "tabemono",
+            "pos": "Noun",
+            "eng": "food"
+        },
+        {
+            "jp": "食べる",
+            "hiragana": "たべる",
+            "romaji": "taberu",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to eat"
+        },
+        {
+            "jp": "多分",
+            "hiragana": "たぶん",
+            "romaji": "tabun",
+            "pos": "Adjective, な-adjective, Adverb",
+            "eng": "perhaps; probably"
+        },
+        {
+            "jp": "大変",
+            "hiragana": "たいへん",
+            "romaji": "taihen",
+            "pos": "Noun, Adjective, な-adjective, Adverb",
+            "eng": "very; greatly; terribly; serious; difficult"
+        },
+        {
+            "jp": "大切",
+            "hiragana": "たいせつ",
+            "romaji": "taisetsu",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "important; necessary; indispensable; beloved"
+        },
+        {
+            "jp": "大使館",
+            "hiragana": "たいしかん",
+            "romaji": "taishikan",
+            "pos": "Noun",
+            "eng": "embassy"
+        },
+        {
+            "jp": "高い",
+            "hiragana": "たかい",
+            "romaji": "takai",
+            "pos": "Adjective, い-adjective",
+            "eng": "high; tall; expensive; above average"
+        },
+        {
+            "jp": "沢山",
+            "hiragana": "たくさん",
+            "romaji": "takusan",
+            "pos": "Noun, Adverbial Noun, Adjective, な-adjective",
+            "eng": "many"
+        },
+        {
+            "jp": "タクシー",
+            "hiragana": "",
+            "romaji": "takushii",
+            "pos": "Noun, Katakana",
+            "eng": "taxi"
+        },
+        {
+            "jp": "卵",
+            "hiragana": "たまご",
+            "romaji": "tamago",
+            "pos": "Noun",
+            "eng": "eggs; egg"
+        },
+        {
+            "jp": "誕生日",
+            "hiragana": "たんじょうび",
+            "romaji": "tanjoubi",
+            "pos": "Noun",
+            "eng": "birthday"
+        },
+        {
+            "jp": "頼む",
+            "hiragana": "たのむ",
+            "romaji": "tanomu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to ask"
+        },
+        {
+            "jp": "楽しい",
+            "hiragana": "たのしい",
+            "romaji": "tanoshii",
+            "pos": "Adjective, い-adjective",
+            "eng": "enjoyable; fun"
+        },
+        {
+            "jp": "縦",
+            "hiragana": "たて",
+            "romaji": "tate",
+            "pos": "Noun",
+            "eng": "length,height"
+        },
+        {
+            "jp": "建物",
+            "hiragana": "たてもの",
+            "romaji": "tatemono",
+            "pos": "Noun",
+            "eng": "building"
+        },
+        {
+            "jp": "立つ",
+            "hiragana": "たつ",
+            "romaji": "tatsu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to stand; to stand up​"
+        },
+        {
+            "jp": "手",
+            "hiragana": "て",
+            "romaji": "te",
+            "pos": "Noun",
+            "eng": "hand; arm"
+        },
+        {
+            "jp": "テーブル",
+            "hiragana": "",
+            "romaji": "teeburu",
+            "pos": "Noun, Katakana",
+            "eng": "table"
+        },
+        {
+            "jp": "テープ",
+            "hiragana": "",
+            "romaji": "teepu",
+            "pos": "Noun, Katakana",
+            "eng": "tape"
+        },
+        {
+            "jp": "テープレコーダー",
+            "hiragana": "",
+            "romaji": "teepu rekoodaa",
+            "pos": "Noun, Katakana",
+            "eng": "tape recorder"
+        },
+        {
+            "jp": "手紙",
+            "hiragana": "てがみ",
+            "romaji": "tegami",
+            "pos": "Noun",
+            "eng": "Letter (message)​"
+        },
+        {
+            "jp": "天気",
+            "hiragana": "てんき",
+            "romaji": "tenki",
+            "pos": "Noun",
+            "eng": "weather; the elements"
+        },
+        {
+            "jp": "テレビ",
+            "hiragana": "",
+            "romaji": "terebi",
+            "pos": "Noun, Katakana",
+            "eng": "television; TV​"
+        },
+        {
+            "jp": "テスト",
+            "hiragana": "",
+            "romaji": "tesuto",
+            "pos": "Noun, Suru verb, Katakana",
+            "eng": "examination; quiz; test"
+        },
+        {
+            "jp": "戸",
+            "hiragana": "と",
+            "romaji": "to",
+            "pos": "Noun",
+            "eng": "Japanese style door"
+        },
+        {
+            "jp": "飛ぶ",
+            "hiragana": "とぶ",
+            "romaji": "tobu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to fly; to hop"
+        },
+        {
+            "jp": "トイレ",
+            "hiragana": "",
+            "romaji": "toire",
+            "pos": "Noun, Katakana",
+            "eng": "toilet"
+        },
+        {
+            "jp": "時計",
+            "hiragana": "とけい",
+            "romaji": "tokei",
+            "pos": "Noun",
+            "eng": "watch; clock; timepiece"
+        },
+        {
+            "jp": "時",
+            "hiragana": "とき",
+            "romaji": "toki",
+            "pos": "Noun",
+            "eng": "time; moment; occasion; chance"
+        },
+        {
+            "jp": "時々",
+            "hiragana": "ときどき",
+            "romaji": "tokidoki",
+            "pos": "Noun, Adverb",
+            "eng": "sometimes; at times"
+        },
+        {
+            "jp": "所",
+            "hiragana": "ところ",
+            "romaji": "tokoro",
+            "pos": "Noun, Suffix",
+            "eng": "place"
+        },
+        {
+            "jp": "止まる",
+            "hiragana": "とまる",
+            "romaji": "tomaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to stop; to come to a halt"
+        },
+        {
+            "jp": "友達",
+            "hiragana": "ともだち",
+            "romaji": "tomodachi",
+            "pos": "Noun",
+            "eng": "friend; companion"
+        },
+        {
+            "jp": "隣",
+            "hiragana": "となり",
+            "romaji": "tonari",
+            "pos": "Noun",
+            "eng": "next door to"
+        },
+        {
+            "jp": "遠い",
+            "hiragana": "とおい",
+            "romaji": "tooi",
+            "pos": "Adjective, い-adjective",
+            "eng": "far"
+        },
+        {
+            "jp": "十日",
+            "hiragana": "とおか",
+            "romaji": "tooka",
+            "pos": "Noun",
+            "eng": "tenth day of the month / 10 days"
+        },
+        {
+            "jp": "鳥",
+            "hiragana": "とり",
+            "romaji": "tori",
+            "pos": "Noun",
+            "eng": "bird"
+        },
+        {
+            "jp": "鶏肉",
+            "hiragana": "とりにく",
+            "romaji": "toriniku",
+            "pos": "Noun",
+            "eng": "chicken meat"
+        },
+        {
+            "jp": "取る",
+            "hiragana": "とる",
+            "romaji": "toru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to take; to pick up; to harvest; to earn; to win; to choose"
+        },
+        {
+            "jp": "撮る",
+            "hiragana": "とる",
+            "romaji": "toru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to take a photo or record a film"
+        },
+        {
+            "jp": "年",
+            "hiragana": "とし",
+            "romaji": "toshi",
+            "pos": "Noun",
+            "eng": "year; age"
+        },
+        {
+            "jp": "図書館",
+            "hiragana": "としょかん",
+            "romaji": "toshokan",
+            "pos": "Noun",
+            "eng": "library"
+        },
+        {
+            "jp": "次",
+            "hiragana": "つぎ",
+            "romaji": "tsugi",
+            "pos": "Noun",
+            "eng": "next"
+        },
+        {
+            "jp": "一日",
+            "hiragana": "ついたち",
+            "romaji": "tsuitachi",
+            "pos": "Noun",
+            "eng": "first day of the month"
+        },
+        {
+            "jp": "疲れる",
+            "hiragana": "つかれる",
+            "romaji": "tsukareru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to get tired"
+        },
+        {
+            "jp": "使う",
+            "hiragana": "つかう",
+            "romaji": "tsukau",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to use"
+        },
+        {
+            "jp": "つける",
+            "hiragana": "",
+            "romaji": "tsukeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to turn on"
+        },
+        {
+            "jp": "付ける",
+            "hiragana": "つける",
+            "romaji": "tsukeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to attach; affix; add; apply"
+        },
+        {
+            "jp": "着く",
+            "hiragana": "つく",
+            "romaji": "tsuku",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to arrive at"
+        },
+        {
+            "jp": "机",
+            "hiragana": "つくえ",
+            "romaji": "tsukue",
+            "pos": "Noun",
+            "eng": "desk"
+        },
+        {
+            "jp": "作る",
+            "hiragana": "つくる",
+            "romaji": "tsukuru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to make"
+        },
+        {
+            "jp": "詰まらない",
+            "hiragana": "つまらない",
+            "romaji": "tsumaranai",
+            "pos": "Adjective, い-adjective",
+            "eng": "boring"
+        },
+        {
+            "jp": "冷たい",
+            "hiragana": "つめたい",
+            "romaji": "tsumetai",
+            "pos": "い-adjective",
+            "eng": "cold to the touch"
+        },
+        {
+            "jp": "勤める",
+            "hiragana": "つとめる",
+            "romaji": "tsutomeru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to work for someone"
+        },
+        {
+            "jp": "強い",
+            "hiragana": "つよい",
+            "romaji": "tsuyoi",
+            "pos": "Adjective, い-adjective",
+            "eng": "powerful"
+        },
+        {
+            "jp": "上",
+            "hiragana": "うえ",
+            "romaji": "ue",
+            "pos": "Noun, Suffix",
+            "eng": "above; up; over; top; surface"
+        },
+        {
+            "jp": "生まれる",
+            "hiragana": "うまれる",
+            "romaji": "umareru",
+            "pos": "Verb, Ichidan verb, Intransitive verb",
+            "eng": "to be born"
+        },
+        {
+            "jp": "海",
+            "hiragana": "うみ",
+            "romaji": "umi",
+            "pos": "Noun",
+            "eng": "sea"
+        },
+        {
+            "jp": "売る",
+            "hiragana": "うる",
+            "romaji": "uru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to sell"
+        },
+        {
+            "jp": "煩い",
+            "hiragana": "うるさい",
+            "romaji": "urusai",
+            "pos": "い-adjective",
+            "eng": "noisy, annoying"
+        }
+    ],
+    7: [
+        {
+            "jp": "後ろ",
+            "hiragana": "うしろ",
+            "romaji": "ushiro",
+            "pos": "Noun",
+            "eng": "back; behind; rear"
+        },
+        {
+            "jp": "薄い",
+            "hiragana": "うすい",
+            "romaji": "usui",
+            "pos": "Adjective, い-adjective",
+            "eng": "thin; weak"
+        },
+        {
+            "jp": "歌",
+            "hiragana": "うた",
+            "romaji": "uta",
+            "pos": "Noun",
+            "eng": "song"
+        },
+        {
+            "jp": "歌う",
+            "hiragana": "うたう",
+            "romaji": "utau",
+            "pos": "Verb, Godan verb, Intransitive verb, Transitive verb",
+            "eng": "to sing"
+        },
+        {
+            "jp": "上着",
+            "hiragana": "うわぎ",
+            "romaji": "uwagi",
+            "pos": "Noun",
+            "eng": "coat; tunic; jacket; outer garment"
+        },
+        {
+            "jp": "ワイシャツ",
+            "hiragana": "",
+            "romaji": "wai shatsu",
+            "pos": "Noun, Katakana, Wasei",
+            "eng": "shirt"
+        },
+        {
+            "jp": "若い",
+            "hiragana": "わかい",
+            "romaji": "wakai",
+            "pos": "Adjective, い-adjective",
+            "eng": "young"
+        },
+        {
+            "jp": "分かる",
+            "hiragana": "わかる",
+            "romaji": "wakaru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to understand; to comprehend; to grasp; to see; to get; to follow"
+        },
+        {
+            "jp": "悪い",
+            "hiragana": "わるい",
+            "romaji": "warui",
+            "pos": "Adjective, い-adjective",
+            "eng": "bad; poor; undesirable"
+        },
+        {
+            "jp": "忘れる",
+            "hiragana": "わすれる",
+            "romaji": "wasureru",
+            "pos": "Verb, Ichidan verb, Transitive verb",
+            "eng": "to forget"
+        },
+        {
+            "jp": "渡る",
+            "hiragana": "わたる",
+            "romaji": "wataru",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to go across"
+        },
+        {
+            "jp": "私",
+            "hiragana": "わたし",
+            "romaji": "watashi",
+            "pos": "Pronoun",
+            "eng": "I; myself"
+        },
+        {
+            "jp": "渡す",
+            "hiragana": "わたす",
+            "romaji": "watasu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to hand over"
+        },
+        {
+            "jp": "山",
+            "hiragana": "やま",
+            "romaji": "yama",
+            "pos": "Noun",
+            "eng": "mountain; hill"
+        },
+        {
+            "jp": "八百屋",
+            "hiragana": "やおや",
+            "romaji": "yaoya",
+            "pos": "Noun",
+            "eng": "greengrocer; fruit and vegetable shop; versatile"
+        },
+        {
+            "jp": "やる",
+            "hiragana": "",
+            "romaji": "yaru",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to do"
+        },
+        {
+            "jp": "野菜",
+            "hiragana": "やさい",
+            "romaji": "yasai",
+            "pos": "Noun",
+            "eng": "vegetable"
+        },
+        {
+            "jp": "易しい",
+            "hiragana": "やさしい",
+            "romaji": "yasashii",
+            "pos": "Adjective, い-adjective",
+            "eng": "easy, simple"
+        },
+        {
+            "jp": "安い",
+            "hiragana": "やすい",
+            "romaji": "yasui",
+            "pos": "Adjective, い-adjective",
+            "eng": "cheap; inexpensive"
+        },
+        {
+            "jp": "休み",
+            "hiragana": "やすみ",
+            "romaji": "yasumi",
+            "pos": "Noun",
+            "eng": "rest; vacation; holiday"
+        },
+        {
+            "jp": "休む",
+            "hiragana": "やすむ",
+            "romaji": "yasumu",
+            "pos": "Verb, Godan verb, Intransitive verb",
+            "eng": "to be absent; to take a day off; to rest"
+        },
+        {
+            "jp": "八つ",
+            "hiragana": "やっつ",
+            "romaji": "yattsu",
+            "pos": "Noun, Numeric",
+            "eng": "eight: 8"
+        },
+        {
+            "jp": "呼ぶ",
+            "hiragana": "よぶ",
+            "romaji": "yobu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to call out, to invite"
+        },
+        {
+            "jp": "良い",
+            "hiragana": "よい/いい",
+            "romaji": "yoi/ii",
+            "pos": "Adjective, い-adjective",
+            "eng": "good"
+        },
+        {
+            "jp": "四日",
+            "hiragana": "よっか",
+            "romaji": "yokka",
+            "pos": "Noun",
+            "eng": "fourth day of the month / 4 days"
+        },
+        {
+            "jp": "横",
+            "hiragana": "よこ",
+            "romaji": "yoko",
+            "pos": "Noun",
+            "eng": "beside,side,width"
+        },
+        {
+            "jp": "よく",
+            "hiragana": "",
+            "romaji": "yoku",
+            "pos": "Adverb",
+            "eng": "often, well"
+        },
+        {
+            "jp": "読む",
+            "hiragana": "よむ",
+            "romaji": "yomu",
+            "pos": "Verb, Godan verb, Transitive verb",
+            "eng": "to read; to guess; to predict; to read (someone's thoughts)"
+        },
+        {
+            "jp": "夜",
+            "hiragana": "よる",
+            "romaji": "yoru",
+            "pos": "Noun",
+            "eng": "evening; night"
+        },
+        {
+            "jp": "四つ",
+            "hiragana": "よつ",
+            "romaji": "yotsu",
+            "pos": "Noun, Numeric",
+            "eng": "four; 4"
+        },
+        {
+            "jp": "洋服",
+            "hiragana": "ようふく",
+            "romaji": "youfuku",
+            "pos": "Noun",
+            "eng": "western clothes"
+        },
+        {
+            "jp": "八日",
+            "hiragana": "ようか",
+            "romaji": "youka",
+            "pos": "Noun",
+            "eng": "eighth day of the month / 8 days"
+        },
+        {
+            "jp": "弱い",
+            "hiragana": "よわい",
+            "romaji": "yowai",
+            "pos": "Adjective, い-adjective",
+            "eng": "weak"
+        },
+        {
+            "jp": "雪",
+            "hiragana": "ゆき",
+            "romaji": "yuki",
+            "pos": "Noun",
+            "eng": "snow"
+        },
+        {
+            "jp": "ゆっくり",
+            "hiragana": "",
+            "romaji": "yukkuri",
+            "pos": "Adverb",
+            "eng": "slowly"
+        },
+        {
+            "jp": "昨夜",
+            "hiragana": "ゆうべ",
+            "romaji": "yuube",
+            "pos": "Noun",
+            "eng": "last night"
+        },
+        {
+            "jp": "郵便局",
+            "hiragana": "ゆうびんきょく",
+            "romaji": "yuubinkyoku",
+            "pos": "Noun",
+            "eng": "post office"
+        },
+        {
+            "jp": "夕方",
+            "hiragana": "ゆうがた",
+            "romaji": "yuugata",
+            "pos": "Noun",
+            "eng": "evening; dusk"
+        },
+        {
+            "jp": "夕飯",
+            "hiragana": "ゆうはん",
+            "romaji": "yuuhan",
+            "pos": "Noun",
+            "eng": "evening meal"
+        },
+        {
+            "jp": "有名",
+            "hiragana": "ゆうめい",
+            "romaji": "yuumei",
+            "pos": "Noun, Adjective, な-adjective",
+            "eng": "famous"
+        },
+        {
+            "jp": "雑誌",
+            "hiragana": "ざっし",
+            "romaji": "zasshi",
+            "pos": "Noun",
+            "eng": "magazine"
+        },
+        {
+            "jp": "全部",
+            "hiragana": "ぜんぶ",
+            "romaji": "zenbu",
+            "pos": "Noun, Adverbial Noun",
+            "eng": "all"
+        },
+        {
+            "jp": "ゼロ",
+            "hiragana": "",
+            "romaji": "zero",
+            "pos": "Noun",
+            "eng": "zero"
+        },
+        {
+            "jp": "ズボン",
+            "hiragana": "",
+            "romaji": "zubon",
+            "pos": "Noun, Katakana",
+            "eng": "trousers; pants"
+        }
+    ]
+}
