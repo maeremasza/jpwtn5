@@ -164,11 +164,9 @@
         .then(res => res.json())
         .then(data => {
             WORDS_DB = data;
-            
             for (let page in WORDS_DB) {
                 ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
             }
-
             document.getElementById("db-status").innerText = `Veritabanı hazır (${ALL_WORDS_FLAT.length} kelime) ✅`;
             updateTimerDisplay(); 
         })
@@ -227,23 +225,14 @@
         const selectedPage = document.getElementById("single-page-combo").value;
         let wordsToTest = [];
 
-        if (selectedPage === "all") {
-            wordsToTest = ALL_WORDS_FLAT;
-        } else {
-            wordsToTest = WORDS_DB[selectedPage] || [];
-        }
+        if (selectedPage === "all") wordsToTest = ALL_WORDS_FLAT;
+        else wordsToTest = WORDS_DB[selectedPage] || [];
 
-        if (wordsToTest.length === 0) {
-            alert("Bu sayfada henüz kelime yok!");
-            return;
-        }
+        if (wordsToTest.length === 0) return alert("Bu sayfada henüz kelime yok!");
 
         const filteredWords = wordsToTest.filter(w => !learnedWords.includes(w.jp));
 
-        if (filteredWords.length === 0) {
-            alert("Tebrikler! Seçtiğin sayfadaki tüm kelimeleri zaten öğrendin!");
-            return;
-        }
+        if (filteredWords.length === 0) return alert("Tebrikler! Seçtiğin sayfadaki tüm kelimeleri zaten öğrendin!");
 
         currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, 5);
         singleWordIndex = 0;
@@ -391,8 +380,6 @@
         setupChannel(roomCode);
         document.getElementById("room-code-display").innerText = roomCode;
         showScreen("online-lobby-screen");
-        
-        // Timeout silindi, kanal başarıyla bağlandığında mesaj atacak.
     }
 
     function setupChannel(roomCode) {
@@ -425,11 +412,14 @@
             .on('broadcast', { event: 'correct_answer' }, (payload) => {
                 handleOnlineCorrectAnswer(payload.payload);
             })
+            // YANLIŞ CEVAP YAKALAYICI (YENİ EKLENDİ)
+            .on('broadcast', { event: 'wrong_answer' }, (payload) => {
+                handleOnlineWrongAnswer(payload.payload.name);
+            })
             .on('broadcast', { event: 'game_over' }, (payload) => {
                 handleOnlineGameOver(payload.payload);
             })
             .subscribe((status) => {
-                // Kanal tam olarak bağlandığında ve kişi kurucu değilse katıldığını bildirir
                 if (status === 'SUBSCRIBED' && !isHost) {
                     roomChannel.send({ type: 'broadcast', event: 'player_joined', payload: { name: myName } });
                 }
@@ -494,7 +484,8 @@
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const correctAns = currentWord.eng.toLowerCase();
 
-        if (answer === correctAns) {
+        // DEĞİŞEN KISIM: Tek kişilikteki gibi "içermesi" yeterli kılındı (includes)
+        if (answer && correctAns.includes(answer)) {
             onlineGameState.players[playerName].score += 1;
             const resultData = { winner: playerName, wordEng: currentWord.eng, players: onlineGameState.players };
             
@@ -512,7 +503,9 @@
                 }
             }, 3000); 
         } else {
-            if (playerName === myName) document.getElementById("online-answer-input").value = "";
+            // YANLIŞ CEVAP DURUMU (YENİ EKLENDİ)
+            roomChannel.send({ type: 'broadcast', event: 'wrong_answer', payload: { name: playerName } });
+            if (playerName === myName) handleOnlineWrongAnswer(myName);
         }
     }
 
@@ -524,6 +517,19 @@
         
         onlineGameState.players = data.players;
         updateOnlineScoreBoard();
+    }
+
+    // YANLIŞ CEVABI EKRANA BASAN FONKSİYON (YENİ EKLENDİ)
+    function handleOnlineWrongAnswer(name) {
+        if (name === myName) {
+            const res = document.getElementById("online-result-label");
+            res.innerText = "Yanlış! Tekrar dene.";
+            res.style.color = "red";
+            document.getElementById("online-answer-input").value = "";
+            
+            // 1.5 saniye sonra "Yanlış" uyarısını sil (kutu açık kalmaya devam eder)
+            setTimeout(() => { if(res.innerText.includes("Yanlış")) res.innerText = ""; }, 1500);
+        }
     }
 
     function handleOnlineGameOver(data) {
