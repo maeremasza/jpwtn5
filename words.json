@@ -1,5 +1,5 @@
 {
-    1: [
+    "1": [
         {
             "jp": "浴びる",
             "hiragana": "あびる",
@@ -701,7 +701,7 @@
             "eng": "elevator"
         }
     ],
-    2: [
+    "2": [
         {
             "jp": "フィルム",
             "hiragana": "",
@@ -1403,7 +1403,7 @@
             "eng": "to be needed"
         }
     ],
-    3: [
+    "3": [
         {
             "jp": "居る",
             "hiragana": "いる",
@@ -2105,7 +2105,7 @@
             "eng": "black tea"
         }
     ],
-    4: [
+    "4": [
         {
             "jp": "公園",
             "hiragana": "こうえん",
@@ -2807,7 +2807,7 @@
             "eng": "to get on (train, plane, bus, ship, etc.)"
         }
     ],
-    5: [
+    "5": [
         {
             "jp": "脱ぐ",
             "hiragana": "ぬぐ",
@@ -3509,7 +3509,7 @@
             "eng": "work; job; business"
         }
     ],
-    6: [
+    "6": [
         {
             "jp": "閉まる",
             "hiragana": "しまる",
@@ -4211,7 +4211,7 @@
             "eng": "noisy, annoying"
         }
     ],
-    7: [
+    "7": [
         {
             "jp": "後ろ",
             "hiragana": "うしろ",
