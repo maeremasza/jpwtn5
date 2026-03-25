@@ -47,9 +47,28 @@
         
         #online-history-list::-webkit-scrollbar { width: 6px; }
         #online-history-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+        /* İSTATİSTİK PANELİ CSS */
+        #stats-btn { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: #17a2b8; color: white; font-size: 24px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000; transition: 0.2s; display: flex; justify-content: center; align-items: center; }
+        #stats-btn:hover { background: #138496; transform: scale(1.05); }
+        #stats-panel { position: fixed; bottom: 85px; right: 20px; width: 260px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 1000; display: none; flex-direction: column; border: 1px solid #ddd; }
+        .stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+        .stat-row:last-child { border-bottom: none; }
+        #stats-content::-webkit-scrollbar { width: 4px; }
+        #stats-content::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
     </style>
 </head>
 <body>
+
+<button id="stats-btn" onclick="toggleStatsPanel()">📊</button>
+<div id="stats-panel">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 5px;">
+        <h4 style="margin: 0; color: #333;">Kalan Kelimeler</h4>
+        <button onclick="toggleStatsPanel()" style="background: none; border: none; font-size: 14px; cursor: pointer; color: #888;">❌</button>
+    </div>
+    <div id="stats-content" style="max-height: 250px; overflow-y: auto;">
+        </div>
+</div>
 
 <div id="main-menu" class="container active">
     <h2>jpwt</h2>
@@ -221,6 +240,11 @@
 
                 document.getElementById("db-status").innerText = `Veritabanı hazır (${maxWords} kelime) ✅`;
                 updateTimerDisplay(); 
+                
+                // Eğer panel açıksa hemen verileri yenile
+                if(document.getElementById("stats-panel").style.display === "flex") {
+                    updateStatsPanel();
+                }
             })
             .catch(err => {
                 document.getElementById("db-status").innerText = "Kelimeler yüklenemedi! JSON dosyanı kontrol et ❌";
@@ -232,7 +256,69 @@
 
 
     // ==========================================
-    // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI (TÜRKÇE UYUMLU)
+    // İSTATİSTİK PANELİ FONKSİYONLARI (YENİ)
+    // ==========================================
+    function toggleStatsPanel() {
+        const panel = document.getElementById("stats-panel");
+        if (panel.style.display === "flex") {
+            panel.style.display = "none";
+        } else {
+            updateStatsPanel();
+            panel.style.display = "flex";
+        }
+    }
+
+    function updateStatsPanel() {
+        const content = document.getElementById("stats-content");
+        content.innerHTML = "";
+        
+        if (Object.keys(WORDS_DB).length === 0) {
+            content.innerHTML = "<div style='text-align:center; padding: 10px; color:#888;'>Henüz veri yok.</div>";
+            return;
+        }
+
+        let totalRemaining = 0;
+
+        for (let page in WORDS_DB) {
+            const wordsInPage = WORDS_DB[page];
+            const pageTotal = wordsInPage.length;
+            const pageLearned = wordsInPage.filter(w => learnedWords.includes(w.jp)).length;
+            const pageRemaining = pageTotal - pageLearned;
+            
+            totalRemaining += pageRemaining;
+
+            const row = document.createElement("div");
+            row.className = "stat-row";
+            
+            if (pageRemaining === 0) {
+                row.style.color = "#28a745";
+                row.style.fontWeight = "bold";
+                row.innerHTML = `<span>Sayfa ${page}</span> <span>Tamamlandı! ✅</span>`;
+            } else {
+                row.innerHTML = `<span>Sayfa ${page}</span> <b>${pageRemaining} / ${pageTotal}</b>`;
+            }
+            
+            content.appendChild(row);
+        }
+
+        const totalRow = document.createElement("div");
+        totalRow.className = "stat-row";
+        totalRow.style.fontWeight = "bold";
+        totalRow.style.borderTop = "2px solid #ccc";
+        totalRow.style.marginTop = "5px";
+        totalRow.style.paddingTop = "10px";
+        
+        if (totalRemaining === 0) {
+             totalRow.innerHTML = `<span style="color: #28a745;">Tebrikler, hepsini öğrendin! 🎉</span>`;
+        } else {
+             totalRow.innerHTML = `<span>Öğrenilecek Toplam:</span> <span style="color: #dc3545; font-size: 14px;">${totalRemaining}</span>`;
+        }
+        content.appendChild(totalRow);
+    }
+
+
+    // ==========================================
+    // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI 
     // ==========================================
     function isMatch(userAns, correctAns) {
         userAns = userAns.trim().toLocaleLowerCase('tr-TR');
@@ -359,6 +445,7 @@
             if (wordCounts[word.jp] >= 3 && !learnedWords.includes(word.jp)) {
                 learnedWords.push(word.jp);
                 localStorage.setItem("learned_words", JSON.stringify(learnedWords));
+                if(document.getElementById("stats-panel").style.display === "flex") updateStatsPanel();
             }
         } else {
             resultLabel.innerText = `Yanlış! ❌\nDoğru Anlamı: ${correctAns}`;
@@ -377,6 +464,7 @@
         if (!learnedWords.includes(word.jp)) {
             learnedWords.push(word.jp);
             localStorage.setItem("learned_words", JSON.stringify(learnedWords));
+            if(document.getElementById("stats-panel").style.display === "flex") updateStatsPanel();
         }
 
         const resultLabel = document.getElementById("single-result-label");
@@ -390,11 +478,9 @@
         setTimeout(loadNextSingleWord, 1500);
     }
 
-    // --- AKILLI DIŞA AKTAR ---
     function exportLearnedWords() {
         if (learnedWords.length === 0) return alert("Dışa aktarılacak öğrenilmiş kelime yok.");
         
-        // Yeni format: Hem listeyi hem de word_counts'u aktar
         const exportData = {
             learned_words: learnedWords,
             word_counts: wordCounts
@@ -409,7 +495,6 @@
         downloadAnchorNode.remove();
     }
 
-    // --- AKILLI İÇE AKTAR ---
     function triggerImport() {
         document.getElementById('import-file').click();
     }
@@ -455,6 +540,7 @@
                     
                     localStorage.setItem("learned_words", JSON.stringify(learnedWords));
                     openPanel(); 
+                    if(document.getElementById("stats-panel").style.display === "flex") updateStatsPanel();
                     
                     if(addedCount > 0) alert(`${addedCount} yeni kelime ve ilerleme durumları başarıyla listene eklendi!`);
                     else alert("Seçilen dosyadaki tüm kelimeler zaten listende mevcut.");
@@ -504,6 +590,7 @@
                 localStorage.setItem("word_counts", JSON.stringify(wordCounts));
             }
             openPanel(); 
+            if(document.getElementById("stats-panel").style.display === "flex") updateStatsPanel();
         }
     }
 
@@ -779,6 +866,7 @@
         if (!learnedWords.includes(jp)) {
             learnedWords.push(jp);
             localStorage.setItem("learned_words", JSON.stringify(learnedWords));
+            if(document.getElementById("stats-panel").style.display === "flex") updateStatsPanel();
         }
         btn.disabled = true;
         btn.innerText = "Öğrenildi ✅";
