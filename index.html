@@ -174,7 +174,7 @@
         <div style="width: 170px; border-left: 1px solid #ccc; padding-left: 15px; text-align: left; display: flex; flex-direction: column;">
             <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 14px; text-align: center; color: #444;">Son Kelimeler</h4>
             <div id="online-history-list" style="flex: 1; overflow-y: auto; max-height: 280px; padding-right: 5px;">
-                </div>
+            </div>
         </div>
 
     </div>
@@ -192,7 +192,6 @@
     // ==========================================
     // 1. SUPABASE VE GENEL AYARLAR
     // ==========================================
-    // SUPABASE_URL ve SUPABASE_ANON_KEY config.js içinden geliyor
     const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     let WORDS_DB = {}; 
@@ -203,7 +202,6 @@
         document.getElementById(screenId).classList.add('active');
     }
 
-    // DİNAMİK KELİME YÜKLEME FONKSİYONU
     function loadWords(fileName) {
         document.getElementById("db-status").innerText = "Kelimeler yükleniyor...";
         document.getElementById("start-single-btn").disabled = true;
@@ -217,7 +215,6 @@
                     ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
                 }
                 
-                // Slider Maximum Değerlerini Güncelle (Sadece Online İçin)
                 const maxWords = ALL_WORDS_FLAT.length;
                 document.getElementById('online-word-slider').max = maxWords;
                 document.getElementById('online-word-input').max = maxWords;
@@ -231,7 +228,6 @@
             });
     }
 
-    // İlk açılışta varsayılanı yükle
     loadWords('words.json');
 
 
@@ -310,7 +306,6 @@
 
         if (filteredWords.length === 0) return alert("Tebrikler! Seçtiğin sayfadaki tüm kelimeleri zaten öğrendin!");
 
-        // Sabit 5 kelime çek
         currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, 5);
         singleWordIndex = 0;
 
@@ -395,10 +390,17 @@
         setTimeout(loadNextSingleWord, 1500);
     }
 
-    // --- DIŞA AKTAR ---
+    // --- AKILLI DIŞA AKTAR ---
     function exportLearnedWords() {
         if (learnedWords.length === 0) return alert("Dışa aktarılacak öğrenilmiş kelime yok.");
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(learnedWords));
+        
+        // Yeni format: Hem listeyi hem de word_counts'u aktar
+        const exportData = {
+            learned_words: learnedWords,
+            word_counts: wordCounts
+        };
+
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
         downloadAnchorNode.setAttribute("download", "ogrenilen_kelimeler.json");
@@ -407,7 +409,7 @@
         downloadAnchorNode.remove();
     }
 
-    // --- İÇE AKTAR ---
+    // --- AKILLI İÇE AKTAR ---
     function triggerImport() {
         document.getElementById('import-file').click();
     }
@@ -420,20 +422,45 @@
         reader.onload = function(e) {
             try {
                 const importedData = JSON.parse(e.target.result);
-                if (Array.isArray(importedData)) {
+                let wordsArray = [];
+                let countsObj = {};
+
+                if (importedData && typeof importedData === 'object' && !Array.isArray(importedData)) {
+                    if (importedData.learned_words && Array.isArray(importedData.learned_words)) {
+                        wordsArray = importedData.learned_words;
+                    }
+                    if (importedData.word_counts && typeof importedData.word_counts === 'object') {
+                        countsObj = importedData.word_counts;
+                    }
+                } 
+                else if (Array.isArray(importedData)) {
+                    wordsArray = importedData;
+                }
+
+                if (wordsArray.length > 0) {
                     let addedCount = 0;
-                    importedData.forEach(word => {
+                    wordsArray.forEach(word => {
                         if (typeof word === "string" && !learnedWords.includes(word)) {
                             learnedWords.push(word);
                             addedCount++;
                         }
                     });
+                    
+                    if (Object.keys(countsObj).length > 0) {
+                        for (let word in countsObj) {
+                            wordCounts[word] = Math.max(wordCounts[word] || 0, countsObj[word]);
+                        }
+                        localStorage.setItem("word_counts", JSON.stringify(wordCounts));
+                    }
+                    
                     localStorage.setItem("learned_words", JSON.stringify(learnedWords));
                     openPanel(); 
-                    if(addedCount > 0) alert(`${addedCount} yeni kelime başarıyla listene eklendi!`);
+                    
+                    if(addedCount > 0) alert(`${addedCount} yeni kelime ve ilerleme durumları başarıyla listene eklendi!`);
                     else alert("Seçilen dosyadaki tüm kelimeler zaten listende mevcut.");
+                    
                 } else {
-                    alert("Hata: Dosya formatı geçersiz.");
+                    alert("Hata: Dosya içinde okunabilir bir kelime listesi bulunamadı.");
                 }
             } catch (err) {
                 alert("Dosya okunamadı. Lütfen geçerli bir JSON dosyası seçin.");
@@ -636,7 +663,6 @@
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const correctAns = currentWord.tr || currentWord.eng;
 
-        // DOĞRU CEVAP
         if (isMatch(answer, correctAns)) {
             onlineGameState.isWaiting = true; 
             onlineGameState.players[playerName].score += 1;
@@ -658,7 +684,6 @@
                 }
             }, 3000); 
         } 
-        // YANLIŞ CEVAP VEYA BOŞ GEÇME
         else {
             onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
             const guesses = onlineGameState.wrongGuesses[playerName];
@@ -728,7 +753,6 @@
         addToOnlineHistory(wordFull); 
     }
 
-    // Sağ taraftaki geçmiş paneline kelime basar
     function addToOnlineHistory(wordFull) {
         const list = document.getElementById("online-history-list");
         const div = document.createElement("div");
@@ -751,7 +775,6 @@
         list.prepend(div); 
     }
 
-    // Butona basılınca anında öğrenilenlere atar
     function addToLearnedFromOnline(jp, btn) {
         if (!learnedWords.includes(jp)) {
             learnedWords.push(jp);
