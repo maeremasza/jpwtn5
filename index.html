@@ -108,7 +108,11 @@
 
 <div id="panel-screen" class="container">
     <h3 style="margin-top:0;">Yönetim Paneli</h3>
-    <p style="font-size: 13px; color: #666;">Bu kelimeler tek kişilik testte karşına çıkmaz.</p>
+    <p style="font-size: 13px; color: #666; margin-bottom: 5px;">Bu kelimeler tek kişilik testte karşına çıkmaz.</p>
+    <div style="font-size: 14px; font-weight: bold; color: #007BFF; margin-bottom: 10px;">
+        Toplam: <span id="learned-count">0</span> kelime
+    </div>
+    
     <div id="word-list"></div>
     <button class="btn btn-primary" onclick="restoreWord()">Seçili Kelimeyi Geri Yükle</button>
     <button class="btn btn-secondary" onclick="showScreen('main-menu')">Ana Menüye Dön</button>
@@ -321,7 +325,6 @@
             input.value = "";
             input.disabled = false;
             
-            // Renk ve metinleri temizle
             const resultLabel = document.getElementById("single-result-label");
             resultLabel.innerText = "";
             resultLabel.style.color = "";
@@ -390,11 +393,13 @@
         listDiv.innerHTML = "";
         selectedListItem = null;
 
+        // Toplam Öğrenilen Sayısını Güncelle
+        document.getElementById("learned-count").innerText = learnedWords.length;
+
         learnedWords.forEach(wordStr => {
             const div = document.createElement("div");
             div.className = "list-item";
             
-            // Hiraganayı düz veritabanından bul
             const wordObj = ALL_WORDS_FLAT.find(w => w.jp === wordStr);
             const hira = (wordObj && wordObj.hiragana) ? ` (${wordObj.hiragana})` : "";
             
@@ -417,7 +422,7 @@
                 wordCounts[selectedListItem] = 0;
                 localStorage.setItem("word_counts", JSON.stringify(wordCounts));
             }
-            openPanel();
+            openPanel(); // Sayacı anında günceller
         }
     }
 
@@ -548,7 +553,6 @@
         document.getElementById("online-roma-label").innerText = payload.word.romaji || "";
         document.getElementById("online-progress-label").innerText = `Kelime: ${payload.currentNo}/${payload.totalWords}`;
         
-        // Renk ve metinleri tamamen temizle
         const resLabel = document.getElementById("online-result-label");
         resLabel.innerText = "";
         resLabel.style.color = "";
@@ -578,7 +582,6 @@
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const correctAns = currentWord.tr || currentWord.eng;
 
-        // DOĞRU CEVAP
         if (isMatch(answer, correctAns)) {
             onlineGameState.isWaiting = true; 
             onlineGameState.players[playerName].score += 1;
@@ -600,7 +603,6 @@
                 }
             }, 3000); 
         } 
-        // YANLIŞ CEVAP VEYA BOŞ GEÇME
         else {
             onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
             const guesses = onlineGameState.wrongGuesses[playerName];
@@ -640,7 +642,7 @@
         
         onlineGameState.players = data.players;
         updateOnlineScoreBoard();
-        addToOnlineHistory(data.wordFull); // Panele ekle
+        addToOnlineHistory(data.wordFull); 
     }
 
     function handleOnlineWrongAnswer(name, guesses) {
@@ -667,10 +669,9 @@
         res.innerText = `⏳ Kimse bilemedi! Kelime atlanıyor...\nCevap: ${wordEng}`;
         res.style.color = "gray";
         
-        addToOnlineHistory(wordFull); // Panele ekle
+        addToOnlineHistory(wordFull); 
     }
 
-    // Sağ taraftaki geçmiş paneline kelime basar
     function addToOnlineHistory(wordFull) {
         const list = document.getElementById("online-history-list");
         const div = document.createElement("div");
@@ -693,7 +694,6 @@
         list.prepend(div); 
     }
 
-    // Butona basılınca anında öğrenilenlere atar
     function addToLearnedFromOnline(jp, btn) {
         if (!learnedWords.includes(jp)) {
             learnedWords.push(jp);
