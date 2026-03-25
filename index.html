@@ -32,8 +32,6 @@
         .roma-label { font-size: 16px; color: #666; margin-bottom: 15px; }
         .blur-text { filter: blur(10px); transition: 0.3s; cursor: pointer; margin: 5px 0; }
         .blur-text:hover { filter: blur(0px); }
-        .red-text { color: red; }
-        .green-text { color: green; }
 
         .player-list { text-align: left; background: #f9f9f9; padding: 10px; border-radius: 5px; margin-top: 10px; }
         .score-board { display: flex; justify-content: space-around; font-weight: bold; margin-bottom: 15px; background: #e9ecef; padding: 10px; border-radius: 5px;}
@@ -44,6 +42,11 @@
         .slider-group { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; background: #fff; padding: 5px; border-radius: 5px; border: 1px solid #ddd; }
         .slider-group input[type="range"] { flex-grow: 1; margin: 0 10px; cursor: pointer; }
         .slider-group input[type="number"] { width: 50px; padding: 5px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
+        
+        .container-wide { width: 550px !important; max-width: 95vw; }
+        
+        #online-history-list::-webkit-scrollbar { width: 6px; }
+        #online-history-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
     </style>
 </head>
 <body>
@@ -62,7 +65,7 @@
     
     <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #ddd;">
         <h4 style="margin-top: 0; margin-bottom: 10px;">👤 Tek Kişilik Çalışma</h4>
-        <div id="timer-label" class="red-text" style="font-weight: bold; font-size: 14px;">Süre hesaplanıyor...</div>
+        <div id="timer-label" style="color: red; font-weight: bold; font-size: 14px;">Süre hesaplanıyor...</div>
         <button id="skip-btn" class="btn btn-skip" onclick="skipTimer()">⏭️ Süreyi Atla</button>
         
         <select id="single-page-combo">
@@ -76,13 +79,7 @@
             <option value="7">Sayfa 7</option>
         </select>
 
-        <div class="slider-group">
-            <span style="font-size: 12px; font-weight: bold;">Soru:</span>
-            <input type="range" id="single-word-slider" min="1" max="50" value="5" oninput="document.getElementById('single-word-input').value = this.value">
-            <input type="number" id="single-word-input" min="1" max="50" value="5" oninput="document.getElementById('single-word-slider').value = this.value">
-        </div>
-
-        <button id="start-single-btn" class="btn btn-primary" onclick="startSingleQuiz()" disabled>Teste Başla</button>
+        <button id="start-single-btn" class="btn btn-primary" onclick="startSingleQuiz()" disabled>Teste Başla (5 Kelime)</button>
         <button class="btn btn-warning" onclick="showScreen('panel-screen'); openPanel();" style="margin-top: 5px;">📚 Öğrenilenleri Yönet</button>
     </div>
 
@@ -147,17 +144,29 @@
     <p id="waiting-msg" style="color: #666;">Kurucunun oyunu başlatması bekleniyor...</p>
 </div>
 
-<div id="online-quiz-screen" class="container">
-    <div class="score-board" id="online-score-board"></div>
-    <div id="online-progress-label" style="font-size: 12px; color: #666; margin-bottom: 5px;">Kelime: -/-</div>
-    
-    <div class="word-label" id="online-word-label">漢字</div>
-    <div class="pos-label" id="online-pos-label">Type</div>
-    <div class="hira-label blur-text" id="online-hira-label">ひらがな</div>
-    <div class="roma-label blur-text" id="online-roma-label">romaji</div>
-    
-    <input type="text" id="online-answer-input" placeholder="Anlamını yaz + Enter (Boş geçebilirsin)" onkeypress="if(event.key==='Enter') checkOnlineAnswerInput()" autocomplete="off">
-    <div id="online-result-label" style="margin-top: 15px; font-weight: bold; white-space: pre-line;"></div>
+<div id="online-quiz-screen" class="container container-wide">
+    <div style="display: flex; gap: 20px;">
+        
+        <div style="flex: 1; text-align: center;">
+            <div class="score-board" id="online-score-board"></div>
+            <div id="online-progress-label" style="font-size: 12px; color: #666; margin-bottom: 5px;">Kelime: -/-</div>
+            
+            <div class="word-label" id="online-word-label">漢字</div>
+            <div class="pos-label" id="online-pos-label">Type</div>
+            <div class="hira-label blur-text" id="online-hira-label">ひらがな</div>
+            <div class="roma-label blur-text" id="online-roma-label">romaji</div>
+            
+            <input type="text" id="online-answer-input" placeholder="Anlamını yaz + Enter (Boş geçebilirsin)" onkeypress="if(event.key==='Enter') checkOnlineAnswerInput()" autocomplete="off">
+            <div id="online-result-label" style="margin-top: 15px; font-weight: bold; white-space: pre-line;"></div>
+        </div>
+
+        <div style="width: 170px; border-left: 1px solid #ccc; padding-left: 15px; text-align: left; display: flex; flex-direction: column;">
+            <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 14px; text-align: center; color: #444;">Son Kelimeler</h4>
+            <div id="online-history-list" style="flex: 1; overflow-y: auto; max-height: 280px; padding-right: 5px;">
+                </div>
+        </div>
+
+    </div>
 </div>
 
 <div id="online-result-screen" class="container">
@@ -196,10 +205,8 @@
                     ALL_WORDS_FLAT = ALL_WORDS_FLAT.concat(WORDS_DB[page]);
                 }
                 
-                // Slider Maximum Değerlerini Güncelle
+                // Slider Maximum Değerlerini Güncelle (Sadece Online İçin)
                 const maxWords = ALL_WORDS_FLAT.length;
-                document.getElementById('single-word-slider').max = maxWords;
-                document.getElementById('single-word-input').max = maxWords;
                 document.getElementById('online-word-slider').max = maxWords;
                 document.getElementById('online-word-input').max = maxWords;
 
@@ -217,17 +224,18 @@
 
 
     // ==========================================
-    // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI
+    // AKILLI & KATI EŞLEŞTİRME ALGORİTMASI (TÜRKÇE UYUMLU)
     // ==========================================
     function isMatch(userAns, correctAns) {
-        userAns = userAns.trim().toLowerCase();
+        userAns = userAns.trim().toLocaleLowerCase('tr-TR');
         if (!userAns) return false; 
         
-        const parts = correctAns.toLowerCase().split(',').map(p => p.trim());
+        const parts = correctAns.toLocaleLowerCase('tr-TR').split(',').map(p => p.trim());
+        
         if (parts.includes(userAns)) return true;
         
         const escapedAns = userAns.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const regex = new RegExp(`\\b${escapedAns}\\b`, 'i');
+        const regex = new RegExp(`(^|[\\s!?.,;()\\-])${escapedAns}([\\s!?.,;()\\-]|$)`, 'i');
         
         return parts.some(part => regex.test(part));
     }
@@ -259,14 +267,14 @@
         
         if (remainingTime <= 0) {
             timerLabel.innerText = "Teste hazırsın!";
-            timerLabel.className = "green-text";
+            timerLabel.style.color = "green";
             startBtn.disabled = false;
             skipBtn.style.display = "none";
         } else {
             const minutes = Math.floor(remainingTime / 60).toString().padStart(2, '0');
             const seconds = Math.floor(remainingTime % 60).toString().padStart(2, '0');
             timerLabel.innerText = `Sonraki teste: ${minutes}:${seconds}`;
-            timerLabel.className = "red-text";
+            timerLabel.style.color = "red";
             startBtn.disabled = true;
             skipBtn.style.display = "inline-block";
         }
@@ -280,7 +288,6 @@
 
     function startSingleQuiz() {
         const selectedPage = document.getElementById("single-page-combo").value;
-        const wordCount = parseInt(document.getElementById("single-word-input").value);
         let wordsToTest = [];
 
         if (selectedPage === "all") wordsToTest = ALL_WORDS_FLAT;
@@ -292,7 +299,8 @@
 
         if (filteredWords.length === 0) return alert("Tebrikler! Seçtiğin sayfadaki tüm kelimeleri zaten öğrendin!");
 
-        currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, wordCount);
+        // Sabit 5 kelime çek
+        currentSingleWords = filteredWords.sort(() => 0.5 - Math.random()).slice(0, 5);
         singleWordIndex = 0;
 
         showScreen("single-quiz-screen");
@@ -312,9 +320,14 @@
             const input = document.getElementById("single-answer-input");
             input.value = "";
             input.disabled = false;
+            
+            // Renk ve metinleri temizle
+            const resultLabel = document.getElementById("single-result-label");
+            resultLabel.innerText = "";
+            resultLabel.style.color = "";
+
             document.getElementById("single-check-btn").disabled = false;
             document.getElementById("single-ban-btn").disabled = false;
-            document.getElementById("single-result-label").innerText = "";
             input.focus();
         } else {
             lastQuizTime = Date.now() / 1000;
@@ -328,12 +341,12 @@
         const input = document.getElementById("single-answer-input");
         const userAns = input.value; 
         const word = currentSingleWords[singleWordIndex];
-        const correctAns = word.tr || word.eng; // JSON'daki anahtar eng veya tr olabilir, ikisini de dener
+        const correctAns = word.tr || word.eng; 
         const resultLabel = document.getElementById("single-result-label");
 
         if (isMatch(userAns, correctAns)) {
             resultLabel.innerText = `Doğru! 🎉\nAnlamı: ${correctAns}`;
-            resultLabel.className = "green-text";
+            resultLabel.style.color = "green";
 
             wordCounts[word.jp] = (wordCounts[word.jp] || 0) + 1;
             localStorage.setItem("word_counts", JSON.stringify(wordCounts));
@@ -344,7 +357,7 @@
             }
         } else {
             resultLabel.innerText = `Yanlış! ❌\nDoğru Anlamı: ${correctAns}`;
-            resultLabel.className = "red-text";
+            resultLabel.style.color = "red";
         }
 
         input.disabled = true;
@@ -377,15 +390,20 @@
         listDiv.innerHTML = "";
         selectedListItem = null;
 
-        learnedWords.forEach(word => {
+        learnedWords.forEach(wordStr => {
             const div = document.createElement("div");
             div.className = "list-item";
-            div.innerText = word;
+            
+            // Hiraganayı düz veritabanından bul
+            const wordObj = ALL_WORDS_FLAT.find(w => w.jp === wordStr);
+            const hira = (wordObj && wordObj.hiragana) ? ` (${wordObj.hiragana})` : "";
+            
+            div.innerText = wordStr + hira;
             div.onclick = function() {
                 const items = document.getElementsByClassName("list-item");
                 for (let item of items) item.classList.remove("selected");
                 div.classList.add("selected");
-                selectedListItem = word;
+                selectedListItem = wordStr;
             };
             listDiv.appendChild(div);
         });
@@ -405,7 +423,7 @@
 
 
     // ==========================================
-    // 3. ÇOK OYUNCULU MOD SİSTEMİ (REKABETÇİ)
+    // 3. ÇOK OYUNCULU MOD SİSTEMİ
     // ==========================================
     let roomChannel;
     let isHost = false;
@@ -466,6 +484,7 @@
                 }
             })
             .on('broadcast', { event: 'game_started' }, () => {
+                document.getElementById("online-history-list").innerHTML = "";
                 showScreen("online-quiz-screen");
             })
             .on('broadcast', { event: 'new_word' }, (payload) => {
@@ -481,7 +500,7 @@
                 handleOnlineWrongAnswer(payload.payload.name, payload.payload.guesses);
             })
             .on('broadcast', { event: 'word_skipped' }, (payload) => {
-                handleWordSkipped(payload.payload.wordEng);
+                handleWordSkipped(payload.payload.wordEng, payload.payload.wordFull);
             })
             .on('broadcast', { event: 'game_over' }, (payload) => {
                 handleOnlineGameOver(payload.payload);
@@ -502,6 +521,7 @@
         onlineGameState.isWaiting = false;
 
         roomChannel.send({ type: 'broadcast', event: 'game_started', payload: {} });
+        document.getElementById("online-history-list").innerHTML = ""; // Host için temizle
         showScreen("online-quiz-screen");
         sendNextOnlineWord();
     }
@@ -528,7 +548,10 @@
         document.getElementById("online-roma-label").innerText = payload.word.romaji || "";
         document.getElementById("online-progress-label").innerText = `Kelime: ${payload.currentNo}/${payload.totalWords}`;
         
-        document.getElementById("online-result-label").innerText = "";
+        // Renk ve metinleri tamamen temizle
+        const resLabel = document.getElementById("online-result-label");
+        resLabel.innerText = "";
+        resLabel.style.color = "";
         
         const input = document.getElementById("online-answer-input");
         input.disabled = false;
@@ -560,7 +583,7 @@
             onlineGameState.isWaiting = true; 
             onlineGameState.players[playerName].score += 1;
             
-            const resultData = { winner: playerName, wordEng: correctAns, players: onlineGameState.players };
+            const resultData = { winner: playerName, wordEng: correctAns, wordFull: currentWord, players: onlineGameState.players };
             
             handleOnlineCorrectAnswer(resultData);
             roomChannel.send({ type: 'broadcast', event: 'correct_answer', payload: resultData });
@@ -577,7 +600,7 @@
                 }
             }, 3000); 
         } 
-        // YANLIŞ CEVAP
+        // YANLIŞ CEVAP VEYA BOŞ GEÇME
         else {
             onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
             const guesses = onlineGameState.wrongGuesses[playerName];
@@ -591,8 +614,8 @@
             if (everyoneOut) {
                 onlineGameState.isWaiting = true; 
                 
-                roomChannel.send({ type: 'broadcast', event: 'word_skipped', payload: { wordEng: correctAns } });
-                handleWordSkipped(correctAns);
+                roomChannel.send({ type: 'broadcast', event: 'word_skipped', payload: { wordEng: correctAns, wordFull: currentWord } });
+                handleWordSkipped(correctAns, currentWord);
 
                 onlineGameState.currentIndex++;
                 setTimeout(() => {
@@ -617,6 +640,7 @@
         
         onlineGameState.players = data.players;
         updateOnlineScoreBoard();
+        addToOnlineHistory(data.wordFull); // Panele ekle
     }
 
     function handleOnlineWrongAnswer(name, guesses) {
@@ -637,11 +661,47 @@
         }
     }
 
-    function handleWordSkipped(wordEng) {
+    function handleWordSkipped(wordEng, wordFull) {
         document.getElementById("online-answer-input").disabled = true;
         const res = document.getElementById("online-result-label");
         res.innerText = `⏳ Kimse bilemedi! Kelime atlanıyor...\nCevap: ${wordEng}`;
         res.style.color = "gray";
+        
+        addToOnlineHistory(wordFull); // Panele ekle
+    }
+
+    // Sağ taraftaki geçmiş paneline kelime basar
+    function addToOnlineHistory(wordFull) {
+        const list = document.getElementById("online-history-list");
+        const div = document.createElement("div");
+        div.style.marginBottom = "8px";
+        div.style.padding = "8px";
+        div.style.background = "#f0f2f5";
+        div.style.borderRadius = "5px";
+        div.style.fontSize = "12px";
+        
+        const isLearned = learnedWords.includes(wordFull.jp);
+        const btnHtml = isLearned 
+            ? `<button disabled style="font-size:10px; padding:4px 6px; background:#28a745; color:white; border:none; border-radius:3px; width:100%;">Öğrenildi ✅</button>`
+            : `<button onclick="addToLearnedFromOnline('${wordFull.jp}', this)" style="font-size:10px; padding:4px 6px; background:#007BFF; color:white; border:none; border-radius:3px; cursor:pointer; width:100%; transition: 0.2s;">Öğrenilenlere Ekle</button>`;
+
+        div.innerHTML = `
+            <div style="font-weight: bold; font-size: 14px; color: #333;">${wordFull.jp}</div>
+            <div style="color: #666; margin-bottom: 5px;">${wordFull.hiragana || ""}</div>
+            ${btnHtml}
+        `;
+        list.prepend(div); 
+    }
+
+    // Butona basılınca anında öğrenilenlere atar
+    function addToLearnedFromOnline(jp, btn) {
+        if (!learnedWords.includes(jp)) {
+            learnedWords.push(jp);
+            localStorage.setItem("learned_words", JSON.stringify(learnedWords));
+        }
+        btn.disabled = true;
+        btn.innerText = "Öğrenildi ✅";
+        btn.style.background = "#28a745";
     }
 
     function handleOnlineGameOver(data) {
