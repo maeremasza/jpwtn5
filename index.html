@@ -193,7 +193,7 @@
         <div style="width: 170px; border-left: 1px solid #ccc; padding-left: 15px; text-align: left; display: flex; flex-direction: column;">
             <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 14px; text-align: center; color: #444;">Son Kelimeler</h4>
             <div id="online-history-list" style="flex: 1; overflow-y: auto; max-height: 280px; padding-right: 5px;">
-            </div>
+                </div>
         </div>
 
     </div>
@@ -215,6 +215,14 @@
 
     let WORDS_DB = {}; 
     let ALL_WORDS_FLAT = []; 
+
+    // Sayfa Yüklendiğinde Kayıtlı İsmi Çek
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedPlayerName = localStorage.getItem("player_name");
+        if (savedPlayerName) {
+            document.getElementById("player-name").value = savedPlayerName;
+        }
+    });
 
     function showScreen(screenId) {
         document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
@@ -241,7 +249,6 @@
                 document.getElementById("db-status").innerText = `Veritabanı hazır (${maxWords} kelime) ✅`;
                 updateTimerDisplay(); 
                 
-                // Eğer panel açıksa hemen verileri yenile
                 if(document.getElementById("stats-panel").style.display === "flex") {
                     updateStatsPanel();
                 }
@@ -256,7 +263,7 @@
 
 
     // ==========================================
-    // İSTATİSTİK PANELİ FONKSİYONLARI (YENİ)
+    // İSTATİSTİK PANELİ FONKSİYONLARI
     // ==========================================
     function toggleStatsPanel() {
         const panel = document.getElementById("stats-panel");
@@ -614,6 +621,8 @@
         myName = document.getElementById("player-name").value.trim();
         if (!myName) return alert("Lütfen adını yaz!");
         
+        localStorage.setItem("player_name", myName); // İsim Kaydetme
+
         isHost = true;
         const roomCode = Math.random().toString(36).substring(2, 7).toUpperCase();
         setupChannel(roomCode);
@@ -633,6 +642,8 @@
         
         if (!myName || !roomCode) return alert("Adını ve Oda Kodunu eksiksiz yaz!");
         
+        localStorage.setItem("player_name", myName); // İsim Kaydetme
+
         setupChannel(roomCode);
         document.getElementById("room-code-display").innerText = roomCode;
         showScreen("online-lobby-screen");
