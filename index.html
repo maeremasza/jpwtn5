@@ -23,7 +23,7 @@
         .btn-skip { background: none; color: #666; font-size: 12px; font-weight: normal; margin-top: 5px; }
         .btn-skip:hover { text-decoration: underline; }
 
-        input[type="text"] { width: 90%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
+        input[type="text"], input[type="file"] { width: 90%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
         select { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; font-family: inherit; }
         
         .word-label { font-size: 42px; font-weight: bold; margin: 0; }
@@ -48,7 +48,7 @@
         #online-history-list::-webkit-scrollbar { width: 6px; }
         #online-history-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
 
-        /* İSTATİSTİK PANELİ CSS */
+        /* SAĞ ALT: İSTATİSTİK PANELİ CSS */
         #stats-btn { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; background: #17a2b8; color: white; font-size: 24px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000; transition: 0.2s; display: flex; justify-content: center; align-items: center; }
         #stats-btn:hover { background: #138496; transform: scale(1.05); }
         #stats-panel { position: fixed; bottom: 85px; right: 20px; width: 260px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 1000; display: none; flex-direction: column; border: 1px solid #ddd; }
@@ -56,9 +56,40 @@
         .stat-row:last-child { border-bottom: none; }
         #stats-content::-webkit-scrollbar { width: 4px; }
         #stats-content::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+
+        /* SAĞ ÜST: BULUT (CLOUD) PANELİ CSS */
+        #cloud-btn { position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background: #007BFF; color: white; font-size: 20px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000; transition: 0.2s; display: flex; justify-content: center; align-items: center; }
+        #cloud-btn:hover { background: #0056b3; transform: scale(1.05); }
+        #cloud-panel { position: fixed; top: 80px; right: 20px; width: 280px; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 1000; display: none; flex-direction: column; border: 1px solid #ddd; }
+        
+        .drop-zone { border: 2px dashed #007BFF; border-radius: 8px; padding: 20px; text-align: center; color: #666; font-size: 12px; cursor: pointer; transition: 0.3s; background: #f8f9fa; margin-bottom: 15px; }
+        .drop-zone.drag-over { background: #e3f2fd; border-color: #0056b3; color: #0056b3; font-weight: bold; }
+        
+        .cloud-item { display: flex; justify-content: space-between; align-items: center; padding: 8px; background: #f0f2f5; border-radius: 5px; margin-bottom: 8px; font-size: 12px; }
+        .cloud-item-btn { background: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 11px; }
+        .cloud-item-btn:hover { background: #218838; }
+        #cloud-list { max-height: 200px; overflow-y: auto; padding-right: 5px; }
+        #cloud-list::-webkit-scrollbar { width: 4px; }
+        #cloud-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
     </style>
 </head>
 <body>
+
+<button id="cloud-btn" onclick="toggleCloudPanel()">☁️</button>
+<div id="cloud-panel">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 5px;">
+        <h4 style="margin: 0; color: #333;">Yedek Bulutu</h4>
+        <button onclick="toggleCloudPanel()" style="background: none; border: none; font-size: 14px; cursor: pointer; color: #888;">❌</button>
+    </div>
+    
+    <div id="drop-zone" class="drop-zone" onclick="document.getElementById('cloud-file-input').click()">
+        📁 <b>.json</b> dosyanı buraya sürükle<br>veya tıklayıp seç
+    </div>
+    <input type="file" id="cloud-file-input" accept=".json" style="display: none;" onchange="handleCloudFileUpload(event)">
+    
+    <div style="font-size: 11px; color: #888; margin-bottom: 5px; text-align: center;">Mevcut Yedekler (14 Gün Tutulur)</div>
+    <div id="cloud-list"></div>
+</div>
 
 <button id="stats-btn" onclick="toggleStatsPanel()">📊</button>
 <div id="stats-panel">
@@ -66,8 +97,7 @@
         <h4 style="margin: 0; color: #333;">Kalan Kelimeler</h4>
         <button onclick="toggleStatsPanel()" style="background: none; border: none; font-size: 14px; cursor: pointer; color: #888;">❌</button>
     </div>
-    <div id="stats-content" style="max-height: 250px; overflow-y: auto;">
-        </div>
+    <div id="stats-content" style="max-height: 250px; overflow-y: auto;"></div>
 </div>
 
 <div id="main-menu" class="container active">
@@ -134,8 +164,8 @@
     </div>
 
     <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-        <button class="btn btn-secondary" onclick="exportLearnedWords()" style="margin-top: 0; background-color: #17a2b8; font-size: 12px;">📥 Dışa Aktar</button>
-        <button class="btn btn-secondary" onclick="triggerImport()" style="margin-top: 0; background-color: #6c757d; font-size: 12px;">📤 İçe Aktar</button>
+        <button class="btn btn-secondary" onclick="exportLearnedWords()" style="margin-top: 0; background-color: #17a2b8; font-size: 12px;">📥 Bilgisayara İndir</button>
+        <button class="btn btn-secondary" onclick="triggerImport()" style="margin-top: 0; background-color: #6c757d; font-size: 12px;">📤 Dosyadan Yükle</button>
     </div>
     <input type="file" id="import-file" accept=".json" style="display: none;" onchange="importLearnedWords(event)">
     
@@ -192,8 +222,7 @@
 
         <div style="width: 170px; border-left: 1px solid #ccc; padding-left: 15px; text-align: left; display: flex; flex-direction: column;">
             <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 14px; text-align: center; color: #444;">Son Kelimeler</h4>
-            <div id="online-history-list" style="flex: 1; overflow-y: auto; max-height: 280px; padding-right: 5px;">
-                </div>
+            <div id="online-history-list" style="flex: 1; overflow-y: auto; max-height: 280px; padding-right: 5px;"></div>
         </div>
 
     </div>
@@ -216,12 +245,12 @@
     let WORDS_DB = {}; 
     let ALL_WORDS_FLAT = []; 
 
-    // Sayfa Yüklendiğinde Kayıtlı İsmi Çek
     document.addEventListener("DOMContentLoaded", () => {
         const savedPlayerName = localStorage.getItem("player_name");
         if (savedPlayerName) {
             document.getElementById("player-name").value = savedPlayerName;
         }
+        setupDragAndDrop();
     });
 
     function showScreen(screenId) {
@@ -263,7 +292,163 @@
 
 
     // ==========================================
-    // İSTATİSTİK PANELİ FONKSİYONLARI
+    // SAĞ ÜST: BULUT PANELİ (YENİ SİSTEM + GÜVENLİK)
+    // ==========================================
+    let cachedCloudData = [];
+
+    function toggleCloudPanel() {
+        const panel = document.getElementById("cloud-panel");
+        if (panel.style.display === "flex") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "flex";
+            fetchCloudData();
+        }
+    }
+
+    function setupDragAndDrop() {
+        const dropZone = document.getElementById('drop-zone');
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            if (e.dataTransfer.files.length) {
+                processCloudUpload(e.dataTransfer.files[0]);
+            }
+        });
+    }
+
+    // VERİ VALİDASYON FONKSİYONU
+    function isValidBackup(data) {
+        if (Array.isArray(data)) return true;
+        if (data && typeof data === "object") {
+            if (data.learned_words && Array.isArray(data.learned_words)) {
+                return data.learned_words.every(w => typeof w === "string");
+            }
+        }
+        return false;
+    }
+
+    function handleCloudFileUpload(event) {
+        if (event.target.files.length) {
+            processCloudUpload(event.target.files[0]);
+            event.target.value = ''; 
+        }
+    }
+
+    // GÜVENLİ BACKEND YÜKLEME FONKSİYONU
+    function processCloudUpload(file) {
+        // Frontend Boyut Kontrolü (3 MB)
+        const MAX_SIZE_MB = 3;
+        if (file.size > MAX_SIZE_MB * 1024 * 1024) {
+            return alert(`Hata: Dosya boyutu çok büyük! Maksimum limit ${MAX_SIZE_MB} MB.`);
+        }
+
+        const reader = new FileReader();
+        reader.onload = async function(e) {
+            try {
+                const jsonData = JSON.parse(e.target.result);
+                
+                // Frontend Veri Validasyonu
+                if(!isValidBackup(jsonData)) {
+                    throw new Error("Geçersiz JSON formatı veya bozuk kelime yapısı.");
+                }
+
+                const uploadName = prompt("Bu yedeğe bir isim verin (Örn: Ahmet PC):");
+                if (!uploadName || uploadName.trim() === "") return;
+
+                document.getElementById('cloud-list').innerHTML = "<div style='text-align:center;'>Yükleniyor... ⏳</div>";
+
+                // Backend RPC Fonksiyonu Çağrısı (Güvenli)
+                const { error } = await supabaseClient.rpc('upload_shared_backup', { 
+                    backup_name: uploadName.trim(), 
+                    backup_data: jsonData 
+                });
+                
+                if (error) throw error;
+                
+                alert("Yedek başarıyla buluta yüklendi! ☁️");
+                fetchCloudData(); // Listeyi yenile
+
+            } catch (err) {
+                alert(`Yükleme başarısız! ${err.message || 'Lütfen geçerli bir yedek (.json) dosyası seçin.'}`);
+                console.error(err);
+                fetchCloudData(); 
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    async function fetchCloudData() {
+        const listDiv = document.getElementById('cloud-list');
+        listDiv.innerHTML = "<div style='text-align:center; color:#888;'>Yedekler aranıyor... ⏳</div>";
+
+        const fourteenDaysAgo = new Date();
+        fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 14);
+
+        const { data, error } = await supabaseClient
+            .from('shared_exports')
+            .select('*')
+            .gte('created_at', fourteenDaysAgo.toISOString())
+            .order('created_at', { ascending: false });
+
+        if (error) {
+            listDiv.innerHTML = "<div style='color:red; text-align:center;'>Bağlantı hatası!</div>";
+            return;
+        }
+
+        cachedCloudData = data;
+        listDiv.innerHTML = "";
+
+        if (data.length === 0) {
+            listDiv.innerHTML = "<div style='text-align:center; color:#888;'>Henüz yüklenmiş yedek yok.</div>";
+            return;
+        }
+
+        data.forEach(item => {
+            const createdAt = new Date(item.created_at);
+            const expiryDate = new Date(createdAt.getTime() + (14 * 24 * 60 * 60 * 1000));
+            const now = new Date();
+            const diffMs = expiryDate - now;
+            
+            const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            const div = document.createElement('div');
+            div.className = 'cloud-item';
+            div.innerHTML = `
+                <div>
+                    <b>${item.name}</b><br>
+                    <span style="font-size:10px; color:#888;">Silinmesine: ${days} gün ${hours} saat kaldı</span>
+                </div>
+                <button class="cloud-item-btn" onclick="downloadFromCloud('${item.id}', '${item.name.replace(/'/g, "\\'")}')">İndir</button>
+            `;
+            listDiv.appendChild(div);
+        });
+    }
+
+    function downloadFromCloud(id, name) {
+        const item = cachedCloudData.find(x => x.id === id);
+        if (!item) return alert("Dosya bulunamadı!");
+
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(item.data));
+        const a = document.createElement('a');
+        a.href = dataStr;
+        a.download = `yedek_${name.replace(/[^a-zA-Z0-9]/g, "_")}.json`; 
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    }
+
+
+    // ==========================================
+    // SAĞ ALT: İSTATİSTİK PANELİ FONKSİYONLARI
     // ==========================================
     function toggleStatsPanel() {
         const panel = document.getElementById("stats-panel");
@@ -621,7 +806,7 @@
         myName = document.getElementById("player-name").value.trim();
         if (!myName) return alert("Lütfen adını yaz!");
         
-        localStorage.setItem("player_name", myName); // İsim Kaydetme
+        localStorage.setItem("player_name", myName); 
 
         isHost = true;
         const roomCode = Math.random().toString(36).substring(2, 7).toUpperCase();
@@ -642,7 +827,7 @@
         
         if (!myName || !roomCode) return alert("Adını ve Oda Kodunu eksiksiz yaz!");
         
-        localStorage.setItem("player_name", myName); // İsim Kaydetme
+        localStorage.setItem("player_name", myName); 
 
         setupChannel(roomCode);
         document.getElementById("room-code-display").innerText = roomCode;
