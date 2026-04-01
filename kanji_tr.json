@@ -5452,7 +5452,505 @@
       "kunyomi": "inu, いぬ",
       "meaning": "köpek"
     },
-    {
+{
       "kanji": "妹",
       "onyomi": "mai, マイ",
-      "
+      "kunyomi": "imouto, いもうと",
+      "meaning": "kız kardeş"
+    },
+{
+      "kanji": "姉",
+      "onyomi": "shi, シ",
+      "kunyomi": "ane, あね",
+      "meaning": "abla"
+    },
+    {
+      "kanji": "漢",
+      "onyomi": "kan, カン",
+      "kunyomi": "",
+      "meaning": "Çin"
+    }
+  ],
+  "N5": [
+    {
+      "kanji": "日",
+      "onyomi": "nichi, jitsu, ニチ, ジツ",
+      "kunyomi": "hi, -bi, -ka, ひ, -び, -か",
+      "meaning": "gün, güneş, Japonya, gün sayacı"
+    },
+    {
+      "kanji": "一",
+      "onyomi": "ichi, イチ",
+      "kunyomi": "hito(tsu), ひと(つ)",
+      "meaning": "bir, 1"
+    },
+    {
+      "kanji": "国",
+      "onyomi": "koku, コク",
+      "kunyomi": "kuni, くに",
+      "meaning": "ülke"
+    },
+    {
+      "kanji": "人",
+      "onyomi": "jin, nin, ジン、 ニン",
+      "kunyomi": "hito, ひと",
+      "meaning": "insan, kişi"
+    },
+    {
+      "kanji": "年",
+      "onyomi": "nen, ネン",
+      "kunyomi": "toshi, とし",
+      "meaning": "yıl, yıl sayacı"
+    },
+    {
+      "kanji": "大",
+      "onyomi": "dai, tai, ダイ、 タイ",
+      "kunyomi": "oo(kii), おお(きい)",
+      "meaning": "büyük, geniş"
+    },
+    {
+      "kanji": "十",
+      "onyomi": "juu, ジュウ",
+      "kunyomi": "tou, to, とお、 と",
+      "meaning": "on, 10"
+    },
+    {
+      "kanji": "二",
+      "onyomi": "ni, ji, ニ、 ジ",
+      "kunyomi": "futa(tsu), ふた(つ)",
+      "meaning": "iki, 2"
+    },
+    {
+      "kanji": "本",
+      "onyomi": "hon, ホン",
+      "kunyomi": "moto, もと",
+      "meaning": "kitap, asıl, gerçek, uzun silindirik nesne sayacı"
+    },
+    {
+      "kanji": "中",
+      "onyomi": "chuu, チュウ",
+      "kunyomi": "naka, uchi, ata(ru), なか、 うち、 あた(る)",
+      "meaning": "iç, orta, merkez"
+    },
+    {
+      "kanji": "長",
+      "onyomi": "chou, チョウ",
+      "kunyomi": "naga(i), osa, なが(い)、 おさ",
+      "meaning": "uzun, lider, şef, kıdemli"
+    },
+    {
+      "kanji": "出",
+      "onyomi": "shutsu, sui, シュツ、 スイ",
+      "kunyomi": "de(ru), da(su), i(deru), で(る)、 だ(す)、 い(でる)",
+      "meaning": "çıkış, ayrılmak, dışarı çıkmak"
+    },
+    {
+      "kanji": "三",
+      "onyomi": "san, サン",
+      "kunyomi": "mi(tsu), み(つ)",
+      "meaning": "üç, 3"
+    },
+    {
+      "kanji": "時",
+      "onyomi": "ji, ジ",
+      "kunyomi": "toki, doki, とき、 -どき",
+      "meaning": "zaman, saat"
+    },
+    {
+      "kanji": "行",
+      "onyomi": "kou, gyou, an, コウ、 ギョウ、 アン",
+      "kunyomi": "i(ku), yu(ku), okona(u), い(く)、 ゆ(く)、 おこな(う)",
+      "meaning": "gitmek, yolculuk, yapmak, satır"
+    },
+    {
+      "kanji": "見",
+      "onyomi": "ken, ケン",
+      "kunyomi": "mi(ru), mi(seru), み(る)、 み(せる)",
+      "meaning": "görmek, bakmak, fikir, görünür"
+    },
+    {
+      "kanji": "月",
+      "onyomi": "getsu, gatsu, ゲツ、 ガツ",
+      "kunyomi": "tsuki, つき",
+      "meaning": "ay (takvim ve gökcismi)"
+    },
+    {
+      "kanji": "分",
+      "onyomi": "bun, fun, bu, ブン、 フン、 ブ",
+      "kunyomi": "wa(keru), わ(ける)",
+      "meaning": "dakika, parça, bölmek, anlamak"
+    },
+    {
+      "kanji": "後",
+      "onyomi": "go, kou, ゴ、 コウ",
+      "kunyomi": "nochi, ushi(ro), ato, のち、 うし(ろ)、 あと",
+      "meaning": "arka, sonra, geri"
+    },
+    {
+      "kanji": "前",
+      "onyomi": "zen, ゼン",
+      "kunyomi": "mae, まえ",
+      "meaning": "ön, önce"
+    },
+    {
+      "kanji": "生",
+      "onyomi": "sei, shou, セイ、 ショウ",
+      "kunyomi": "i(kiru), u(mu), o(u), ha(eru), nama, い(きる)、 う(む)、 お(う)、 は(える)、 なま",
+      "meaning": "yaşam, doğmak, çiğ, saf"
+    },
+    {
+      "kanji": "五",
+      "onyomi": "go, ゴ",
+      "kunyomi": "itsu(tsu), いつ(つ)",
+      "meaning": "beş, 5"
+    },
+    {
+      "kanji": "間",
+      "onyomi": "kan, ken, カン、 ケン",
+      "kunyomi": "aida, ma, ai, あいだ、 ま、 あい",
+      "meaning": "ara, mesafe, aralık"
+    },
+    {
+      "kanji": "上",
+      "onyomi": "jou, shou, shan, ジョウ、 ショウ、 シャン",
+      "kunyomi": "ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru), うえ、 うわ-、 かみ、 あ(げる)、 のぼ(る)、 たてまつ(る)",
+      "meaning": "üst, yukarı"
+    },
+    {
+      "kanji": "東",
+      "onyomi": "tou, トウ",
+      "kunyomi": "higashi, ひがし",
+      "meaning": "doğu"
+    },
+    {
+      "kanji": "四",
+      "onyomi": "shi, シ",
+      "kunyomi": "yo(tsu), yon, よ(つ)、 よん",
+      "meaning": "dört, 4"
+    },
+    {
+      "kanji": "今",
+      "onyomi": "kon, kin, コン、 キン",
+      "kunyomi": "ima, いま",
+      "meaning": "şimdi, şu an"
+    },
+    {
+      "kanji": "金",
+      "onyomi": "kin, kon, gon, キン、 コン、 ゴン",
+      "kunyomi": "kane, kana, gane, かね、 かな-、 -がね",
+      "meaning": "altın, para"
+    },
+    {
+      "kanji": "九",
+      "onyomi": "kyuu, ku, キュウ、 ク",
+      "kunyomi": "kokono(tsu), ここの(つ)",
+      "meaning": "dokuz, 9"
+    },
+    {
+      "kanji": "入",
+      "onyomi": "nyuu, ニュウ",
+      "kunyomi": "i(ru), hai(ru), い(る)、はい(る)",
+      "meaning": "girmek, eklemek"
+    },
+    {
+      "kanji": "学",
+      "onyomi": "gaku, ガク",
+      "kunyomi": "mana(bu), まな(ぶ)",
+      "meaning": "öğrenmek, okul, bilim"
+    },
+    {
+      "kanji": "高",
+      "onyomi": "kou, コウ",
+      "kunyomi": "taka(i), たか(い)",
+      "meaning": "yüksek, uzun, pahalı"
+    },
+    {
+      "kanji": "円",
+      "onyomi": "en, エン",
+      "kunyomi": "maru(i), まる(い)",
+      "meaning": "yen, yuvarlak, daire"
+    },
+    {
+      "kanji": "子",
+      "onyomi": "shi, su, tsu, シ、 ス、 ツ",
+      "kunyomi": "ko, ne, こ、 ね",
+      "meaning": "çocuk"
+    },
+    {
+      "kanji": "外",
+      "onyomi": "gai, ge, ガイ、 ゲ",
+      "kunyomi": "soto, hoka, hazu-, to-, そと、 ほか、 はず(す)、 と-",
+      "meaning": "dış, dışarı"
+    },
+    {
+      "kanji": "八",
+      "onyomi": "hachi, ハチ",
+      "kunyomi": "ya(tsu), you, や(つ)、 よう",
+      "meaning": "sekiz, 8"
+    },
+    {
+      "kanji": "六",
+      "onyomi": "roku, ロク",
+      "kunyomi": "mu(tsu), mui, む(つ)、 むい",
+      "meaning": "altı, 6"
+    },
+    {
+      "kanji": "下",
+      "onyomi": "ka, ge, カ、 ゲ",
+      "kunyomi": "shita, shimo, moto, sa(geru), kuda(ru), o(rosu), した、 しも、 もと、 さ(げる)、 くだ(る)、 お(ろす)",
+      "meaning": "alt, aşağı, inmek"
+    },
+    {
+      "kanji": "来",
+      "onyomi": "rai, tai, ライ、 タイ",
+      "kunyomi": "kuru, kitaru, ki, ko, く.る、 きた.る、 き、 こ",
+      "meaning": "gelmek, gelecek, sonraki"
+    },
+    {
+      "kanji": "気",
+      "onyomi": "ki, ke, キ、 ケ",
+      "kunyomi": "iki, いき",
+      "meaning": "ruh, zihin, hava, atmosfer, his"
+    },
+    {
+      "kanji": "小",
+      "onyomi": "shou, ショウ",
+      "kunyomi": "chii(sai), ko-, o-, sa-, ちい(さい)、 こ-、 お-、 さ-",
+      "meaning": "küçük, ufak"
+    },
+    {
+      "kanji": "七",
+      "onyomi": "shichi, シチ",
+      "kunyomi": "nana(tsu), nano, なな(つ)、 なの",
+      "meaning": "yedi, 7"
+    },
+    {
+      "kanji": "山",
+      "onyomi": "san, sen, サン、 セン",
+      "kunyomi": "yama, やま",
+      "meaning": "dağ"
+    },
+    {
+      "kanji": "話",
+      "onyomi": "wa, ワ",
+      "kunyomi": "hana(su), hanashi, はな(す)、 はなし",
+      "meaning": "konuşma, hikaye, anlatmak"
+    },
+    {
+      "kanji": "女",
+      "onyomi": "jo, ジョ",
+      "kunyomi": "onnna, me, おんな、 め",
+      "meaning": "kadın, dişi"
+    },
+    {
+      "kanji": "北",
+      "onyomi": "hoku, ホク",
+      "kunyomi": "kita, きた",
+      "meaning": "kuzey"
+    },
+    {
+      "kanji": "午",
+      "onyomi": "go, ゴ",
+      "kunyomi": "uma, うま",
+      "meaning": "öğle"
+    },
+    {
+      "kanji": "百",
+      "onyomi": "hyaku, byaku, ヒャク、 ビャク",
+      "kunyomi": "momo, もも",
+      "meaning": "yüz, 100"
+    },
+    {
+      "kanji": "書",
+      "onyomi": "sho, ショ",
+      "kunyomi": "kaku, か(く)",
+      "meaning": "yazmak"
+    },
+    {
+      "kanji": "先",
+      "onyomi": "sen, セン",
+      "kunyomi": "saki, ma(zu), さき、 ま(ず)",
+      "meaning": "önce, ileri, gelecek, öncelik"
+    },
+    {
+      "kanji": "名",
+      "onyomi": "mei, myou, メイ、 ミョウ",
+      "kunyomi": "na, な",
+      "meaning": "isim, şöhret, ünlü"
+    },
+    {
+      "kanji": "川",
+      "onyomi": "sen, セン",
+      "kunyomi": "kawa, かわ",
+      "meaning": "nehir, akarsu"
+    },
+    {
+      "kanji": "千",
+      "onyomi": "sen, セン",
+      "kunyomi": "chi, ち",
+      "meaning": "bin, 1000"
+    },
+    {
+      "kanji": "水",
+      "onyomi": "sui, スイ",
+      "kunyomi": "mizu, みず",
+      "meaning": "su"
+    },
+    {
+      "kanji": "半",
+      "onyomi": "han, ハン",
+      "kunyomi": "naka(ba), なか(ば)",
+      "meaning": "yarım, yarı, orta"
+    },
+    {
+      "kanji": "男",
+      "onyomi": "dan, nan, ダン、 ナン",
+      "kunyomi": "otoko, o, おとこ、 お",
+      "meaning": "erkek"
+    },
+    {
+      "kanji": "西",
+      "onyomi": "sei, sai, セイ、 サイ",
+      "kunyomi": "nishi, にし",
+      "meaning": "batı"
+    },
+    {
+      "kanji": "電",
+      "onyomi": "den, デン",
+      "kunyomi": "",
+      "meaning": "elektrik, elektrikli"
+    },
+    {
+      "kanji": "校",
+      "onyomi": "kou, コウ",
+      "kunyomi": "",
+      "meaning": "okul, sınav"
+    },
+    {
+      "kanji": "語",
+      "onyomi": "go, ゴ",
+      "kunyomi": "kata(ru), かた(る)",
+      "meaning": "dil, kelime, konuşmak"
+    },
+    {
+      "kanji": "土",
+      "onyomi": "do, to, ド、 ト",
+      "kunyomi": "tsuchi, つち",
+      "meaning": "toprak, dünya"
+    },
+    {
+      "kanji": "木",
+      "onyomi": "boku, moku, ボク、 モク",
+      "kunyomi": "ki, ko, き、 こ-",
+      "meaning": "ağaç, tahta, ahşap"
+    },
+    {
+      "kanji": "聞",
+      "onyomi": "bun, mon, ブン、 モン",
+      "kunyomi": "ki(ku), き(く)",
+      "meaning": "duymak, dinlemek, sormak"
+    },
+    {
+      "kanji": "食",
+      "onyomi": "shoku, jiki, ショク、 ジキ",
+      "kunyomi": "k(u), ta(beru), ha(mu), く(う)、 た(べる)、 は(む)",
+      "meaning": "yemek, yiyecek"
+    },
+    {
+      "kanji": "車",
+      "onyomi": "sha, シャ",
+      "kunyomi": "kuruma, くるま",
+      "meaning": "araba, araç, tekerlek"
+    },
+    {
+      "kanji": "何",
+      "onyomi": "ka, カ",
+      "kunyomi": "nani, nan, なに、 なん",
+      "meaning": "ne"
+    },
+    {
+      "kanji": "南",
+      "onyomi": "nan, na, ナン、 ナ",
+      "kunyomi": "minami, みなみ",
+      "meaning": "güney"
+    },
+    {
+      "kanji": "万",
+      "onyomi": "man, ban, マン、 バン",
+      "kunyomi": "",
+      "meaning": "on bin, 10.000"
+    },
+    {
+      "kanji": "毎",
+      "onyomi": "mai, マイ",
+      "kunyomi": "goto(ni), ごと(に)",
+      "meaning": "her, her biri"
+    },
+    {
+      "kanji": "白",
+      "onyomi": "haku, byaku, ハク、 ビャク",
+      "kunyomi": "shiro(i), しろ(い)",
+      "meaning": "beyaz"
+    },
+    {
+      "kanji": "天",
+      "onyomi": "ten, テン",
+      "kunyomi": "amatsu, あまつ",
+      "meaning": "cennet, gökyüzü, ilahi"
+    },
+    {
+      "kanji": "母",
+      "onyomi": "bo, ボ",
+      "kunyomi": "haha, kaa, はは、 かあ",
+      "meaning": "anne"
+    },
+    {
+      "kanji": "火",
+      "onyomi": "ka, カ",
+      "kunyomi": "hi, bi, ho, ひ、 -び、 ほ-",
+      "meaning": "ateş"
+    },
+    {
+      "kanji": "右",
+      "onyomi": "u, yuu, ウ、 ユウ",
+      "kunyomi": "migi, みぎ",
+      "meaning": "sağ (yön)"
+    },
+    {
+      "kanji": "読",
+      "onyomi": "doku, toku, tou, ドク、 トク、 トウ",
+      "kunyomi": "yo(mu), よ(む)",
+      "meaning": "okumak"
+    },
+    {
+      "kanji": "友",
+      "onyomi": "yuu, ユウ",
+      "kunyomi": "tomo, とも",
+      "meaning": "arkadaş, dost"
+    },
+    {
+      "kanji": "左",
+      "onyomi": "sa, sha, サ、 シャ",
+      "kunyomi": "hidari, ひだり",
+      "meaning": "sol"
+    },
+    {
+      "kanji": "休",
+      "onyomi": "kyuu, キュウ",
+      "kunyomi": "yasu(mu), やす(む)",
+      "meaning": "dinlenmek, tatil, izin"
+    },
+    {
+      "kanji": "父",
+      "onyomi": "fu, フ",
+      "kunyomi": "chichi, tou, ちち、 とう",
+      "meaning": "baba"
+    },
+    {
+      "kanji": "雨",
+      "onyomi": "u, ウ",
+      "kunyomi": "ame, ama, あめ、 あま",
+      "meaning": "yağmur"
+    }
+  ]
+}
