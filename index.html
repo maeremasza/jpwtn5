@@ -103,10 +103,10 @@
     <h2>jpwt</h2>
     
     <div style="background: #e3f2fd; padding: 10px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #90caf9;">
-        <label style="font-weight: bold; font-size: 14px; color: #0d47a1;">Hedef Dil (Anlam Testi İçin):</label>
+        <label style="font-weight: bold; font-size: 14px; color: #0d47a1;">Hedef Dil:</label>
         <select id="language-select" onchange="changeLanguage()" style="margin-top: 5px;">
-            <option value="words.json">İngilizce</option>
-            <option value="words_tr.json">Türkçe</option>
+            <option value="eng">İngilizce</option>
+            <option value="tr">Türkçe</option>
         </select>
         <p style="font-size: 12px; color: #666; margin: 5px 0 0 0;" id="db-status">Kelimeler yükleniyor...</p>
     </div>
@@ -295,7 +295,6 @@
                 <option value="7">Sayfa 7</option>
             `;
         } else {
-            // N2 BURAYA EKLENDİ
             combo.innerHTML = `
                 <option value="all">Tüm Seviyeler (N5-N2)</option>
                 <option value="N5">N5 Seviyesi</option>
@@ -317,15 +316,15 @@
         updateDropdownOptions(mode);
 
         const langSelect = document.getElementById("language-select");
-        if (mode === "reading") {
-            langSelect.disabled = true;
-            langSelect.title = "Okunuş testinde kanji.json kullanılır.";
-        } else {
-            langSelect.disabled = false;
-            langSelect.title = "";
-        }
+        langSelect.disabled = false; // Artık okunuş modunda da dil seçilebilir
+        langSelect.title = "";
 
-        const fileToLoad = mode === "meaning" ? langSelect.value : "kanji.json";
+        let fileToLoad = "";
+        if (mode === "meaning") {
+            fileToLoad = langSelect.value === "tr" ? "words_tr.json" : "words.json";
+        } else {
+            fileToLoad = langSelect.value === "tr" ? "kanji_tr.json" : "kanji.json";
+        }
 
         loadWords(fileToLoad, () => {
             if (document.getElementById("panel-screen").classList.contains("active")) {
@@ -337,12 +336,11 @@
     }
 
     function changeLanguage() {
-        if (currentSingleMode === "meaning") {
-            changeAppMode("meaning");
-        }
+        // Mevcut modla beraber veritabanını günceller
+        changeAppMode(currentSingleMode);
     }
 
-    // AKILLI VERİTABANI YÜKLEYİCİSİ (Kanji.json okuyucu eklendi)
+    // AKILLI VERİTABANI YÜKLEYİCİSİ
     function loadWords(fileName, callback) {
         if (currentDBFile === fileName) {
             if(callback) callback();
@@ -394,7 +392,7 @@
                             return {
                                 jp: w.kanji,
                                 romaji: allRomaji, 
-                                meaning: w.meaning,
+                                meaning: w.meaning || w.tr || w.eng,
                                 hiragana: "" 
                             };
                         }
@@ -831,7 +829,10 @@
         document.getElementById("single-check-btn").disabled = true;
         document.getElementById("single-ban-btn").disabled = true;
         singleWordIndex++;
-        setTimeout(loadNextSingleWord, 2000);
+
+        // OKUNUŞ MODU İÇİN 2 KAT BEKLEME SÜRESİ
+        const delay = currentSingleMode === "reading" ? 4000 : 2000;
+        setTimeout(loadNextSingleWord, delay);
     }
 
     function banSingleWord() {
@@ -858,7 +859,9 @@
         document.getElementById("single-check-btn").disabled = true;
         document.getElementById("single-ban-btn").disabled = true;
         singleWordIndex++;
-        setTimeout(loadNextSingleWord, 1500);
+        
+        const delay = currentSingleMode === "reading" ? 3000 : 1500;
+        setTimeout(loadNextSingleWord, delay);
     }
 
     // --- BİRLEŞTİRİLMİŞ DIŞA/İÇE AKTAR ---
@@ -1168,6 +1171,8 @@
         const currentWord = onlineGameState.words[onlineGameState.currentIndex];
         const correctAns = onlineGameState.mode === "meaning" ? (currentWord.tr || currentWord.eng) : currentWord.romaji;
 
+        const onlineDelay = onlineGameState.mode === "reading" ? 6000 : 3000;
+
         if (isMatch(answer, correctAns, onlineGameState.mode)) {
             onlineGameState.isWaiting = true; 
             onlineGameState.players[playerName].score += 1;
@@ -1187,7 +1192,7 @@
                     handleOnlineGameOver(finalData);
                     roomChannel.send({ type: 'broadcast', event: 'game_over', payload: finalData });
                 }
-            }, 3000); 
+            }, onlineDelay); 
         } 
         else {
             onlineGameState.wrongGuesses[playerName] = (onlineGameState.wrongGuesses[playerName] || 0) + 1;
@@ -1215,7 +1220,7 @@
                         handleOnlineGameOver(finalData);
                         roomChannel.send({ type: 'broadcast', event: 'game_over', payload: finalData });
                     }
-                }, 3000);
+                }, onlineDelay);
             }
         }
     }
