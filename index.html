@@ -295,11 +295,13 @@
                 <option value="7">Sayfa 7</option>
             `;
         } else {
+            // N2 BURAYA EKLENDİ
             combo.innerHTML = `
-                <option value="all">Tüm Seviyeler (N5-N3)</option>
+                <option value="all">Tüm Seviyeler (N5-N2)</option>
                 <option value="N5">N5 Seviyesi</option>
                 <option value="N4">N4 Seviyesi</option>
                 <option value="N3">N3 Seviyesi</option>
+                <option value="N2">N2 Seviyesi</option>
             `;
         }
     }
@@ -360,7 +362,6 @@
                     let rawItems = data[key];
                     let items = [];
                     
-                    // Eğer json içinde 1, 2 gibi alt sayfalar varsa düzeltip çıkarır
                     if (!Array.isArray(rawItems)) {
                         for (let subKey in rawItems) {
                             items = items.concat(rawItems[subKey]);
@@ -369,14 +370,13 @@
                         items = rawItems;
                     }
                     
-                    // EĞER KANJİ VERİTABANI GELDİYSE OTOMATİK ÇEVİRİ YAP
                     items = items.map(w => {
                         if (w.kanji) {
                             const expandRomaji = (str) => {
                                 if (!str) return "";
                                 let results = [];
                                 str.split(',').map(s => s.trim()).filter(s => /^[a-zA-Z()\-]+$/.test(s)).forEach(s => {
-                                    let clean = s.replace(/\-/g, ""); // Tireleri sil
+                                    let clean = s.replace(/\-/g, ""); 
                                     if (clean.includes('(') && clean.includes(')')) {
                                         results.push(clean.replace(/[()]/g, "")); 
                                         results.push(clean.replace(/\([^)]*\)/g, "")); 
@@ -393,9 +393,9 @@
 
                             return {
                                 jp: w.kanji,
-                                romaji: allRomaji, // Virgüllü tüm ihtimalleri barındırır (örn: au, a)
+                                romaji: allRomaji, 
                                 meaning: w.meaning,
-                                hiragana: "" // Okunuşu tamamen gizliyoruz (sadece anlamı ipucu kalacak)
+                                hiragana: "" 
                             };
                         }
                         return w; 
@@ -660,7 +660,6 @@
         let uAns = userAns.trim();
         let cAns = correctAns;
 
-        // Romaji (İngilizce harfler) için I -> i düzgün küçülsün diye lokalizasyonu ayırıyoruz
         if (mode === "meaning") {
             uAns = uAns.toLocaleLowerCase('tr-TR');
             cAns = cAns.toLocaleLowerCase('tr-TR');
